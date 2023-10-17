@@ -1,3 +1,5 @@
+# BP Terri: Probably don't need this since it isn't doing anything
+
 # www.robotstxt.org/
 
 # Allow crawling of all content
