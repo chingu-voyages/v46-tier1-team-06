@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #196160;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+}/*# sourceMappingURL=main.css.map */
