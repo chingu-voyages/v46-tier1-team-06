@@ -98,20 +98,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* Starter Code */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #196160;
-  margin: 0;
-  width: 100vw;
-  min-height: 100vh;
-  font-family: "Open Sans", sans-serif;
-  color: black;
-}
-
 h1, h2, h3 {
   font-family: "Josefin Sans", sans-serif;
 }
