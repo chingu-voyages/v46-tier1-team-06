@@ -143,8 +143,7 @@ form {
   align-items: flex-start;
   padding-top: 3rem;
 }
-
-.recipe {
+.recipes .recipe {
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -153,8 +152,7 @@ form {
   box-shadow: 3px 3px 5px silver;
   border-radius: 20px;
 }
-
-.recipe-category {
+.recipes .recipe-category {
   background-color: #58BC82;
   padding: 0.5rem 0.75rem;
   align-self: flex-start;

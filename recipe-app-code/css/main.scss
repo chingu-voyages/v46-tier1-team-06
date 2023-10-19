@@ -102,21 +102,22 @@ form {
     justify-content: space-around;
     align-items: flex-start;
     padding-top: 3rem;
+    .recipe {
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 5px silver;
+        border-radius: 20px;
+    }
+    .recipe-category {
+        background-color: #58BC82;
+        padding: 0.5rem 0.75rem;
+        align-self: flex-start;
+    }
 }
-.recipe {
-    padding-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 3px 3px 5px silver;
-    border-radius: 20px;
-}
-.recipe-category {
-    background-color: #58BC82;
-    padding: 0.5rem 0.75rem;
-    align-self: flex-start;
-}
+
 .quote-section {
     padding: 5rem;
 }
