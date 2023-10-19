@@ -8,6 +8,38 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -98,22 +130,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-h1, h2, h3 {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-h1 {
-  font-size: 3.75rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
 header {
   display: flex;
   flex-direction: column;
