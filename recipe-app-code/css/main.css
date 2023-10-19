@@ -52,12 +52,14 @@ body {
   background-color: #196160;
 }
 
-h1, h2, h3 {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-h1 {
-  font-size: 60px;
+header,
+section,
+article,
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 html {
@@ -130,13 +132,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 form {
   display: flex;
   justify-content: center;
