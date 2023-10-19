@@ -12,6 +12,10 @@ body {
     margin: 0;
     font-family: $default-font;
     background-color: $dark-teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header,
