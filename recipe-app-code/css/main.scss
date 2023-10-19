@@ -93,9 +93,12 @@
      ========================================================================== */
 
 /* ===== HEADER AND SEARCH BAR ===== */
-form {
-    display: flex;
-    justify-content: center;
+header {
+    flex-direction: column;
+    form {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* ===== RECIPE DISPLAY ===== */

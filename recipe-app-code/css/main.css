@@ -132,7 +132,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* ===== HEADER AND SEARCH BAR ===== */
-form {
+header {
+  flex-direction: column;
+}
+header form {
   display: flex;
   justify-content: center;
 }
