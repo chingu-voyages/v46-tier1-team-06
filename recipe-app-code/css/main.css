@@ -1,15 +1,69 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #196160;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+section,
+article,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 html {
   color: #222;
@@ -26,7 +80,6 @@ html {
  *
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -40,7 +93,6 @@ html {
 /*
  * A better looking default horizontal rule
  */
-
 hr {
   display: block;
   height: 1px;
@@ -55,7 +107,6 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
@@ -68,7 +119,6 @@ video {
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
   border: 0;
   margin: 0;
@@ -78,7 +128,6 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
   resize: vertical;
 }
@@ -86,58 +135,49 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* Starter Code */
-   @charset "UTF-8";
-   
-   *,
-   *::before,
-   *::after {
-     box-sizing: border-box;
-   }
-   
-   html {
-     border: 0;
-     font-size: 1 rem;
-     margin: 0;
-     padding: 0;
-     height: 100%;
-   }
-   
-   body {  
-    color: #102e96;
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    margin: 1rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-  }
+/* ===== HEADER AND SEARCH BAR ===== */
+header {
+  flex-direction: column;
+}
+header form {
+  display: flex;
+  justify-content: center;
+}
 
-  .content-wrapper {
-    max-width: 700px;
-  }
+/* ===== RECIPE DISPLAY ===== */
+.recipes {
+  width: 85vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 3rem;
+}
+.recipes .recipe {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 5px silver;
+  border-radius: 20px;
+}
+.recipes .recipe-category {
+  background-color: #58BC82;
+  padding: 0.5rem 0.75rem;
+  align-self: flex-start;
+}
 
-  img {
-    width: 100%;
-    margin: 0;
-  }
-
-  h1,
-  h2 {
-    text-align: center;
-  }
-
-  /* Starter Code End */
+/* ===== LANDING ===== */
+.quote-section {
+  padding: 5rem;
+}
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers
  */
-
 .hidden,
 [hidden] {
   display: none !important;
@@ -151,7 +191,6 @@ textarea {
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -170,7 +209,6 @@ textarea {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -185,7 +223,6 @@ textarea {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
   visibility: hidden;
 }
@@ -201,7 +238,6 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix::before,
 .clearfix::after {
   content: " ";
@@ -217,24 +253,17 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
-
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
 @media print {
   *,
   *::before,
@@ -245,20 +274,16 @@ textarea {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
   a,
   a:visited {
     text-decoration: underline;
   }
-
   a[href]::after {
     content: " (" attr(href) ")";
   }
-
   abbr[title]::after {
     content: " (" attr(title) ")";
   }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
@@ -267,17 +292,14 @@ textarea {
   a[href^="javascript:"]::after {
     content: "";
   }
-
   pre {
     white-space: pre-wrap !important;
   }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -285,22 +307,18 @@ textarea {
   thead {
     display: table-header-group;
   }
-
   tr,
   img {
     page-break-inside: avoid;
   }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
-
   h2,
   h3 {
     page-break-after: avoid;
   }
-}
-
+}/*# sourceMappingURL=main.css.map */
