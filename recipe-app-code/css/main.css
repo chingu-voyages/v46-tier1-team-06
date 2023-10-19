@@ -49,7 +49,6 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #196160;
   display: flex;
   flex-direction: column;
   justify-content: center;
