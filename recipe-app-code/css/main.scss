@@ -92,10 +92,13 @@
      Author's custom styles
      ========================================================================== */
 
+/* ===== HEADER AND SEARCH BAR ===== */
 form {
     display: flex;
     justify-content: center;
 }
+
+/* ===== RECIPE DISPLAY ===== */
 .recipes {
     width: 85vw;
     display: flex;
@@ -117,6 +120,8 @@ form {
         align-self: flex-start;
     }
 }
+
+/* ===== LANDING ===== */
 
 .quote-section {
     padding: 5rem;
