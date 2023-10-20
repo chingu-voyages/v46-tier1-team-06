@@ -25,7 +25,7 @@ header {
 
     .search-button {
         background-color: color.$dark-teal;
-        border: none;
+        border-color: color.$dark-teal;
         border-radius: 0 50px 50px 0;
         margin-right: 20px;
         padding: 8px 11px;
@@ -37,7 +37,7 @@ header {
 
     .refresh-button {
         background-color: color.$dark-magenta;
-        border: none;
+        border-color: color.$dark-magenta;
         border-radius: 15px;
         height: 55px;
         padding: 0 10px;
