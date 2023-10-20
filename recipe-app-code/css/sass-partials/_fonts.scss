@@ -4,12 +4,18 @@ $heading-font: 'Josefin Sans', sans-serif;
 h1, h2, h3 {
     font-family: $heading-font;
 }
+
+// Brand title
 h1 {
     font-size: 3.75rem;
 }
+
+// Recipe titles on landing page
 h2 {
     font-size: 1.5rem;
 }
+
+// "Global food waste ..."
 h3 {
     font-size: 2rem;
 }
