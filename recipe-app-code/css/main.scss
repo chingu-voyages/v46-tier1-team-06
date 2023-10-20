@@ -7,10 +7,69 @@
 /* ===== HEADER AND SEARCH BAR ===== */
 header {
     flex-direction: column;
-    form {
+    
+    .search-bar-area {
         display: flex;
-        justify-content: center;
     }
+    
+    .search-input {
+        background-color: color.$green-tea-green;
+        border: none; 
+        border-radius: 50px 0 0 50px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        padding-left: 30px;
+        height: 55px;
+        min-width: 341px;
+    }
+
+    .search-button {
+        background-color: color.$dark-teal;
+        border-radius: 0 50px 50px 0;
+        margin-right: 20px;
+        padding: 8px 11px;
+    }
+
+    .search-button:hover {
+        background-color: color.$light-teal;
+    }
+
+    .refresh-button {
+        background-color: color.$dark-magenta;
+        border-radius: 15px;
+        height: 55px;
+        padding: 0 10px;
+    }
+    
+    .refresh-button:hover {
+        background-color: color.$light-magenta;
+    }
+
+    .icon {
+        display: inline-block;
+        color: #444444;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+    }
+
+      .icon-search {
+        /* Using currentColor above lets
+        us use `color` for changing the color
+        of our icons: */
+        color: white;
+        /* The width and height of the SVG
+        was previously set to 1em.
+        This allows us to use `font-size`
+        to change the size of our icon: */
+        font-size: 34px;
+      }
+
+      .icon-spinner11 {
+        color: white;
+        font-size: 35px;
+      }
+    
 }
 
 /* ===== RECIPES DISPLAY ===== */
