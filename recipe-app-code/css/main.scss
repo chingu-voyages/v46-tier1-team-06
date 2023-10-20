@@ -37,6 +37,13 @@ header {
     .refresh-button:hover {
         background-color: color.$light-magenta;
     }
+    .icon {
+        display: inline-block;
+        color: #444444;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+      }
 }
 
 /* ===== RECIPE DISPLAY ===== */
