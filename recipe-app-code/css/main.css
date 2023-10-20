@@ -58,9 +58,15 @@ footer {
 header {
   flex-direction: column;
 }
-header form {
-  display: flex;
-  justify-content: center;
+header .search-input {
+  background-color: #C9E8BA;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 30px;
+  height: 55px;
+  min-width: 341px;
 }
 
 /* ===== RECIPE DISPLAY ===== */
