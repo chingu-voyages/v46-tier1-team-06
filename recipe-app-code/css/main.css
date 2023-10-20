@@ -64,6 +64,14 @@ footer {
   align-items: center;
 }
 
+.icon {
+  display: inline-block;
+  color: #444444;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
 /* ===== HEADER AND SEARCH BAR ===== */
 header {
   flex-direction: column;
@@ -150,5 +158,10 @@ header .app-instructions {
 /* ===== FOOTER ===== */
 footer {
   background-color: #196160;
+  padding: 5rem 0;
   width: 100%;
+}
+footer .icon-github {
+  color: white;
+  font-size: 75px;
 }/*# sourceMappingURL=main.css.map */

@@ -100,5 +100,11 @@ header {
 /* ===== FOOTER ===== */
 footer {
     background-color: color.$dark-teal;
+    padding: 5rem 0;
     width: 100%;
+
+    .icon-github {
+        color: white;
+        font-size: 75px;
+    }
 }
