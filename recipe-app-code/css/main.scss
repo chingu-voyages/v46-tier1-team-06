@@ -23,7 +23,8 @@ header {
         min-width: 341px;
     }
 
-    .search-input:hover {
+    .search-input:hover,
+    .search-input:focus {
         border-color: color.$dark-forest-green;
     }
 
@@ -35,8 +36,10 @@ header {
         padding: 8px 11px;
     }
 
-    .search-button:hover {
+    .search-button:hover,
+    .search-button:focus {
         background-color: color.$light-teal;
+        border-width: 3px;
     }
 
     .refresh-button {
@@ -47,8 +50,10 @@ header {
         padding: 0 10px;
     }
     
-    .refresh-button:hover {
+    .refresh-button:hover,
+    .refresh-button:focus {
         background-color: color.$light-magenta;
+        border-width: 3px;
     }
 
     .icon {

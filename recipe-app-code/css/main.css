@@ -72,7 +72,8 @@ header .search-input {
   height: 55px;
   min-width: 341px;
 }
-header .search-input:hover {
+header .search-input:hover,
+header .search-input:focus {
   border-color: #384547;
 }
 header .search-button {
@@ -82,8 +83,10 @@ header .search-button {
   margin-right: 20px;
   padding: 8px 11px;
 }
-header .search-button:hover {
+header .search-button:hover,
+header .search-button:focus {
   background-color: #0D9D9B;
+  border-width: 3px;
 }
 header .refresh-button {
   background-color: #8F2D56;
@@ -92,8 +95,10 @@ header .refresh-button {
   height: 55px;
   padding: 0 10px;
 }
-header .refresh-button:hover {
+header .refresh-button:hover,
+header .refresh-button:focus {
   background-color: #C5497F;
+  border-width: 3px;
 }
 header .icon {
   display: inline-block;
