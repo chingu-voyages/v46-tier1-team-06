@@ -152,4 +152,10 @@ header .app-instructions {
 /* ===== LANDING ===== */
 .quote-section {
   padding: 5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #196160;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
