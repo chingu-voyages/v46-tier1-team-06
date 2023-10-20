@@ -37,7 +37,8 @@ header {
             background-color: color.$emerald;
             align-self: flex-start;
         }
-        .recipe-title {
+        .recipe-title-container {
+            flex-grow: 2;
             margin: 0;
             padding: 1rem;
             width: 50%;
