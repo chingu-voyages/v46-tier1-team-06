@@ -30,18 +30,22 @@ header {
         border-radius: 20px;
         border: 1pt solid rebeccapurple;
         .recipe-image {
+            margin: 0;
             border: 1pt solid hotpink;
         }
         .recipe-category {
+            margin: 0;
             background-color: color.$emerald;
             padding: 0.5rem 0.75rem;
             align-self: flex-start;
             border: 1pt solid black;
         }
         .recipe-title {
+            margin: 0;
             border: 1pt solid lime;
         }
         .recipe-button {
+            margin: 0;
             border: 1pt solid dodgerblue;
         }
     }
