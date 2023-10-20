@@ -18,6 +18,15 @@ header {
         height: 55px;
         min-width: 341px;
     }
+    .search-button {
+        background-color: color.$dark-teal;
+        border-radius: 0 50px 50px 0;
+        margin-right: 20px;
+        padding: 0 11px;
+    }
+    .search-button:hover {
+        background-color: color.$light-teal;
+    }
 }
 
 /* ===== RECIPE DISPLAY ===== */

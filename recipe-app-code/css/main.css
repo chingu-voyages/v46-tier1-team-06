@@ -68,6 +68,15 @@ header .search-input {
   height: 55px;
   min-width: 341px;
 }
+header .search-button {
+  background-color: #196160;
+  border-radius: 0 50px 50px 0;
+  margin-right: 20px;
+  padding: 0 11px;
+}
+header .search-button:hover {
+  background-color: #0D9D9B;
+}
 
 /* ===== RECIPE DISPLAY ===== */
 .recipes {
