@@ -74,6 +74,7 @@ header .search-input {
 }
 header .search-button {
   background-color: #196160;
+  border: none;
   border-radius: 0 50px 50px 0;
   margin-right: 20px;
   padding: 8px 11px;
@@ -83,6 +84,7 @@ header .search-button:hover {
 }
 header .refresh-button {
   background-color: #8F2D56;
+  border: none;
   border-radius: 15px;
   height: 55px;
   padding: 0 10px;
