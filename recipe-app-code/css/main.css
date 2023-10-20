@@ -43,6 +43,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 header,
@@ -58,9 +59,58 @@ footer {
 header {
   flex-direction: column;
 }
-header form {
+header .search-bar-area {
   display: flex;
-  justify-content: center;
+}
+header .search-input {
+  background-color: #C9E8BA;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 30px;
+  height: 55px;
+  min-width: 341px;
+}
+header .search-button {
+  background-color: #196160;
+  border-radius: 0 50px 50px 0;
+  margin-right: 20px;
+  padding: 8px 11px;
+}
+header .search-button:hover {
+  background-color: #0D9D9B;
+}
+header .refresh-button {
+  background-color: #8F2D56;
+  border-radius: 15px;
+  height: 55px;
+  padding: 0 10px;
+}
+header .refresh-button:hover {
+  background-color: #C5497F;
+}
+header .icon {
+  display: inline-block;
+  color: #444444;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+header .icon-search {
+  /* Using currentColor above lets
+  us use `color` for changing the color
+  of our icons: */
+  color: white;
+  /* The width and height of the SVG
+  was previously set to 1em.
+  This allows us to use `font-size`
+  to change the size of our icon: */
+  font-size: 34px;
+}
+header .icon-spinner11 {
+  color: white;
+  font-size: 35px;
 }
 
 /* ===== RECIPE DISPLAY ===== */
