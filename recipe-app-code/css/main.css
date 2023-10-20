@@ -72,7 +72,7 @@ header .search-button {
   background-color: #196160;
   border-radius: 0 50px 50px 0;
   margin-right: 20px;
-  padding: 0 11px;
+  padding: 8px 11px;
 }
 header .search-button:hover {
   background-color: #0D9D9B;
@@ -93,7 +93,7 @@ header .icon {
   height: 1em;
   fill: currentColor;
 }
-header .icon-spinner11 {
+header .icon-search {
   /* Using currentColor above lets
   us use `color` for changing the color
   of our icons: */
@@ -102,9 +102,9 @@ header .icon-spinner11 {
   was previously set to 1em.
   This allows us to use `font-size`
   to change the size of our icon: */
-  font-size: 35px;
+  font-size: 34px;
 }
-header .icon-search {
+header .icon-spinner11 {
   color: white;
   font-size: 35px;
 }
