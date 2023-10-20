@@ -72,6 +72,9 @@ header .search-input {
   height: 55px;
   min-width: 341px;
 }
+header .search-input:hover {
+  border-color: #384547;
+}
 header .search-button {
   background-color: #196160;
   border-color: #196160;

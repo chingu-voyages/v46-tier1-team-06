@@ -23,6 +23,10 @@ header {
         min-width: 341px;
     }
 
+    .search-input:hover {
+        border-color: color.$dark-forest-green;
+    }
+
     .search-button {
         background-color: color.$dark-teal;
         border-color: color.$dark-teal;
