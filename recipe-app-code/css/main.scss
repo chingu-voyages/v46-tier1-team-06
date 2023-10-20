@@ -42,6 +42,9 @@ header {
             margin: 0;
             padding: 1rem;
             width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .recipe-button {
             margin: 0;
