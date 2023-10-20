@@ -28,11 +28,22 @@ header {
         align-items: center;
         box-shadow: 3px 3px 5px silver;
         border-radius: 20px;
-    }
-    .recipe-category {
-        background-color: color.$emerald;
-        padding: 0.5rem 0.75rem;
-        align-self: flex-start;
+        border: 1pt solid rebeccapurple;
+        .recipe-image {
+            border: 1pt solid hotpink;
+        }
+        .recipe-category {
+            background-color: color.$emerald;
+            padding: 0.5rem 0.75rem;
+            align-self: flex-start;
+            border: 1pt solid black;
+        }
+        .recipe-title {
+            border: 1pt solid lime;
+        }
+        .recipe-button {
+            border: 1pt solid dodgerblue;
+        }
     }
 }
 
