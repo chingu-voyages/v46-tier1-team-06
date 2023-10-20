@@ -8,6 +8,10 @@
 header {
     flex-direction: column;
     
+    .search-bar-area {
+        display: flex;
+    }
+    
     .search-input {
         background-color: color.$green-tea-green;
         border: none; 

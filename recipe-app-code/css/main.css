@@ -58,6 +58,9 @@ footer {
 header {
   flex-direction: column;
 }
+header .search-bar-area {
+  display: flex;
+}
 header .search-input {
   background-color: #C9E8BA;
   border: none;
