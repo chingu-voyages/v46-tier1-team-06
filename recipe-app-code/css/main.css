@@ -1,3 +1,7 @@
+h1, h2, h3, p {
+  color: #384547;
+}
+
 h1, h2, h3 {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -12,6 +16,10 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+h1, h2, h3, p {
+  color: #384547;
 }
 
 h1, h2, h3 {
@@ -110,6 +118,9 @@ header .icon-search {
 header .icon-spinner11 {
   color: white;
   font-size: 35px;
+}
+header .app-instructions {
+  font-weight: bold;
 }
 
 /* ===== RECIPE DISPLAY ===== */

@@ -1,5 +1,11 @@
+@use 'color';
+
 $default-font: 'Open Sans', sans-serif;
 $heading-font: 'Josefin Sans', sans-serif;
+
+h1, h2, h3, p {
+    color: color.$dark-forest-green;
+}
 
 h1, h2, h3 {
     font-family: $heading-font;
