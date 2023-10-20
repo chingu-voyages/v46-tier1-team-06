@@ -1,7 +1,7 @@
 @charset "utf-8";
-@use 'sass-partials/fonts';
-@use 'sass-partials/color';
-@use 'sass-partials/general-layout';
+@use 'sass-partials/fonts' as fonts;
+@use 'sass-partials/color' as color;
+@use 'sass-partials/general-layout'as general-layout;
  
 
 /* ===== HEADER AND SEARCH BAR ===== */
