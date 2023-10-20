@@ -99,13 +99,6 @@ header .refresh-button {
 header .refresh-button:hover {
   background-color: #C5497F;
 }
-header .icon {
-  display: inline-block;
-  color: #444444;
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
-}
 header .icon-search {
   /* Using currentColor above lets
   us use `color` for changing the color
