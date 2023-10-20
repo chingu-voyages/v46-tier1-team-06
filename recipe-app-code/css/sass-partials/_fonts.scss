@@ -10,14 +10,17 @@ h1 {
     font-size: 3.75rem;
 }
 
-// Recipe titles on landing page
-h2 {
+// Recipe titles and buttons on landing page
+h2, .recipe-button {
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.5rem;
     text-align: center;
 }
 
+.recipe-button {
+    color: white;
+}
 // "Global food waste ..."
 h3 {
     font-size: 2rem;
