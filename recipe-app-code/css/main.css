@@ -77,6 +77,15 @@ header .search-button {
 header .search-button:hover {
   background-color: #0D9D9B;
 }
+header .refresh-button {
+  background-color: #8F2D56;
+  border-radius: 15px;
+  height: 55px;
+  padding: 0 10px;
+}
+header .refresh-button:hover {
+  background-color: #C5497F;
+}
 
 /* ===== RECIPE DISPLAY ===== */
 .recipes {

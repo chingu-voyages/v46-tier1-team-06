@@ -27,6 +27,16 @@ header {
     .search-button:hover {
         background-color: color.$light-teal;
     }
+    .refresh-button {
+        background-color: color.$dark-magenta;
+        border-radius: 15px;
+        height: 55px;
+        padding: 0 10px;
+    }
+    
+    .refresh-button:hover {
+        background-color: color.$light-magenta;
+    }
 }
 
 /* ===== RECIPE DISPLAY ===== */
