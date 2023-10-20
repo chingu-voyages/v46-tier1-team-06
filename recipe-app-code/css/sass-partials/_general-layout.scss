@@ -1,8 +1,6 @@
 @import 'color';
 @import 'fonts';
 
-@charset "UTF-8";
-
 * {
     box-sizing: border-box;
 }
@@ -11,7 +9,6 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: $default-font;
-    background-color: $dark-teal;
     display: flex;
     flex-direction: column;
     justify-content: center;
