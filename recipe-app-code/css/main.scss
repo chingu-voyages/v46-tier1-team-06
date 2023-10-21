@@ -122,7 +122,7 @@ header {
             border: color.$dark-teal;
             border-radius: 15px;
 
-            &:hover {
+            &:hover, &:focus {
                 background-color: color.$light-teal;
             }
         }
