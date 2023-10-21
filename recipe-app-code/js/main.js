@@ -23,6 +23,7 @@ const res = await fetch(url, options);
  };
  getData();
 
+
  
 
 
