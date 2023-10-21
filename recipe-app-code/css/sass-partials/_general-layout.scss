@@ -1,11 +1,11 @@
-@import 'color';
+@use 'color';
 @import 'fonts';
 
 * {
     box-sizing: border-box;
 }
 body {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     margin: 0;
     font-family: $default-font;
@@ -22,4 +22,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon {
+	display: inline-block;
+	color: #444444;
+    width: 1em;
+	height: 1em;
+	fill: currentColor;
 }

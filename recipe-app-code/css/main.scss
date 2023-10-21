@@ -23,37 +23,40 @@ header {
         min-width: 341px;
     }
 
+    .search-input:hover,
+    .search-input:focus {
+        border-color: color.$dark-forest-green;
+    }
+
     .search-button {
         background-color: color.$dark-teal;
+        border-color: color.$dark-teal;
         border-radius: 0 50px 50px 0;
         margin-right: 20px;
         padding: 8px 11px;
     }
 
-    .search-button:hover {
+    .search-button:hover,
+    .search-button:focus {
         background-color: color.$light-teal;
+        border-width: 3px;
     }
 
     .refresh-button {
         background-color: color.$dark-magenta;
+        border-color: color.$dark-magenta;
         border-radius: 15px;
         height: 55px;
         padding: 0 10px;
     }
     
-    .refresh-button:hover {
+    .refresh-button:hover,
+    .refresh-button:focus {
         background-color: color.$light-magenta;
+        border-width: 3px;
     }
 
-    .icon {
-        display: inline-block;
-        color: #444444;
-        width: 1em;
-        height: 1em;
-        fill: currentColor;
-    }
-
-      .icon-search {
+    .icon-search {
         /* Using currentColor above lets
         us use `color` for changing the color
         of our icons: */
@@ -63,13 +66,17 @@ header {
         This allows us to use `font-size`
         to change the size of our icon: */
         font-size: 34px;
-      }
+    }
 
-      .icon-spinner11 {
+    .icon-spinner11 {
         color: white;
         font-size: 35px;
-      }
+    }
     
+    .app-instructions {
+        font-weight: bold;
+        margin-top: 2rem;
+    }
 }
 
 /* ===== RECIPES DISPLAY ===== */
@@ -120,4 +127,16 @@ header {
 
 .quote-section {
     padding: 5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: color.$dark-teal;
+    padding: 5rem 0;
+    width: 100%;
+
+    .icon-github {
+        color: white;
+        font-size: 75px;
+    }
 }

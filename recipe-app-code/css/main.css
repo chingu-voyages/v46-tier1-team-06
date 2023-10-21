@@ -1,9 +1,14 @@
+h1, h2, h3, p {
+  color: #384547;
+}
+
 h1, h2, h3 {
   font-family: "Josefin Sans", sans-serif;
 }
 
 h1 {
-  font-size: 3.75rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -14,12 +19,17 @@ h3 {
   font-size: 2rem;
 }
 
+h1, h2, h3, p {
+  color: #384547;
+}
+
 h1, h2, h3 {
   font-family: "Josefin Sans", sans-serif;
 }
 
 h1 {
-  font-size: 3.75rem;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
@@ -35,7 +45,7 @@ h3 {
 }
 
 body {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -52,6 +62,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon {
+  display: inline-block;
+  color: #444444;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 
 /* ===== HEADER AND SEARCH BAR ===== */
@@ -71,30 +89,33 @@ header .search-input {
   height: 55px;
   min-width: 341px;
 }
+header .search-input:hover,
+header .search-input:focus {
+  border-color: #384547;
+}
 header .search-button {
   background-color: #196160;
+  border-color: #196160;
   border-radius: 0 50px 50px 0;
   margin-right: 20px;
   padding: 8px 11px;
 }
-header .search-button:hover {
+header .search-button:hover,
+header .search-button:focus {
   background-color: #0D9D9B;
+  border-width: 3px;
 }
 header .refresh-button {
   background-color: #8F2D56;
+  border-color: #8F2D56;
   border-radius: 15px;
   height: 55px;
   padding: 0 10px;
 }
-header .refresh-button:hover {
+header .refresh-button:hover,
+header .refresh-button:focus {
   background-color: #C5497F;
-}
-header .icon {
-  display: inline-block;
-  color: #444444;
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
+  border-width: 3px;
 }
 header .icon-search {
   /* Using currentColor above lets
@@ -110,6 +131,10 @@ header .icon-search {
 header .icon-spinner11 {
   color: white;
   font-size: 35px;
+}
+header .app-instructions {
+  font-weight: bold;
+  margin-top: 2rem;
 }
 
 /* ===== RECIPE DISPLAY ===== */
@@ -138,4 +163,15 @@ header .icon-spinner11 {
 /* ===== LANDING ===== */
 .quote-section {
   padding: 5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #196160;
+  padding: 5rem 0;
+  width: 100%;
+}
+footer .icon-github {
+  color: white;
+  font-size: 75px;
 }/*# sourceMappingURL=main.css.map */
