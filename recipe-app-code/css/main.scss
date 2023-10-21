@@ -95,7 +95,8 @@ header {
         box-shadow: 3px 3px 5px silver;
         border-radius: 20px;
         .recipe-image {
-            margin: 0;
+            width: 100%;
+            object-fit: cover;
         }
         .recipe-category {
             margin: 0;
