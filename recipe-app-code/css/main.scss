@@ -56,15 +56,7 @@ header {
         border-width: 3px;
     }
 
-    .icon {
-        display: inline-block;
-        color: #444444;
-        width: 1em;
-        height: 1em;
-        fill: currentColor;
-    }
-
-      .icon-search {
+    .icon-search {
         /* Using currentColor above lets
         us use `color` for changing the color
         of our icons: */
@@ -74,13 +66,17 @@ header {
         This allows us to use `font-size`
         to change the size of our icon: */
         font-size: 34px;
-      }
+    }
 
-      .icon-spinner11 {
+    .icon-spinner11 {
         color: white;
         font-size: 35px;
-      }
+    }
     
+    .app-instructions {
+        font-weight: bold;
+        margin-top: 2rem;
+    }
 }
 
 /* ===== RECIPE DISPLAY ===== */
@@ -110,4 +106,16 @@ header {
 
 .quote-section {
     padding: 5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: color.$dark-teal;
+    padding: 5rem 0;
+    width: 100%;
+
+    .icon-github {
+        color: white;
+        font-size: 75px;
+    }
 }
