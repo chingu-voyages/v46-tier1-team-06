@@ -119,9 +119,14 @@ header {
             background-color: color.$dark-teal;
             border: color.$dark-teal;
             border-radius: 15px;
+
+            &:hover {
+                background-color: color.$light-teal;
+            }
         }
     }
 }
+
 
 /* ===== LANDING ===== */
 
