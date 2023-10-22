@@ -23,7 +23,10 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
+article {
+    flex-direction: column;
+    width: 70vw;
+}
 .icon {
 	display: inline-block;
 	color: #444444;
