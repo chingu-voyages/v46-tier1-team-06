@@ -1,7 +1,7 @@
 @charset "utf-8";
-@use 'sass-partials/fonts';
-@use 'sass-partials/color';
-@use 'sass-partials/general-layout';
+@use 'sass-partials/fonts' as fonts;
+@use 'sass-partials/color' as color;
+@use 'sass-partials/general-layout'as general-layout;
  
 
 /* ===== HEADER AND SEARCH BAR ===== */
@@ -79,28 +79,55 @@ header {
     }
 }
 
-/* ===== RECIPE DISPLAY ===== */
+/* ===== RECIPES DISPLAY ===== */
 .recipes {
     width: 85vw;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: stretch;
     padding-top: 3rem;
     .recipe {
+        margin: 0 0.5vw; // small margin left and right, so they never touch
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         box-shadow: 3px 3px 5px silver;
         border-radius: 20px;
-    }
-    .recipe-category {
-        background-color: #58BC82;
-        padding: 0.5rem 0.75rem;
-        align-self: flex-start;
+        .recipe-image {
+            width: 100%;
+        }
+        .recipe-category {
+            margin: 0;
+            padding: 0.5rem 0.75rem;
+            background-color: color.$emerald;
+            align-self: flex-start;
+        }
+        .recipe-title-container {
+            flex-grow: 2;
+            margin: 0;
+            padding: 1rem;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .recipe-button {
+            margin: 0;
+            padding: 10px;
+            width: 80%;
+            background-color: color.$dark-teal;
+            border: color.$dark-teal;
+            border-radius: 15px;
+
+            &:hover, &:focus {
+                background-color: color.$light-teal;
+            }
+        }
     }
 }
+
 
 /* ===== LANDING ===== */
 
