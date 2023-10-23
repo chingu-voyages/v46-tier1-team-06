@@ -7,3 +7,11 @@ const options = {
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
+
+
+fetch(url, options)
+.then(response => response.json())
+.then(data => {
+    localStorage.setItem("recipes", JSON.stringify(data))  // has to be stringified to be in localStorage
+})
+
