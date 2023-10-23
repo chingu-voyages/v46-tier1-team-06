@@ -25,3 +25,6 @@ fetch(url, options)
 })
 */
 
+// get the recipes from localStorage
+const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
+
