@@ -1,3 +1,11 @@
+//variables 
+
+const searchRecipe=document.querySelector(".search-input");
+const recipeList= document.querySelector(".recipe");
+const allRecipes = document.querySelector(".recipes");
+const searchButton=document.querySelector('.search-button')
+const APP_key= 'ca0513b8f5msh784ebae5a83c946p120834jsnafdce15c50f6';
+
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce';
 const options = {
@@ -7,6 +15,15 @@ const options = {
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
+
+/* 
+const getData = async function () {
+const res = await fetch(url, options);
+ const data = await res.json();
+ console.log(data);
+ };
+ getData(); */
+
 
 /* To save calls to the API, this block of javascript will fetch 3 recipes
    from the API and store them to localStorage.  From then on, we can just
