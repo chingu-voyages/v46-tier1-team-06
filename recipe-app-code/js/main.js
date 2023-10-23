@@ -53,3 +53,20 @@ const cookTimeElement = document.createElement("p")
 cookTimeElement.classList.add("newRecipeCookTime")
 cookTimeElement.innerHTML = cookTime;
 apiTest.append(cookTimeElement);
+
+// create an empty ul for the list of ingredients
+const ingredientList = document.createElement("ul")
+
+// make an array of the ingredients from the searchResults stored in "recipes"
+let ingredientArray = recipes.results[0].sections[0].components.map(ingredient => ingredient.raw_text)
+
+// make new list items from the array and append each
+// to the ingredient list DOM ul element
+ingredientArray.forEach(ingredient => {
+  let newListItem = document.createElement("li");
+  newListItem.innerHTML = ingredient;
+  ingredientList.appendChild(newListItem);
+})
+
+// append ingredientList to apiTest for it to show in the DOM
+apiTest.appendChild(ingredientList);
