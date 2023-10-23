@@ -14,7 +14,7 @@ header {
     
     .search-input {
         background-color: color.$green-tea-green;
-        border: none; 
+        border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 50px 0 0 50px;
         font-size: 1.25rem;
         font-weight: bold;
@@ -23,14 +23,9 @@ header {
         min-width: 341px;
     }
 
-    .search-input:hover,
-    .search-input:focus {
-        border-color: color.$dark-forest-green;
-    }
-
     .search-button {
         background-color: color.$dark-teal;
-        border-color: color.$dark-teal;
+        border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 0 50px 50px 0;
         margin-right: 20px;
         padding: 8px 11px;
@@ -39,12 +34,11 @@ header {
     .search-button:hover,
     .search-button:focus {
         background-color: color.$light-teal;
-        border-width: 3px;
     }
 
     .refresh-button {
         background-color: color.$dark-magenta;
-        border-color: color.$dark-magenta;
+        border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 15px;
         height: 55px;
         padding: 0 10px;
@@ -53,7 +47,6 @@ header {
     .refresh-button:hover,
     .refresh-button:focus {
         background-color: color.$light-magenta;
-        border-width: 3px;
     }
 
     .icon-search {
