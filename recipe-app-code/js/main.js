@@ -36,3 +36,20 @@ const title = recipes.results[0].name;
 const thumbnail = recipes.results[0].thumbnail_url;
 const cookTime = recipes.results[0].cook_time_minutes;
 
+// create DOM elements for those items,
+// add classnames, innerHTML,
+// and append to apiTest node in index.html
+const titleElement = document.createElement("h2");
+titleElement.classList.add("newRecipeTitle");
+titleElement.innerHTML = title;
+apiTest.append(titleElement);
+
+const thumbnailElement = document.createElement("img");
+thumbnailElement.classList.add("newRecipeThumbnail");
+thumbnailElement.src = thumbnail;
+apiTest.append(thumbnailElement);
+
+const cookTimeElement = document.createElement("p")
+cookTimeElement.classList.add("newRecipeCookTime")
+cookTimeElement.innerHTML = cookTime;
+apiTest.append(cookTimeElement);
