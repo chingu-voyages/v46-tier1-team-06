@@ -31,3 +31,8 @@ const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed
 // variable that references DOM
 const apiTest = document.querySelector("#api-test");
 
+// gather some of the needed data from the first recipe
+const title = recipes.results[0].name;
+const thumbnail = recipes.results[0].thumbnail_url;
+const cookTime = recipes.results[0].cook_time_minutes;
+
