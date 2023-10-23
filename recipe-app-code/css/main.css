@@ -179,6 +179,7 @@ header .app-instructions {
 }
 .recipes .recipe .recipe-image {
   width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 .recipes .recipe .recipe-category {
   margin: 0;
