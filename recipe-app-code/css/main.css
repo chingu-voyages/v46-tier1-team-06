@@ -103,10 +103,11 @@ article {
 header {
   flex-direction: column;
 }
-header .search-bar-area {
+header .search-container {
   display: flex;
+  flex-direction: row;
 }
-header .search-input {
+header .search-form__input {
   background-color: #C9E8BA;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 50px 0 0 50px;
@@ -116,26 +117,26 @@ header .search-input {
   height: 55px;
   min-width: 341px;
 }
-header .search-button {
+header .search-form__search-button {
   background-color: #196160;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 0 50px 50px 0;
   margin-right: 20px;
   padding: 8px 11px;
 }
-header .search-button:hover,
-header .search-button:focus {
+header .search-form__search-button:hover,
+header .search-form__search-button:focus {
   background-color: #0D9D9B;
 }
-header .refresh-button {
+header .search-form__refresh-button {
   background-color: #8F2D56;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   height: 55px;
   padding: 0 10px;
 }
-header .refresh-button:hover,
-header .refresh-button:focus {
+header .search-form__refresh-button:hover,
+header .search-form__refresh-button:focus {
   background-color: #C5497F;
 }
 header .icon-search {
@@ -199,7 +200,7 @@ header .app-instructions {
   padding: 10px;
   width: 80%;
   background-color: #196160;
-  border: #196160;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
 .recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
