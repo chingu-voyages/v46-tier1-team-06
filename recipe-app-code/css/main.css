@@ -174,4 +174,11 @@ footer {
 footer .icon-github {
   color: white;
   font-size: 75px;
+}
+footer .social {
+  position: absolute;
+  right: 0;
+}
+footer .developer-names {
+  color: white;
 }/*# sourceMappingURL=main.css.map */
