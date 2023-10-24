@@ -34,12 +34,14 @@
 <body>
   <header>
     <h1 class="brand">Zero-Waste Recipe</h1>
-    <form class="search-bar-area">
-      <label for="search-bar">
-        <span class="sr-only">Search the recipe app</span>
-      </label>
-      <input id="search-bar" class="search-input" name="search-bar" type="search" placeholder="lettuce...">
-      <button class="search-button">
+    <div class="search-container">
+      <form class="search-form">
+        <label for="search-bar">
+          <span class="sr-only">Search the recipe app</span>
+        </label>
+        <input id="search-bar" class="search-form__input" name="search-bar" type="search" placeholder="lettuce...">
+      </form>
+      <button class="search-form__search-button">
         <span class="sr-only">Search</span>
         <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs>
@@ -51,8 +53,8 @@
         </svg>
         <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
       </button>
-      <button class="refresh-button" id="refresh-button">
-        <span class="sr-only">Refresh</span>
+      <button id="refresh-button" class="search-form__refresh-button" >
+        <span class="sr-only">Refresh to do a new search</span>
         <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <defs>
             <title>refresh</title>
@@ -63,18 +65,19 @@
         </svg>
         <svg class="icon icon-spinner11"><use xlink:href="#icon-spinner11"></use></svg>
       </button>
-    </form>
-      <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
+    </div>
+    <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
   <section class="recipes">
     <div class="recipe">
-      <img class="recipe-image" src="./img/example1.png" alt="food picture">
+      <img class="recipe-image" src="./img/example1.jpg" alt="food picture">
       <p class="recipe-category">dinner</p>
       <div class="recipe-title-container">
         <h2 class="recipe-title">Chili Prawn Linguine</h2>
       </div>
-      <button class="recipe-button">View Recipe</button>
+      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+      <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
     </div>
     <div class="recipe">
       <img class="recipe-image" src="./img/example2.png" alt="food picture">
@@ -82,7 +85,7 @@
       <div class="recipe-title-container">
         <h2 class="recipe-title">Kapsalo</h2>
       </div>
-      <button class="recipe-button">View Recipe</button>
+      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
     </div>
     <div class="recipe">
       <img class="recipe-image" src="./img/example3.png" alt="food picture">
@@ -90,7 +93,7 @@
       <div class="recipe-title-container">
         <h2 class="recipe-title">Chivito Uruguayo</h2>
       </div>
-      <button class="recipe-button">View Recipe</button>
+      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
     </div>
   </section>
 
