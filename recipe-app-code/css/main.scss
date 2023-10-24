@@ -8,13 +8,14 @@
 header {
     flex-direction: column;
     
-    .search-bar-area {
+    .search-container {
         display: flex;
+        flex-direction: row;
     }
     
-    .search-input {
+    .search-form__input {
         background-color: color.$green-tea-green;
-        border: none; 
+        border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 50px 0 0 50px;
         font-size: 1.25rem;
         font-weight: bold;
@@ -23,37 +24,30 @@ header {
         min-width: 341px;
     }
 
-    .search-input:hover,
-    .search-input:focus {
-        border-color: color.$dark-forest-green;
-    }
-
-    .search-button {
+    .search-form__search-button {
         background-color: color.$dark-teal;
-        border-color: color.$dark-teal;
+        border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 0 50px 50px 0;
         margin-right: 20px;
         padding: 8px 11px;
     }
 
-    .search-button:hover,
-    .search-button:focus {
+    .search-form__search-button:hover,
+    .search-form__search-button:focus {
         background-color: color.$light-teal;
-        border-width: 3px;
     }
 
-    .refresh-button {
+    .search-form__refresh-button {
         background-color: color.$dark-magenta;
-        border-color: color.$dark-magenta;
+        border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 15px;
         height: 55px;
         padding: 0 10px;
     }
     
-    .refresh-button:hover,
-    .refresh-button:focus {
+    .search-form__refresh-button:hover,
+    .search-form__refresh-button:focus {
         background-color: color.$light-magenta;
-        border-width: 3px;
     }
 
     .icon-search {
@@ -97,6 +91,7 @@ header {
         border-radius: 20px;
         .recipe-image {
             width: 100%;
+            border-radius: 20px 20px 0 0;
         }
         .recipe-category {
             margin: 0;
@@ -118,7 +113,7 @@ header {
             padding: 10px;
             width: 80%;
             background-color: color.$dark-teal;
-            border: color.$dark-teal;
+            border: 0.1em solid rgb(0 0 0 / 0.2);
             border-radius: 15px;
 
             &:hover, &:focus {
