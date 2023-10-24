@@ -16,14 +16,15 @@ const options = {
 	}
 };
 
-/* 
+/*
 const getData = async function () {
 const res = await fetch(url, options);
  const data = await res.json();
+ localStorage.setItem("recipes", JSON.stringify(data));
  console.log(data);
  };
- getData(); */
-
+ getData();
+ */
 
 /* To save calls to the API, this block of javascript will fetch 3 recipes
    from the API and store them to localStorage.  From then on, we can just
@@ -39,8 +40,8 @@ fetch(url, options)
 .then(response => response.json())
 .then(data => {
     localStorage.setItem("recipes", JSON.stringify(data))  // has to be stringified to be in localStorage
-})
-*/
+    console.log(data);
+}) */
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
