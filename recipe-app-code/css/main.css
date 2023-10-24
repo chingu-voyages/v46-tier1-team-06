@@ -1,143 +1,242 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+h1, h2, h3, p {
+  color: #384547;
+}
 
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h2, .recipe-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.recipe-button {
+  color: white;
+}
+
+.recipe-category {
+  color: black;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h1, h2, h3, p {
+  color: #384547;
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h2, .recipe-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.recipe-button {
+  color: white;
+}
+
+.recipe-category {
+  color: black;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+section,
+article,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  flex-direction: column;
+  width: 70vw;
+}
+
+.icon {
+  display: inline-block;
+  color: #444444;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* ===== HEADER AND SEARCH BAR ===== */
+header {
+  flex-direction: column;
+}
+header .search-container {
+  display: flex;
+  flex-direction: row;
+}
+header .search-form__input {
+  background-color: #C9E8BA;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
+  border-radius: 50px 0 0 50px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-left: 30px;
+  height: 55px;
+  min-width: 341px;
+}
+header .search-form__search-button {
+  background-color: #196160;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
+  border-radius: 0 50px 50px 0;
+  margin-right: 20px;
+  padding: 8px 11px;
+}
+header .search-form__search-button:hover,
+header .search-form__search-button:focus {
+  background-color: #0D9D9B;
+}
+header .search-form__refresh-button {
+  background-color: #8F2D56;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  height: 55px;
+  padding: 0 10px;
+}
+header .search-form__refresh-button:hover,
+header .search-form__refresh-button:focus {
+  background-color: #C5497F;
+}
+header .icon-search {
+  /* Using currentColor above lets
+  us use `color` for changing the color
+  of our icons: */
+  color: white;
+  /* The width and height of the SVG
+  was previously set to 1em.
+  This allows us to use `font-size`
+  to change the size of our icon: */
+  font-size: 34px;
+}
+header .icon-spinner11 {
+  color: white;
+  font-size: 35px;
+}
+header .app-instructions {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+/* ===== RECIPES DISPLAY ===== */
+.recipes {
+  width: 85vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding-top: 3rem;
+}
+.recipes .recipe {
+  margin: 0 0.5vw;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 3px 3px 5px silver;
+  border-radius: 20px;
+}
+.recipes .recipe .recipe-image {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.recipes .recipe .recipe-category {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  background-color: #58BC82;
+  align-self: flex-start;
+}
+.recipes .recipe .recipe-title-container {
+  flex-grow: 2;
+  margin: 0;
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipes .recipe .recipe-button {
+  margin: 0;
+  padding: 10px;
+  width: 80%;
+  background-color: #196160;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+.recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
+  background-color: #0D9D9B;
+}
+
+/* ===== LANDING ===== */
+.quote-section {
+  padding: 5rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #196160;
+  padding: 5rem 0;
+  width: 100%;
+}
+footer .icon-github {
+  color: white;
+  font-size: 75px;
+}
+
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-/* Starter Code */
-   @charset "UTF-8";
-   
-   *,
-   *::before,
-   *::after {
-     box-sizing: border-box;
-   }
-   
-   html {
-     border: 0;
-     font-size: 1 rem;
-     margin: 0;
-     padding: 0;
-     height: 100%;
-   }
-   
-   body {  
-    color: #102e96;
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    margin: 1rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .content-wrapper {
-    max-width: 700px;
-  }
-
-  img {
-    width: 100%;
-    margin: 0;
-  }
-
-  h1,
-  h2 {
-    text-align: center;
-  }
-
-  /* Starter Code End */
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers
  */
-
 .hidden,
 [hidden] {
   display: none !important;
@@ -151,7 +250,6 @@ textarea {
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -170,7 +268,6 @@ textarea {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -185,122 +282,6 @@ textarea {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
   visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
+}/*# sourceMappingURL=main.css.map */

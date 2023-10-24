@@ -1,28 +1,29 @@
-# voyage-tasks
+# Zero-Waste Recipes
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Overview:
+Reduce food waste by searching our database for an ingredient that you have getting ready to spoil in your refrigerator or pantry.  You'll get a list of delicious recipes made with that exact ingredient.
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+## Features:
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+- Design comp built on Figma, including mobile and tablet versions
+    - All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+    - Fonts no smaller than 16px, larger readable recipe cards
+- Sass: variables, partials, and nesting
+- Built using Agile principles and SCRUM methodology in a series of sprints
+- Our team frequently employed pair programming to teach other Sass and work on Javascript together
+- Semantic Accessible layout:
+    - BEM for classes for easy readbility for anyone reading the code
+    - All buttons inputs and icons are labeled for screen readers
+    - The "View Recipes" buttons have an additional `aria-describedby`
+attirbute so that people who use screen readers are forewarned that a modal will be opening up
+- Vanilla Javascript that prioritizes readability
+    - Async fetch functions
 
-> Own it & Make it your Own!
+## Running the Project:
+- Deployed to: [GH-Pages](link)
+- [Github Repo](https://github.com/chingu-voyages/v46-tier1-team-06)
 
-## Team Documents
+## Dependencies:
 
-You may find these helpful as you work together to organize your project.
+**TastyAPI**  Our app fetches recipes from the TastyAPI found at [Rapid API: Tasty API](https://rapidapi.com/apidojo/api/tasty).  The call is made to the `recipes/list` endpoint.
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
-
-Meeting Agenda templates (located in the `/docs` directory in this repo):
-
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx

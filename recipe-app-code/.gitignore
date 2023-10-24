@@ -5,3 +5,4 @@ node_modules
 dist
 .cache
 .DS_Store
+css/main.css.map
