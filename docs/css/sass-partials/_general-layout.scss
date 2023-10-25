@@ -1,0 +1,36 @@
+@use 'color';
+@import 'fonts';
+
+* {
+    box-sizing: border-box;
+}
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    font-family: $default-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header,
+section,
+article,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article {
+    flex-direction: column;
+    width: 70vw;
+}
+.icon {
+	display: inline-block;
+	color: #444444;
+    width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
