@@ -6,12 +6,13 @@ const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
 
+const allRecipesContainer = document.querySelector(".recipes");
+const recipeList = document.querySelector(".recipe-list");
+
 // gather some of the needed data from the first recipe
 const title = recipes.results[0].name;
 const thumbnail = recipes.results[0].thumbnail_url;
 const cookTime = recipes.results[0].cook_time_minutes;
-
-const recipeList = document.createElement("ul");
 
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce';
