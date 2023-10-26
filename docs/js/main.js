@@ -48,7 +48,6 @@ const showRecipes = function (recipes) {
                     <h2 class="recipe-title">${title}</h2>
                 </div>
                 <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-                <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
             </div>
       `;
         recipeList.append(recipeObject);
