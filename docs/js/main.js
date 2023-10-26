@@ -47,9 +47,10 @@ fetch(url, options)
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
 // variable that references DOM
-const apiTest = document.querySelector("#api-test");
-const titleTest = document.querySelector(".recipe-title");
-const thumbnailTest = document.querySelector(".image-container");
+// const apiTest = document.querySelector("#api-test");
+const recipeTitle = document.querySelector(".recipe-title");
+const recipeThumbnail = document.querySelector(".recipe-image-container");
+const recipeCategory = document.querySelector(".recipe-category");
 
 // gather some of the needed data from the first recipe
 const title = recipes.results[0].name;
