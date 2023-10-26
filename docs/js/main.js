@@ -74,6 +74,33 @@ cookTimeElement.classList.add("newRecipeCookTime")
 cookTimeElement.innerHTML = cookTime;
 apiTest.append(cookTimeElement);
 
+/* const showRepos = function (repos) {
+    filterInput.classList.remove("hide");
+    for (const repo of repos) {
+        const repoObject = document.createElement("li");
+        repoObject.classList.add("repo");
+        repoObject.innerHTML = `<h3>${repo.name}</h3>`
+        repoList.append(repoObject);
+    }
+}; */
+
+/* if(data.meals){
+    data.meals.forEach(meal => {
+        html += `
+            <div class = "meal-item" data-id = "${meal.idMeal}">
+            
+                    <div class = "meal-img">
+                        <img src = "${meal.strMealThumb}" alt = "food">
+                    </div>
+                    <div class = "meal-name">
+                        <h3>${meal.strMeal}</h3>
+                        <a href = "#" class = "recipe-btn">Get Recipe</a>
+                    </div>
+      
+            </div>
+        `;
+    }); */
+
 // create an empty ul for the list of ingredients
 const ingredientList = document.createElement("ul")
 
