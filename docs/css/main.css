@@ -103,7 +103,7 @@ article {
 header {
   flex-direction: column;
 }
-header .search-container {
+header .search-form {
   display: flex;
   flex-direction: row;
 }
