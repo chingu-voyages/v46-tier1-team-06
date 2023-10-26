@@ -33,9 +33,9 @@ const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed
 
 
 const showRecipes = function (recipes) {
-    for (const key in recipes) {
-        const title = recipes[key].name;
-        const thumbnail = recipes[key].thumbnail_url;
+    for (const recipe in recipes) {
+        const title = recipes[recipe].name;
+        const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe-card");
         recipeObject.innerHTML = `
