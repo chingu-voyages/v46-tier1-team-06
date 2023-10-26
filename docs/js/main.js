@@ -11,6 +11,8 @@ const title = recipes.results[0].name;
 const thumbnail = recipes.results[0].thumbnail_url;
 const cookTime = recipes.results[0].cook_time_minutes;
 
+const recipeList = document.createElement("ul");
+
 /*
 const searchRecipe=document.querySelector(".search-input");
 const recipeList= document.querySelector(".recipe");
@@ -96,8 +98,7 @@ apiTest.append(cookTimeElement); */
     }
 }; */
 
-/* if(data.meals){
-    data.meals.forEach(meal => {
+/*  data.meals.forEach(meal => {
         html += `
             <div class = "meal-item" data-id = "${meal.idMeal}">
             
