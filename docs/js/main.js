@@ -6,6 +6,11 @@ const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
 
+// gather some of the needed data from the first recipe
+const title = recipes.results[0].name;
+const thumbnail = recipes.results[0].thumbnail_url;
+const cookTime = recipes.results[0].cook_time_minutes;
+
 /*
 const searchRecipe=document.querySelector(".search-input");
 const recipeList= document.querySelector(".recipe");
@@ -32,8 +37,7 @@ const res = await fetch(url, options);
  console.log(data);
  };
  getData();
- */
-
+*/
 /* To save calls to the API, this block of javascript will fetch 3 recipes
    from the API and store them to localStorage.  From then on, we can just
    use the data in localStorage to work on developing our Detailed Recipe
@@ -54,15 +58,10 @@ fetch(url, options)
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
-// gather some of the needed data from the first recipe
-const title = recipes.results[0].name;
-const thumbnail = recipes.results[0].thumbnail_url;
-const cookTime = recipes.results[0].cook_time_minutes;
-
 // create DOM elements for those items,
 // add classnames, innerHTML,
 // and append to apiTest node in index.html
-const titleElement = document.createElement("h2");
+/* const titleElement = document.createElement("h2");
 titleElement.classList.add("newRecipeTitle");
 titleElement.innerHTML = title;
 titleTest.append(titleElement);
@@ -75,15 +74,25 @@ thumbnailTest.append(thumbnailElement);
 const cookTimeElement = document.createElement("p")
 cookTimeElement.classList.add("newRecipeCookTime")
 cookTimeElement.innerHTML = cookTime;
-apiTest.append(cookTimeElement);
+apiTest.append(cookTimeElement); */
 
-/* const showRepos = function (repos) {
-    filterInput.classList.remove("hide");
-    for (const repo of repos) {
-        const repoObject = document.createElement("li");
-        repoObject.classList.add("repo");
-        repoObject.innerHTML = `<h3>${repo.name}</h3>`
-        repoList.append(repoObject);
+/* const showRecipes = function (recipes) {
+    for (const recipe of recipes) {
+        const recipeObject = document.createElement("li");
+        recipeObject.classList.add("recipes");
+        repoObject.innerHTML =
+            `<div class="recipe">
+                <div class="recipe-image-container">
+        <!-- <img class="recipe-image" src="./img/example2.png" alt="food picture"> -->
+                </div>
+      <p class="recipe-category">dinner</p>
+      <div class="recipe-title-container">
+        <h2 class="recipe-title"><!-- Recipe Title --></h2>
+      </div>
+      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+      <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
+    </div>`
+        recipes.append(recipeObject);
     }
 }; */
 
