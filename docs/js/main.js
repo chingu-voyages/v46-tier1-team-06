@@ -35,3 +35,12 @@ const res = await fetch(url, options);
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
+
+const showRepos = function (repos) {
+    for (const repo of repos) {
+        const repoObject = document.createElement("li");
+        repoObject.classList.add("repo");
+        repoObject.innerHTML = `<h3>${repo.name}</h3>`
+        repoList.append(repoObject);
+    }
+};
