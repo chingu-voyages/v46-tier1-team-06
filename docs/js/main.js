@@ -9,7 +9,7 @@ const recipeCategory = document.querySelector(".recipe-category");
 
 const allRecipesContainer = document.querySelector(".recipes");
 const recipeList = document.querySelector(".recipe-list");
-const search = document.querySelector(".search-form__search-button");
+const searchButton = document.querySelector(".search-form__search-button");
 
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
@@ -61,4 +61,6 @@ const showRecipes = function (recipes) {
 
 showRecipes(recipes);
 
-
+searchButton.addEventListener("click", function (e) {
+    searchButton.style.backgroundColor="red";
+});
