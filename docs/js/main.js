@@ -2,12 +2,14 @@
 
 // variables that references DOM
 // const apiTest = document.querySelector("#api-test");
+
 const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
 
 const allRecipesContainer = document.querySelector(".recipes");
 const recipeList = document.querySelector(".recipe-list");
+const search = document.querySelector(".search-form__search-button");
 
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
@@ -19,15 +21,16 @@ const options = {
 	}
 };
 
+/*
 const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
      console.log(data.results);
-};
+}; 
      
 getData();
-
+*/
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
@@ -57,3 +60,5 @@ const showRecipes = function (recipes) {
 };
 
 showRecipes(recipes);
+
+
