@@ -1,7 +1,6 @@
 //variables 
 
 // variables that references DOM
-// const apiTest = document.querySelector("#api-test");
 const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
