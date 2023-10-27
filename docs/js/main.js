@@ -57,29 +57,31 @@ const showRecipes = function (recipes) {
     }
 };
 
-/*searchButton.addEventListener("click", getRecipeList);*/
+searchButton.addEventListener("click", getRecipeList);
 
 /*const searchText = document.getElementById('search-bar').value.trim();
 const lowerCaseSearch = searchText.toLowerCase();*/
+const ingredientsArray = [];
 const makeIngredientsArray = function (recipes) {
-    const ingredientsArray = [];
     for (let recipe in recipes) {
         const searchIngredients = recipes[recipe].sections[0].components;
         ingredientsArray.push(searchIngredients);
     }
+    return ingredientsArray;
 }
 makeIngredientsArray(recipes);
 
-    /*for (let ingredient of ingredientsArray) {
-        for (const recipe in recipes) {
-            const ingredientsLowerCase = searchIngredients.innerText.toLowerCase();
+function getRecipeList (ingredientsArray) {
+    for (let ingredient of ingredientsArray) {
+        for (const key in ingredient) {
+            /* const ingredientsLowerCase = searchIngredients.innerText.toLowerCase();
             if (ingredientsLowerCase.includes(lowerCaseSearch)) {
                 showRecipes(recipes);
             } else {
                 recipeList.innerHTML = "Sorry, item not found!";
-            }
+            }*/
+            console.log(ingredient[key]);
         }
-    }*/
-
-/*function getRecipeList () {
-};*/
+    }
+};
+getRecipeList(ingredientsArray);
