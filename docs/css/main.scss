@@ -75,8 +75,10 @@ header {
 
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
+    padding-top: 3rem;
     width: 85vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
     padding-top: 3rem;
@@ -87,8 +89,8 @@ header {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        box-shadow: 3px 3px 5px silver;
         border-radius: 20px;
+        box-shadow: 3px 3px 5px silver;
         .recipe-image {
             width: 100%;
             border-radius: 20px 20px 0 0;
