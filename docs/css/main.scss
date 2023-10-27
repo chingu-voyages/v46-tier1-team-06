@@ -74,8 +74,8 @@ header {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes {
-    width: 85vw;
+.recipes-container {
+    width: 50vw;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
@@ -99,7 +99,7 @@ header {
             background-color: color.$emerald;
             align-self: flex-start;
         }
-        .recipe-title-container {
+        .recipe-title__container {
             flex-grow: 2;
             margin: 0;
             padding: 1rem;
