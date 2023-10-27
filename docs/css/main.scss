@@ -83,7 +83,7 @@ header {
     align-items: stretch;
     gap: 20px;
     .recipe {
-        margin: 0 0.5vw; // small margin left and right, so they never touch
+        width: 350px;
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
