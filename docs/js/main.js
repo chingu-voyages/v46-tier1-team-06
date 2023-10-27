@@ -63,3 +63,7 @@ const showRecipes = function (recipes) {
 showRecipes(recipes);
 
 searchButton.addEventListener("click", getRecipeList);
+
+function getRecipeList () {
+    console.log("I'm working!");
+};
