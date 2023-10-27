@@ -74,12 +74,15 @@ header {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes {
-    width: 85vw;
+.recipes-container {
+    width: 50vw;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
     padding-top: 3rem;
+    .recipe-list{
+        list-style-type: none;
+    }
     .recipe {
         margin: 0 0.5vw; // small margin left and right, so they never touch
         padding-bottom: 2rem;
@@ -99,7 +102,7 @@ header {
             background-color: color.$emerald;
             align-self: flex-start;
         }
-        .recipe-title-container {
+        .recipe-title__container {
             flex-grow: 2;
             margin: 0;
             padding: 1rem;
