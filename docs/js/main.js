@@ -62,11 +62,13 @@ const showRecipes = function (recipes) {
 
 showRecipes(recipes);
 
-searchButton.addEventListener("click", getRecipeList);
+/*searchButton.addEventListener("click", getRecipeList);*/
 
-function getRecipeList () {
-    searchInput.addEventListener("input", function (e) {
-        const searchText = e.target.value;
-        console.log(searchText);
-      });
-};
+searchInput.addEventListener("input", function (e) {
+    const searchText = e.target.value;
+    console.log(searchText);
+});
+
+/* function getRecipeList () {
+    
+}; */
