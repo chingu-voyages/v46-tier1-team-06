@@ -81,7 +81,7 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    padding-top: 3rem;
+    gap: 20px;
     .recipe {
         margin: 0 0.5vw; // small margin left and right, so they never touch
         padding-bottom: 2rem;
