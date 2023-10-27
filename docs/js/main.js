@@ -15,7 +15,6 @@ const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
-     console.log(data.results);
 };
      
 getData();
