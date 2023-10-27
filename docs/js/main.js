@@ -5,7 +5,7 @@ const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
 
-const allRecipesContainer = document.querySelector(".recipes");
+const allRecipesContainer = document.querySelector(".recipes-container");
 const recipeList = document.querySelector(".recipe-list");
 const searchButton = document.querySelector(".search-form__search-button");
 const searchInput = document.querySelector(".search-form__input");
@@ -47,7 +47,7 @@ const showRecipes = function (recipes) {
                     <img class="recipe-image" src="${thumbnail}" alt="food picture">
                 </figure>
                 <p class="recipe-category">dinner</p>
-                <div class="recipe-title-container">
+                <div class="recipe-title__container">
                     <h2 class="recipe-title">${title}</h2>
                 </div>
                 <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
