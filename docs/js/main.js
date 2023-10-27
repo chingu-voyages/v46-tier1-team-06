@@ -59,10 +59,16 @@ const showRecipes = function (recipes) {
 
 /*searchButton.addEventListener("click", getRecipeList);*/
 
-const searchText = document.getElementById('search-bar').value.trim();
-    const lowerCaseSearch = searchText.toLowerCase();
-    const searchIngredients = recipes[recipe].sections[0].components;
-    const ingredientsArray = recipes[recipe].sections[0].components;
+/*const searchText = document.getElementById('search-bar').value.trim();
+const lowerCaseSearch = searchText.toLowerCase();*/
+const makeIngredientsArray = function (recipes) {
+    for (const recipe in recipes) {
+        const searchIngredients = recipes[recipe].sections[0].components;
+        console.log(searchIngredients);
+        /*const ingredientsArray = []*/
+    }
+}
+makeIngredientsArray(recipes);
 
     /*for (let ingredient of ingredientsArray) {
         for (const recipe in recipes) {
