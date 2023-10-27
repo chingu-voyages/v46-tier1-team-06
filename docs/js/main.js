@@ -66,5 +66,6 @@ searchButton.addEventListener("click", getRecipeList);
 
 function getRecipeList () {
     const searchText = document.getElementById('search-bar').value.trim();
-    console.log(searchText);
+    const lowerCaseSearch = searchText.toLowerCase();
+    console.log(lowerCaseSearch);
 };
