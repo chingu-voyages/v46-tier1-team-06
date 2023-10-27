@@ -1,12 +1,5 @@
-//variables 
-
-// variables that references DOM
-const recipeTitle = document.querySelector(".recipe-title");
-const recipeThumbnail = document.querySelector(".recipe-image-container");
-const recipeCategory = document.querySelector(".recipe-category");
-
-const allRecipesContainer = document.querySelector(".recipes");
-const recipeList = document.querySelector(".recipe-list");
+// DOM reference constant
+const recipeList = document.querySelector("#api-test-recipe-list");
 
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
