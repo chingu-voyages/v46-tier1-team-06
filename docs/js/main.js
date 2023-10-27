@@ -57,10 +57,6 @@ const showRecipes = function (recipes) {
     }
 };
 
-searchButton.addEventListener("click", getRecipeList);
-
-/*const searchText = document.getElementById('search-bar').value.trim();
-const lowerCaseSearch = searchText.toLowerCase();*/
 const ingredientsArray = [];
 const makeIngredientsArray = function (recipes) {
     for (let recipe in recipes) {
@@ -72,16 +68,19 @@ const makeIngredientsArray = function (recipes) {
 makeIngredientsArray(recipes);
 
 function getRecipeList (ingredientsArray) {
-    for (let ingredient of ingredientsArray) {
-        for (const key in ingredient) {
-            /* const ingredientsLowerCase = searchIngredients.innerText.toLowerCase();
+    for (let ingredients of ingredientsArray) {
+        for (const key in ingredients) {
+            const searchText = document.getElementById('search-bar').value.trim();
+            const lowerCaseSearch = searchText.toLowerCase();
+            const ingredientsLowerCase = ingredients[key].innerText.toLowerCase();
             if (ingredientsLowerCase.includes(lowerCaseSearch)) {
                 showRecipes(recipes);
             } else {
                 recipeList.innerHTML = "Sorry, item not found!";
-            }*/
-            console.log(ingredient[key]);
+            }
+            /*console.log(ingredient[key]);*/
         }
     }
 };
-getRecipeList(ingredientsArray);
+searchButton.addEventListener("click", getRecipeList(ingredientsArray));
+console.log(getRecipeList(ingredientsArray));
