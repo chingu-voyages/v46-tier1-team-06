@@ -1,11 +1,6 @@
 //variables 
 
 // variables that references DOM
-<<<<<<< HEAD
-// const apiTest = document.querySelector("#api-test");
-
-=======
->>>>>>> development
 const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
@@ -69,5 +64,5 @@ searchButton.addEventListener("click", getRecipeList);
 function getRecipeList () {
     const searchText = document.getElementById('search-bar').value.trim();
     const lowerCaseSearch = searchText.toLowerCase();
-    
+    const searchIngredients = recipes[recipe].sections[0].components;
 };
