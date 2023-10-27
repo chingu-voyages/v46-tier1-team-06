@@ -24,7 +24,6 @@ getData();
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
-
 const showRecipes = function (recipes) {
     for (const recipe in recipes) {
         const title = recipes[recipe].name;
@@ -33,6 +32,11 @@ const showRecipes = function (recipes) {
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
             <img class="recipe-image" src="${thumbnail}" alt="food picture">
+            <p class="recipe-category">dinner</p>
+            <div class="recipe-title-container">
+                <h2 class="recipe-title">${title}</h2>
+            </div>
+            <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         recipeList.append(recipeObject);
     }
