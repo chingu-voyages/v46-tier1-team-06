@@ -62,13 +62,9 @@ const showRecipes = function (recipes) {
 
 showRecipes(recipes);
 
-/*searchButton.addEventListener("click", getRecipeList);*/
+searchButton.addEventListener("click", getRecipeList);
 
-searchInput.addEventListener("input", function (e) {
-    const searchText = e.target.value;
+function getRecipeList () {
+    const searchText = document.getElementById('search-bar').value.trim();
     console.log(searchText);
-});
-
-/* function getRecipeList () {
-    
-}; */
+};
