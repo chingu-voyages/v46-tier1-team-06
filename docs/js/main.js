@@ -62,10 +62,10 @@ const showRecipes = function (recipes) {
 /*const searchText = document.getElementById('search-bar').value.trim();
 const lowerCaseSearch = searchText.toLowerCase();*/
 const makeIngredientsArray = function (recipes) {
-    for (const recipe in recipes) {
+    const ingredientsArray = [];
+    for (let recipe in recipes) {
         const searchIngredients = recipes[recipe].sections[0].components;
-        console.log(searchIngredients);
-        /*const ingredientsArray = []*/
+        ingredientsArray.push(searchIngredients);
     }
 }
 makeIngredientsArray(recipes);
