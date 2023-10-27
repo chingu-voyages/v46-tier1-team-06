@@ -1,7 +1,6 @@
 //variables 
 
 // variables that references DOM
-// const apiTest = document.querySelector("#api-test");
 const recipeTitle = document.querySelector(".recipe-title");
 const recipeThumbnail = document.querySelector(".recipe-image-container");
 const recipeCategory = document.querySelector(".recipe-category");
@@ -34,9 +33,9 @@ const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed
 
 
 const showRecipes = function (recipes) {
-    for (const key in recipes) {
-        const title = recipes[key].name;
-        const thumbnail = recipes[key].thumbnail_url;
+    for (const recipe in recipes) {
+        const title = recipes[recipe].name;
+        const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe-card");
         recipeObject.innerHTML = `
@@ -49,7 +48,6 @@ const showRecipes = function (recipes) {
                     <h2 class="recipe-title">${title}</h2>
                 </div>
                 <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-                <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
             </div>
       `;
         recipeList.append(recipeObject);
