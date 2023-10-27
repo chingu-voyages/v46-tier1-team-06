@@ -65,5 +65,8 @@ showRecipes(recipes);
 searchButton.addEventListener("click", getRecipeList);
 
 function getRecipeList () {
-    console.log("I'm working!");
+    searchInput.addEventListener("input", function (e) {
+        const searchText = e.target.value;
+        console.log(searchText);
+      });
 };
