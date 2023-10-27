@@ -11,14 +11,15 @@ const options = {
 	}
 };
 
+/*
 const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
 };
-     
-getData();
 
+getData();
+*/
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
@@ -41,7 +42,7 @@ const showRecipes = function (recipes) {
                 </div>
                 <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
             </div>
-      `;
+        `;
         recipeList.append(recipeObject);
     }
 };
