@@ -76,12 +76,13 @@ header {
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
     padding-top: 3rem;
-    width: 85vw;
+    width: 50vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
     gap: 20px;
+  
     .recipe {
         width: 350px;
         padding-bottom: 2rem;
@@ -103,7 +104,7 @@ header {
             background-color: color.$emerald;
             align-self: flex-start;
         }
-        .recipe-title-container {
+        .recipe-title__container {
             flex-grow: 2;
             margin: 0;
             padding: 1rem;
