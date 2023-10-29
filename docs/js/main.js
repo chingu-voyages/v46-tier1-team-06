@@ -1,5 +1,8 @@
 // DOM reference constant
 const recipeList = document.querySelector(".recipes");
+const searchBtn = document.querySelector(".search-form__search-button");
+const searchBarInput = document.querySelector('#search-bar');
+const searchForm = document.querySelector('form.search-form')
 
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
