@@ -162,7 +162,7 @@ header .app-instructions {
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
   padding-top: 3rem;
-  width: 85vw;
+  width: 75vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -170,7 +170,7 @@ header .app-instructions {
   gap: 20px;
 }
 .recipes .recipe {
-  width: 350px;
+  width: 310px;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -180,8 +180,8 @@ header .app-instructions {
   box-shadow: 3px 3px 5px silver;
 }
 .recipes .recipe .recipe-image {
-  width: 350px;
-  height: 350px;
+  width: 310px;
+  height: 273px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;

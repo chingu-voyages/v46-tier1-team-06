@@ -76,7 +76,7 @@ header {
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
     padding-top: 3rem;
-    width: 85vw;
+    width: 75vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -84,7 +84,7 @@ header {
     gap: 20px;
   
     .recipe {
-        width: 350px;
+        width: 310px;
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
@@ -93,8 +93,8 @@ header {
         border-radius: 20px;
         box-shadow: 3px 3px 5px silver;
         .recipe-image {
-            width: 350px;
-            height: 350px;
+            width: 310px;
+            height: 273px;
             object-fit: cover;
             border-radius: 20px 20px 0 0;
         }
