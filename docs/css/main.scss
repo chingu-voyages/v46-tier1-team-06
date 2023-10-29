@@ -157,6 +157,13 @@ header {
         margin:20px;
         align-items: center;
         text-align: center;
+        .img-container {
+            img {
+                width: 325px;
+                height: 230px;
+                object-fit: cover;
+            }
+        }
         .title-container {
             .meal-label {
                 padding: 5px 28px;
