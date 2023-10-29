@@ -27,6 +27,17 @@ getData();
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
+//event listeners
+searchBtn.addEventListener('click', () => {
+    console.log("You clicked")
+});
+searchForm.addEventListener('submit', e => {
+    //prevent the normal submission of the form
+    e.preventDefault();
+    var recipeInput = document.getElementById("search-bar")
+    console.log(recipeInput.value)
+});
+
 const showRecipes = function (recipes) {
     for (const recipe in recipes) {
         const title = recipes[recipe].name;
