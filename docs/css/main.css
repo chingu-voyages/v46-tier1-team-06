@@ -160,46 +160,48 @@ header .app-instructions {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes-container {
-  width: 50vw;
+.recipes {
+  padding-top: 3rem;
+  width: 85vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
-  padding-top: 3rem;
+  gap: 20px;
 }
-.recipes-container .recipe-list {
-  list-style-type: none;
-}
-.recipes-container .recipe {
-  margin: 0 0.5vw;
+.recipes .recipe {
+  width: 350px;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 3px 3px 5px silver;
   border-radius: 20px;
+  box-shadow: 3px 3px 5px silver;
 }
-.recipes-container .recipe .recipe-image {
-  width: 100%;
+.recipes .recipe .recipe-image {
+  width: 350px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.recipes-container .recipe .recipe-category {
+.recipes .recipe .recipe-category {
   margin: 0;
   padding: 0.5rem 0.75rem;
   background-color: #58BC82;
   align-self: flex-start;
 }
-.recipes-container .recipe .recipe-title__container {
+.recipes .recipe .recipe-title__container {
   flex-grow: 2;
   margin: 0;
   padding: 1rem;
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.recipes-container .recipe .recipe-button {
+.recipes .recipe .recipe-button {
   margin: 0;
   padding: 10px;
   width: 80%;
@@ -207,7 +209,7 @@ header .app-instructions {
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
-.recipes-container .recipe .recipe-button:hover, .recipes-container .recipe .recipe-button:focus {
+.recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
 }
 

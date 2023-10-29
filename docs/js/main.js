@@ -1,12 +1,5 @@
-//variables 
-
-// variables that references DOM
-const recipeTitle = document.querySelector(".recipe-title");
-const recipeThumbnail = document.querySelector(".recipe-image-container");
-const recipeCategory = document.querySelector(".recipe-category");
-
-const allRecipesContainer = document.querySelector(".recipes-container");
-const recipeList = document.querySelector(".recipe-list");
+// DOM reference constant
+const recipeList = document.querySelector(".recipes");
 
 // Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
@@ -18,38 +11,33 @@ const options = {
 	}
 };
 
+/*
 const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
-     console.log(data.results);
 };
-     
-getData();
 
+getData();
+*/
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
-
 
 const showRecipes = function (recipes) {
     for (const recipe in recipes) {
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
-        recipeObject.classList.add("recipe-card");
+        recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
-            <div class="recipe">
-                <figure>
-                    <img class="recipe-image" src="${thumbnail}" alt="food picture">
-                </figure>
-                <p class="recipe-category">dinner</p>
-                <div class="recipe-title__container">
-                    <h2 class="recipe-title">${title}</h2>
-                </div>
-                <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+            <img class="recipe-image" src="${thumbnail}" alt="food picture">
+            <p class="recipe-category">dinner</p>
+            <div class="recipe-title__container">
+                <h2 class="recipe-title">${title}</h2>
             </div>
-      `;
+            <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+        `;
         recipeList.append(recipeObject);
     }
 };

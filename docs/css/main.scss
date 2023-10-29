@@ -74,26 +74,28 @@ header {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes-container {
-    width: 50vw;
+.recipes {
+    padding-top: 3rem;
+    width: 85vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    padding-top: 3rem;
-    .recipe-list{
-        list-style-type: none;
-    }
+    gap: 20px;
+  
     .recipe {
-        margin: 0 0.5vw; // small margin left and right, so they never touch
+        width: 350px;
         padding-bottom: 2rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        box-shadow: 3px 3px 5px silver;
         border-radius: 20px;
+        box-shadow: 3px 3px 5px silver;
         .recipe-image {
-            width: 100%;
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
             border-radius: 20px 20px 0 0;
         }
         .recipe-category {
@@ -106,7 +108,7 @@ header {
             flex-grow: 2;
             margin: 0;
             padding: 1rem;
-            width: 50%;
+            width: 70%;
             display: flex;
             justify-content: center;
             align-items: center;
