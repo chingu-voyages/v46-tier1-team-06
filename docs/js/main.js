@@ -4,7 +4,7 @@ const searchBtn = document.querySelector(".search-form__search-button");
 const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form')
 
-// Constants needed for fetching 3 recipes from the TastyAPI for 'lettuce'
+// Constants needed for fetching from the TastyAPI
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
 const options = {
 	method: 'GET',
@@ -14,15 +14,13 @@ const options = {
 	}
 };
 
-/*
-const getData = async function () {
+/*const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
 };
 
-getData();
-*/
+getData();*/
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
