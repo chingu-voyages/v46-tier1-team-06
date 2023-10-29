@@ -218,6 +218,51 @@ header .app-instructions {
   padding: 5rem;
 }
 
+/* ===== MODAL ===== */
+#modal {
+  margin: 0px auto;
+  padding: 0px;
+  font-family: "Open Sans";
+  width: 950px;
+  background-color: #8F2D56;
+}
+#modal h1, #modal h2, #modal ul, #modal ol {
+  color: white;
+}
+#modal .exit-button {
+  background-color: #196160;
+  border-radius: 50%;
+  padding: 5px 5px;
+  color: white;
+  float: right;
+  margin-right: 50px;
+}
+#modal .img-title-row {
+  display: flex;
+  flex: 2;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+}
+#modal .img-title-row .img-container img {
+  width: 325px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#modal .img-title-row .title-container .meal-label {
+  padding: 5px 28px;
+  background-color: #58BC82;
+  width: 225px;
+  border-radius: 20%;
+}
+#modal .ingredients {
+  margin: 50px;
+}
+#modal .instructions {
+  margin: 50px;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background-color: #196160;
