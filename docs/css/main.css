@@ -169,7 +169,6 @@ header .app-instructions {
   align-items: stretch;
   gap: 20px;
 }
-
 .recipes .recipe {
   width: 350px;
   padding-bottom: 2rem;
@@ -187,13 +186,13 @@ header .app-instructions {
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.recipes-container .recipe .recipe-category {
+.recipes .recipe .recipe-category {
   margin: 0;
   padding: 0.5rem 0.75rem;
   background-color: #58BC82;
   align-self: flex-start;
 }
-.recipes-container .recipe .recipe-title__container {
+.recipes .recipe .recipe-title__container {
   flex-grow: 2;
   margin: 0;
   padding: 1rem;
@@ -202,7 +201,7 @@ header .app-instructions {
   justify-content: center;
   align-items: center;
 }
-.recipes-container .recipe .recipe-button {
+.recipes .recipe .recipe-button {
   margin: 0;
   padding: 10px;
   width: 80%;
@@ -210,7 +209,7 @@ header .app-instructions {
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
-.recipes-container .recipe .recipe-button:hover, .recipes-container .recipe .recipe-button:focus {
+.recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
 }
 
