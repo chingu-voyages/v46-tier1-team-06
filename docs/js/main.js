@@ -5,7 +5,7 @@ const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form')
 
 // Constants needed for fetching from the TastyAPI
-const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce';
+let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce`;
 const options = {
 	method: 'GET',
 	headers: {
