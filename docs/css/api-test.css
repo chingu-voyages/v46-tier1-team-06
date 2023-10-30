@@ -1,9 +1,8 @@
 #api-test {
+    padding: 10px 50px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-
-    img {
-        width: 35vw;
-    }
+    border: 0.5pt solid gray;
 }

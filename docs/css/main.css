@@ -160,46 +160,48 @@ header .app-instructions {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes-container {
-  width: 50vw;
+.recipes {
+  padding-top: 3rem;
+  width: 75vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
-  padding-top: 3rem;
+  gap: 20px;
 }
-.recipes-container .recipe-list {
-  list-style-type: none;
-}
-.recipes-container .recipe {
-  margin: 0 0.5vw;
+.recipes .recipe {
+  width: 310px;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 3px 3px 5px silver;
   border-radius: 20px;
+  box-shadow: 3px 3px 5px silver;
 }
-.recipes-container .recipe .recipe-image {
-  width: 100%;
+.recipes .recipe .recipe-image {
+  width: 310px;
+  height: 273px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.recipes-container .recipe .recipe-category {
+.recipes .recipe .recipe-category {
   margin: 0;
   padding: 0.5rem 0.75rem;
   background-color: #58BC82;
   align-self: flex-start;
 }
-.recipes-container .recipe .recipe-title__container {
+.recipes .recipe .recipe-title__container {
   flex-grow: 2;
   margin: 0;
   padding: 1rem;
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.recipes-container .recipe .recipe-button {
+.recipes .recipe .recipe-button {
   margin: 0;
   padding: 10px;
   width: 80%;
@@ -207,13 +209,58 @@ header .app-instructions {
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
-.recipes-container .recipe .recipe-button:hover, .recipes-container .recipe .recipe-button:focus {
+.recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
 }
 
 /* ===== LANDING ===== */
 .quote-section {
   padding: 5rem;
+}
+
+/* ===== MODAL ===== */
+#modal {
+  margin: 0px auto;
+  padding: 0px;
+  font-family: "Open Sans";
+  width: 950px;
+  background-color: #8F2D56;
+}
+#modal h1, #modal h2, #modal ul, #modal ol {
+  color: white;
+}
+#modal .exit-button {
+  background-color: #196160;
+  border-radius: 50%;
+  padding: 5px 5px;
+  color: white;
+  float: right;
+  margin-right: 50px;
+}
+#modal .img-title-row {
+  display: flex;
+  flex: 2;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+}
+#modal .img-title-row .img-container img {
+  width: 325px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#modal .img-title-row .title-container .meal-label {
+  padding: 5px 28px;
+  background-color: #58BC82;
+  width: 225px;
+  border-radius: 20%;
+}
+#modal .ingredients {
+  margin: 50px;
+}
+#modal .instructions {
+  margin: 50px;
 }
 
 /* ===== FOOTER ===== */

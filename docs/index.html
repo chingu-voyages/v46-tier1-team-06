@@ -69,19 +69,25 @@
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
-  <section class="recipes-container">
+
+  <section id="api-test">
+    <h2>Our API Test Area</h2>
+    <p>We are testing our search capability by using fetch to pull the data from TastyAPI, 
+      creating cards from that data and adding the cards here.</p>
     <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
-    <ul class="recipe-list"></ul>
+    <ul class="recipes"></ul>
   </section>
-  <!-- <section class="recipes">
+
+<!-- Our three static cards
+  <section class="recipes">
     <div class="recipe">
-      <div class="recipe-image-container"> -->
-        <!-- <img class="recipe-image" src="./img/example2.png" alt="food picture"> -->
-      <!-- </div>
+      <div class="recipe-image-container">
+        <img class="recipe-image" src="./img/example1.png" alt="food picture">
+      </div>
       <p class="recipe-category">dinner</p>
-      <div class="recipe-title__container">
-        <h2 class="recipe-title"> --><!-- Recipe Title --><!--</h2>-->
-      <!-- </div>
+      <div class="recipe-title-container">
+        <h2 class="recipe-title">Chili Prawn Linguine</h2>
+      </div>
       <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
       <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
     </div>
@@ -103,7 +109,8 @@
       </div>
       <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
     </div>
-  </section> -->
+  </section>
+-->
 
   <article class="quote-section">
     <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
@@ -116,7 +123,9 @@
     </ul>
   </article>
 
-  <section id="api-test"></section>
+  <section id="modal" class="hidden">
+    <div id="recipe-details"></div>
+  </section>
 
   <footer>
     <a aria-label="Github repository for app" href="https://github.com/chingu-voyages/v46-tier1-team-06" target="_blank">
