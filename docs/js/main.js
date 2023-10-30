@@ -40,9 +40,11 @@ const showRecipes = function (recipes) {
     for (const recipe in recipes) {
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
+        const recipeID = recipes[recipe].id;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
+            <p class="recipe-id">${recipeID}</p>
             <img class="recipe-image" src="${thumbnail}" alt="food picture">
             <p class="recipe-category">dinner</p>
             <div class="recipe-title__container">
