@@ -5,7 +5,7 @@ const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form')
 
 // Constants needed for fetching from the TastyAPI
-let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=lettuce`;
+let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
 const options = {
 	method: 'GET',
 	headers: {
@@ -14,10 +14,12 @@ const options = {
 	}
 };
 
-/*const getData = async function () {
+/*
+const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
+     console.log(data);
 };
 
 getData();*/
@@ -38,15 +40,14 @@ searchForm.addEventListener('submit', e => {
 
 const showRecipes = function (recipes) {
     for (const recipe in recipes) {
+        const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
-        const recipeID = recipes[recipe].id;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
             <p class="recipe-id hidden">${recipeID}</p>
             <img class="recipe-image" src="${thumbnail}" alt="food picture">
-            <p class="recipe-category">dinner</p>
             <div class="recipe-title__container">
                 <h2 class="recipe-title">${title}</h2>
             </div>
