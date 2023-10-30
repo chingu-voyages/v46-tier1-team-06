@@ -1,4 +1,4 @@
-h1, h2, h3, p {
+h1, h2, h3, ol, p, ul, li {
   color: #384547;
 }
 
@@ -30,7 +30,7 @@ h3 {
   font-size: 2rem;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, ol, p, ul, li {
   color: #384547;
 }
 
