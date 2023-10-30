@@ -43,13 +43,12 @@ header {
         border-radius: 15px;
         height: 55px;
         padding: 0 10px;
+
+        &:hover, &:focus {
+            background-color: color.$light-magenta;
+        }
     }
     
-    .search-form__refresh-button:hover,
-    .search-form__refresh-button:focus {
-        background-color: color.$light-magenta;
-    }
-
     .icon-search {
         /* Using currentColor above lets
         us use `color` for changing the color

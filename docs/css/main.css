@@ -135,8 +135,7 @@ header .search-form__refresh-button {
   height: 55px;
   padding: 0 10px;
 }
-header .search-form__refresh-button:hover,
-header .search-form__refresh-button:focus {
+header .search-form__refresh-button:hover, header .search-form__refresh-button:focus {
   background-color: #C5497F;
 }
 header .icon-search {
