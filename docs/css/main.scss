@@ -127,11 +127,15 @@ header {
     }
 }
 
-
-/* ===== LANDING ===== */
-
-.quote-section {
-    padding: 5rem;
+/* ===== SEARCH RESULTS ===== */
+#search-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+        margin: 0;
+        padding: 3rem 0;
+    }
 }
 
 /* ===== MODAL ===== */
