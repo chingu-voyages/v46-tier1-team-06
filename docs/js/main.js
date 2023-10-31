@@ -30,7 +30,7 @@ const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed
 //event listeners
 searchBtn.addEventListener('click', () => {
     console.log("You clicked");
-    showRecipes();
+    showRecipes(recipes);
 });
 searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
