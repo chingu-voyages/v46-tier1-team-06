@@ -69,48 +69,55 @@
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
-  <section class="recipes">
-    <div class="recipe">
-      <div class="recipe-image-container">
-        <img class="recipe-image" src="./img/example1.png" alt="food picture">
+  <section id="landing-page">
+    <section id="static-recipes" class="recipes">
+      <div class="recipe">
+        <div class="recipe-image-container">
+          <img class="recipe-image" src="./img/example1.png" alt="food picture">
+        </div>
+        <p class="recipe-category">dinner</p>
+        <div class="recipe-title-container">
+          <h2 class="recipe-title">Chili Prawn Linguine</h2>
+        </div>
+        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+        <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
       </div>
-      <p class="recipe-category">dinner</p>
-      <div class="recipe-title-container">
-        <h2 class="recipe-title">Chili Prawn Linguine</h2>
+      <div class="recipe">
+        <div class="recipe-image-container">
+          <img class="recipe-image" src="./img/example2.png" alt="food picture">
+        </div>
+        <p class="recipe-category">dinner</p>
+        <div class="recipe-title-container">
+          <h2 class="recipe-title">Kapsalo</h2>
+        </div>
+        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
       </div>
-      <button id="this-button" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
-    </div>
-    <div class="recipe">
-      <div class="recipe-image-container">
-        <img class="recipe-image" src="./img/example2.png" alt="food picture">
+      <div class="recipe">
+        <img class="recipe-image" src="./img/example3.png" alt="food picture">
+        <p class="recipe-category">dinner</p>
+        <div class="recipe-title-container">
+          <h2 class="recipe-title">Chivito Uruguayo</h2>
+        </div>
+        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
       </div>
-      <p class="recipe-category">dinner</p>
-      <div class="recipe-title-container">
-        <h2 class="recipe-title">Kapsalo</h2>
-      </div>
-      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-    </div>
-    <div class="recipe">
-      <img class="recipe-image" src="./img/example3.png" alt="food picture">
-      <p class="recipe-category">dinner</p>
-      <div class="recipe-title-container">
-        <h2 class="recipe-title">Chivito Uruguayo</h2>
-      </div>
-      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-    </div>
+    </section>
+    <article class="quote-section">
+      <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
+      <p><strong>Here are some ways you can help the planet by focusing on your food ingredients!</strong></p>
+      <ul>
+        <li>Search for recipes that use the ingredients in your fridge that are about to go bad!</li>
+        <li>Adapt recipes to use ingredients you already have: grains for grains, vegetables for vegetables, etc.!</li>
+        <li>Get inspired to use your ingredients that come in big packages/bundles in multiple ways!</li>
+        <li>Shop seasonally and locally to further decrease your carbon footprint: plan your upcoming meals around your local harvest calendar!</li>
+      </ul>
+    </article>
   </section>
 
-  <article class="quote-section">
-    <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
-    <p><strong>Here are some ways you can help the planet by focusing on your food ingredients!</strong></p>
-    <ul>
-      <li>Search for recipes that use the ingredients in your fridge that are about to go bad!</li>
-      <li>Adapt recipes to use ingredients you already have: grains for grains, vegetables for vegetables, etc.!</li>
-      <li>Get inspired to use your ingredients that come in big packages/bundles in multiple ways!</li>
-      <li>Shop seasonally and locally to further decrease your carbon footprint: plan your upcoming meals around your local harvest calendar!</li>
-    </ul>
-  </article>
+  <section id="search-results-container">
+    <h2>Search Results</h2>
+    <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
+    <ul id="search-results" class="recipes"></ul>
+  </section>
 
   <dialog id="modal">
     <div id="recipe-details">

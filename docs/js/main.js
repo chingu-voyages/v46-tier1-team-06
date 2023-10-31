@@ -1,5 +1,5 @@
 // DOM reference constant
-const recipeList = document.querySelector(".recipes");
+const recipeList = document.querySelector("#search-results");
 const searchBtn = document.querySelector(".search-form__search-button");
 const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form');
