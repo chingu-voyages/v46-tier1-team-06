@@ -41,7 +41,6 @@ searchForm.addEventListener('submit', e => {
 
 const showRecipes = function (recipes) {
     while (recipeList.hasChildNodes()) {
-        console.log("removed")
         recipeList.firstElementChild.remove();
     }
     for (const recipe in recipes) {
