@@ -43,13 +43,12 @@ header {
         border-radius: 15px;
         height: 55px;
         padding: 0 10px;
+
+        &:hover, &:focus {
+            background-color: color.$light-magenta;
+        }
     }
     
-    .search-form__refresh-button:hover,
-    .search-form__refresh-button:focus {
-        background-color: color.$light-magenta;
-    }
-
     .icon-search {
         /* Using currentColor above lets
         us use `color` for changing the color
@@ -193,6 +192,11 @@ footer {
     .icon-github {
         color: white;
         font-size: 75px;
+    }
+
+    .github-link:hover,
+    .github-link:focus {
+        border: 0.1em solid rgb(0 0 0 / 0.2);
     }
 }
 
