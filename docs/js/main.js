@@ -13,15 +13,15 @@ const options = {
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
-
-/*const getData = async function () {
+/*
+const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
      localStorage.setItem("recipes", JSON.stringify(data.results));
 };
 
-getData();*/
-
+getData();
+*/
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
@@ -39,6 +39,8 @@ searchForm.addEventListener('submit', e => {
 const showRecipes = function (recipes) {
     for (const recipe in recipes) {
         const title = recipes[recipe].name;
+        const mealType = recipes[recipe].tags[0].name;
+        console.log(mealType);
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
