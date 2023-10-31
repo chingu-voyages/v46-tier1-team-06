@@ -241,7 +241,7 @@ header .app-instructions {
   width: 950px;
   background-color: #8F2D56;
 }
-#modal h1, #modal h2, #modal ul, #modal ol {
+#modal h1, #modal h2, #modal ul, #modal li {
   color: white;
 }
 #modal .exit-button {
