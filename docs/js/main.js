@@ -52,7 +52,10 @@ const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed
 //event listeners
 searchBtn.addEventListener('click', () => {
     showRecipes(recipes);
+    landingPage.classList.toggle("hidden");
+    searchResults.classList.toggle("hidden");
 });
+
 searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
     e.preventDefault();
