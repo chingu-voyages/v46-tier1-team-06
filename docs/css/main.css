@@ -158,6 +158,16 @@ header .app-instructions {
   margin-top: 2rem;
 }
 
+/* ===== LANDING PAGE ===== */
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landing-page .quote-section {
+  padding: 5rem;
+}
+
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
   padding-top: 3rem;
@@ -212,9 +222,15 @@ header .app-instructions {
   background-color: #0D9D9B;
 }
 
-/* ===== LANDING ===== */
-.quote-section {
-  padding: 5rem;
+/* ===== SEARCH RESULTS ===== */
+#search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#search-results-container ul {
+  margin: 0;
+  padding: 3rem 0;
 }
 
 /* ===== MODAL ===== */
