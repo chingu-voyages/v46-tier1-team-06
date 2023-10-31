@@ -3,7 +3,8 @@ const recipeList = document.querySelector("#search-results");
 const searchBtn = document.querySelector(".search-form__search-button");
 const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form');
-
+const landingPage = document.querySelector("#landing-page");
+const searchResults = document.querySelector("#search-results-container");
 
 /* from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog */
 
