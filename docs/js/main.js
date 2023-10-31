@@ -64,6 +64,11 @@ searchForm.addEventListener('submit', e => {
     console.log(recipeInput.value)
 });
 
+refreshButton.addEventListener("click", () => {
+    landingPage.classList.remove("hidden");
+    searchResults.classList.add("hidden");
+})
+
 const showRecipes = function (recipes) {
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
