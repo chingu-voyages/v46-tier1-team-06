@@ -5,6 +5,7 @@ const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form');
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
+const refreshButton = document.querySelector("#refresh-button");
 
 /* from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog */
 
