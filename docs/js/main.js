@@ -32,7 +32,7 @@ let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'aefb749900mshc8cd7b4b9f9c201p120819jsnb5e67af174c0',
+		'X-RapidAPI-Key': 'f3bd08de05mshbc74d5d0d7c6b6ep11586ejsn91973fbdea76',
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
