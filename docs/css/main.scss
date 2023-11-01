@@ -28,6 +28,7 @@ header {
         background-color: color.$dark-teal;
         border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 0 50px 50px 0;
+        cursor: pointer;
         margin-right: 20px;
         padding: 8px 11px;
 
@@ -42,6 +43,7 @@ header {
         background-color: color.$dark-magenta;
         border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 15px;
+        cursor: pointer;
         height: 55px;
         padding: 0 10px;
 
@@ -130,6 +132,7 @@ header {
             background-color: color.$dark-teal;
             border: 0.1em solid rgb(0 0 0 / 0.2);
             border-radius: 15px;
+            cursor: pointer;
 
             &:hover, &:focus {
                 background-color: color.$light-teal;
