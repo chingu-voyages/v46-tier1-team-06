@@ -37,7 +37,6 @@ const options = {
 	}
 };
 
-/*
 const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
@@ -45,7 +44,7 @@ const getData = async function () {
      console.log(data);
 };
 
-getData();*/
+getData();
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
@@ -70,12 +69,17 @@ refreshButton.addEventListener("click", () => {
 })
 
 const showRecipes = function (recipes) {
-    while (recipeList.hasChildNodes()) {
+    /*while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
-    }
+    }*/
     for (const recipe in recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
+        const recipeTags = recipes[recipe].tags;
+        console.log(recipeTags);
+        /*for (let key in recipeTags) {
+            console.log(key, recipeTags[key]);
+        }*/
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
