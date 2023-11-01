@@ -65,7 +65,7 @@ const showRecipes = function (recipes) {
             <div class="recipe-title__container">
                 <h2 class="recipe-title">${title}</h2>
             </div>
-            <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+            <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         recipeList.append(recipeObject);
     }
