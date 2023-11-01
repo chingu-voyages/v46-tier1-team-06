@@ -69,17 +69,17 @@ refreshButton.addEventListener("click", () => {
 })
 
 const showRecipes = function (recipes) {
-    /*while (recipeList.hasChildNodes()) {
+    while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
-    }*/
+    }
     for (const recipe in recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
         const recipeTags = recipes[recipe].tags;
         console.log(recipeTags);
-        /*for (let key in recipeTags) {
+        for (let key in recipeTags) {
             console.log(key, recipeTags[key]);
-        }*/
+        }
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
