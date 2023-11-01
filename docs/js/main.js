@@ -72,6 +72,8 @@ const showRecipes = function (recipes) {
 };
 
 // Modal Functionality
+
+// Opening and Closing
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#this-button"); // changed to our button
 const closeButton = document.querySelector(".exit-button"); // changed to our button
