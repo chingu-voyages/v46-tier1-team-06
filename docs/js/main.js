@@ -71,17 +71,13 @@ const showRecipes = function (recipes) {
     }
 };
 
-
+// Modal Functionality
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#this-button"); // changed to our button
 const closeButton = document.querySelector(".exit-button"); // changed to our button
-
-// "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
-
-// "Close" button closes the dialog
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
