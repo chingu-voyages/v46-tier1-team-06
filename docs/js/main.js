@@ -114,6 +114,7 @@ function createModal(event) {
                 nextIngredient.innerHTML = ingredient;
                 modalIngredientsList.appendChild(nextIngredient);
             })
+            break;
         }
     }
 }
