@@ -92,3 +92,5 @@ const modalCategory = document.querySelector(".meal-label h3")
 const modalIngredientsList = document.querySelector("#ingredients-list");
 const modalInstructionsList = document.querySelector("#instructions-list");
 
+function createModal(event) {
+    let recipeID = event.target.id.slice(2);
