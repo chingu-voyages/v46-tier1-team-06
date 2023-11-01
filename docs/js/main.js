@@ -85,3 +85,10 @@ closeButton.addEventListener("click", () => {
 // Listening for View Recipe Button clicks through Event Delegation
 recipeList.addEventListener("click", createModal)
 
+// DOM references needed to place modal content
+const modalImage = document.querySelector("#example1");
+const modalTitle = document.querySelector(".title-container h1");
+const modalCategory = document.querySelector(".meal-label h3")
+const modalIngredientsList = document.querySelector("#ingredients-list");
+const modalInstructionsList = document.querySelector("#instructions-list");
+
