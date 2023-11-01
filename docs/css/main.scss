@@ -30,12 +30,13 @@ header {
         border-radius: 0 50px 50px 0;
         margin-right: 20px;
         padding: 8px 11px;
+
+        &:hover,
+        &:focus {
+        background-color: color.$light-teal;
+        }
     }
 
-    .search-form__search-button:hover,
-    .search-form__search-button:focus {
-        background-color: color.$light-teal;
-    }
 
     .search-form__refresh-button {
         background-color: color.$dark-magenta;
