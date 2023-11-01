@@ -79,7 +79,7 @@
         <div class="recipe-title-container">
           <h2 class="recipe-title">Chili Prawn Linguine</h2>
         </div>
-        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+        <button id="this-button" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
       </div>
       <div class="recipe">
@@ -113,8 +113,7 @@
     </article>
   </section>
 
-  <section id="search-results-container">
-    <h2>Search Results</h2>
+  <section id="search-results-container" class="hidden">
     <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
     <ul id="search-results" class="recipes"></ul>
   </section>
@@ -191,14 +190,6 @@
         </div>
     </div>
   </dialog>
-
-  <section id="api-test">
-    <h2>Our API Test Area</h2>
-    <p>We are testing our search capability by using fetch to pull the data from TastyAPI, 
-      creating cards from that data and adding the cards here.</p>
-    <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
-    <ul class="recipes"></ul>
-  </section>
 
   <footer>
     <span id="github-link__desc" class="sr-only">Opens a new tab and goes to a different website</span>

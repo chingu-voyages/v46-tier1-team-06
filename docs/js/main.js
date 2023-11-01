@@ -3,7 +3,9 @@ const recipeList = document.querySelector("#search-results");
 const searchBtn = document.querySelector(".search-form__search-button");
 const searchBarInput = document.querySelector('#search-bar');
 const searchForm = document.querySelector('form.search-form');
-
+const landingPage = document.querySelector("#landing-page");
+const searchResults = document.querySelector("#search-results-container");
+const refreshButton = document.querySelector("#refresh-button");
 
 /* from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog */
 
@@ -30,7 +32,7 @@ let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'aefb749900mshc8cd7b4b9f9c201p120819jsnb5e67af174c0',
+		'X-RapidAPI-Key': 'f3bd08de05mshbc74d5d0d7c6b6ep11586ejsn91973fbdea76',
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
@@ -50,15 +52,22 @@ const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed
 
 //event listeners
 searchBtn.addEventListener('click', () => {
-    console.log("You clicked");
     showRecipes(recipes);
+    landingPage.classList.add("hidden");
+    searchResults.classList.remove("hidden");
 });
+
 searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
     e.preventDefault();
     var recipeInput = document.getElementById("search-bar")
     console.log(recipeInput.value)
 });
+
+refreshButton.addEventListener("click", () => {
+    landingPage.classList.remove("hidden");
+    searchResults.classList.add("hidden");
+})
 
 const showRecipes = function (recipes) {
     while (recipeList.hasChildNodes()) {
