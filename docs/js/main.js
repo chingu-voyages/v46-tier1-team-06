@@ -70,7 +70,7 @@ const showRecipes = function (recipes) {
         recipeList.append(recipeObject);
     }
 };
-/* from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog */
+
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#this-button"); // changed to our button
@@ -85,5 +85,3 @@ showButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
-
-/* end of code from mozilla */
