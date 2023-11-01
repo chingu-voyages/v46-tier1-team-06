@@ -250,10 +250,14 @@ header .app-instructions {
   background-color: #196160;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  cursor: pointer;
   padding: 5px 5px;
   color: white;
   float: right;
   margin-right: 50px;
+}
+#modal .recipe-details__exit-button:hover, #modal .recipe-details__exit-button:focus {
+  background-color: #0D9D9B;
 }
 #modal .img-title-row {
   display: flex;

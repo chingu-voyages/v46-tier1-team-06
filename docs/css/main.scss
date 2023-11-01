@@ -163,13 +163,18 @@ header {
         color:white;
     }
     .recipe-details__exit-button {
-        background-color: #196160;
+        background-color: color.$dark-teal;
         border: 0.1em solid rgb(0 0 0 / 0.2);
         border-radius: 50%;
+        cursor: pointer;
         padding: 5px 5px;
         color:white;
         float:right;
-        margin-right:50px; 
+        margin-right:50px;
+
+        &:hover, &:focus {
+            background-color: color.$light-teal;
+        }
     }
     .img-title-row {
         display:flex;
