@@ -113,6 +113,13 @@ function createModal(event) {
                 let nextIngredient = document.createElement("li");
                 nextIngredient.innerHTML = ingredient;
                 modalIngredientsList.appendChild(nextIngredient);
+            });
+
+            const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
+            instructionsArray.forEach(instruction => {
+                let nextInstruction = document.createElement("li");
+                nextInstruction.innerHTML = instruction;
+                modalInstructionsList.appendChild(nextInstruction);
             })
             break;
         }
