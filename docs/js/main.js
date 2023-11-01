@@ -11,7 +11,7 @@ const refreshButton = document.querySelector("#refresh-button");
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#this-button"); // changed to our button
-const closeButton = document.querySelector(".exit-button"); // changed to our button
+const closeButton = document.querySelector(".recipe-details__exit-button"); // changed to our button
 
 // "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
