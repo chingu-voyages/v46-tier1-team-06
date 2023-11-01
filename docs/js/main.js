@@ -117,4 +117,5 @@ function createModal(event) {
             break;
         }
     }
+    dialog.showModal();
 }
