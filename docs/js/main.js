@@ -81,3 +81,7 @@ showButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   dialog.close();
 });
+
+// Listening for View Recipe Button clicks through Event Delegation
+recipeList.addEventListener("click", createModal)
+
