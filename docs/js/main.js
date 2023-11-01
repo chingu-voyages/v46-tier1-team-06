@@ -96,6 +96,16 @@ function createModal(event) {
     let recipeID = event.target.id.slice(2);
     for (index in recipes) {
         if (recipes[index].id == recipeID) {
+            const thumbnail = recipes[index].thumbnail_url;
+            modalImage.src = thumbnail;
+
+            const title = recipes[index].name;
+            modalTitle.innerHTML = title;
+            modalImage.alt = title;
+
+            // const category = recipes[index] ... ;
+            // modalCategory.innerHTML = category;
+
         }
     }
 }
