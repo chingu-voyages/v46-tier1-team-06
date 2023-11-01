@@ -259,6 +259,10 @@ header .app-instructions {
 #modal .recipe-details__exit-button:hover, #modal .recipe-details__exit-button:focus {
   background-color: #0D9D9B;
 }
+#modal .recipe-details__exit-button .icon-cross {
+  color: white;
+  font-size: 16px;
+}
 #modal .img-title-row {
   display: flex;
   flex: 2;

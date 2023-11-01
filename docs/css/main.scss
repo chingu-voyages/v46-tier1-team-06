@@ -175,6 +175,11 @@ header {
         &:hover, &:focus {
             background-color: color.$light-teal;
         }
+
+        .icon-cross {
+            color: white;
+            font-size: 16px;
+        }
     }
     .img-title-row {
         display:flex;
