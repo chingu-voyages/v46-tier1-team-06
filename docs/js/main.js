@@ -108,6 +108,12 @@ function createModal(event) {
             // const category = recipes[index] ... ;
             // modalCategory.innerHTML = category;
 
+            const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
+            ingredientArray.forEach(ingredient => {
+                let nextIngredient = document.createElement("li");
+                nextIngredient.innerHTML = ingredient;
+                modalIngredientsList.appendChild(nextIngredient);
+            })
         }
     }
 }
