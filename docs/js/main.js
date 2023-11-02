@@ -78,11 +78,16 @@ const showRecipes = function (recipes) {
         const allRecipeTags = recipes[recipe].tags;
         console.log(allRecipeTags);
         for (let tag in allRecipeTags) {
-            console.log(tag, allRecipeTags[tag]);
+            //console.log(tag, allRecipeTags[tag]);
             let allTags = (tag, allRecipeTags[tag]);
             let tagsArray = [];
             tagsArray.push(allTags);
-            console.log(tagsArray);
+            //console.log(tagsArray);
+            for (let keys of tagsArray) {
+                for (let values in keys) {
+                    console.log(values, keys[values]);
+                }
+            }
         }
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
