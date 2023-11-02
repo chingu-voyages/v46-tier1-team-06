@@ -1,4 +1,4 @@
-h1, h2, h3, p {
+h1, h2, h3, ol, p, ul, li {
   color: #384547;
 }
 
@@ -30,7 +30,7 @@ h3 {
   font-size: 2rem;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, ol, p, ul, li {
   color: #384547;
 }
 
@@ -103,7 +103,7 @@ article {
 header {
   flex-direction: column;
 }
-header .search-container {
+header .search-form {
   display: flex;
   flex-direction: row;
 }
@@ -135,8 +135,7 @@ header .search-form__refresh-button {
   height: 55px;
   padding: 0 10px;
 }
-header .search-form__refresh-button:hover,
-header .search-form__refresh-button:focus {
+header .search-form__refresh-button:hover, header .search-form__refresh-button:focus {
   background-color: #C5497F;
 }
 header .icon-search {
@@ -159,26 +158,41 @@ header .app-instructions {
   margin-top: 2rem;
 }
 
+/* ===== LANDING PAGE ===== */
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landing-page .quote-section {
+  padding: 5rem;
+}
+
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
-  width: 85vw;
+  padding-top: 3rem;
+  width: 75vw;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
-  padding-top: 3rem;
+  gap: 20px;
 }
 .recipes .recipe {
-  margin: 0 0.5vw;
+  width: 310px;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 3px 3px 5px silver;
   border-radius: 20px;
+  box-shadow: 3px 3px 5px silver;
 }
 .recipes .recipe .recipe-image {
-  width: 100%;
+  width: 310px;
+  height: 273px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
 .recipes .recipe .recipe-category {
@@ -187,11 +201,11 @@ header .app-instructions {
   background-color: #58BC82;
   align-self: flex-start;
 }
-.recipes .recipe .recipe-title-container {
+.recipes .recipe .recipe-title__container {
   flex-grow: 2;
   margin: 0;
   padding: 1rem;
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,9 +222,60 @@ header .app-instructions {
   background-color: #0D9D9B;
 }
 
-/* ===== LANDING ===== */
-.quote-section {
-  padding: 5rem;
+/* ===== SEARCH RESULTS ===== */
+#search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#search-results-container ul {
+  margin: 0;
+  padding: 3rem 0;
+}
+
+/* ===== MODAL ===== */
+#modal {
+  margin: 0px auto;
+  padding: 0px;
+  font-family: "Open Sans";
+  width: 950px;
+  background-color: #8F2D56;
+}
+#modal h1, #modal h2, #modal ul, #modal li {
+  color: white;
+}
+#modal .exit-button {
+  background-color: #196160;
+  border-radius: 50%;
+  padding: 5px 5px;
+  color: white;
+  float: right;
+  margin-right: 50px;
+}
+#modal .img-title-row {
+  display: flex;
+  flex: 2;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+}
+#modal .img-title-row .img-container img {
+  width: 325px;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#modal .img-title-row .title-container .meal-label {
+  padding: 5px 28px;
+  background-color: #58BC82;
+  width: 225px;
+  border-radius: 20%;
+}
+#modal .ingredients {
+  margin: 50px;
+}
+#modal .instructions {
+  margin: 50px;
 }
 
 /* ===== FOOTER ===== */
@@ -222,6 +287,10 @@ footer {
 footer .icon-github {
   color: white;
   font-size: 75px;
+}
+footer .github-link:hover,
+footer .github-link:focus {
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
 }
 
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */

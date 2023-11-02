@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -22,6 +22,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/api-test.css">
 
   <meta name="theme-color" content="#fafafa">
 
@@ -39,75 +40,160 @@
           <span class="sr-only">Search the recipe app</span>
         </label>
         <input id="search-bar" class="search-form__input" name="search-bar" type="search" placeholder="lettuce...">
+        <button class="search-form__search-button">
+          <span class="sr-only">Search</span>
+          <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <symbol id="icon-search" viewBox="0 0 32 32">
+                <title>search</title>
+                <path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
+              </symbol>
+            </defs>
+          </svg>
+          <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+        </button>
+        <button id="refresh-button" class="search-form__refresh-button" >
+          <span class="sr-only">Refresh to do a new search</span>
+          <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <title>refresh</title>
+              <symbol id="icon-spinner11" viewBox="0 0 32 32">
+                <path d="M32 12h-12l4.485-4.485c-2.267-2.266-5.28-3.515-8.485-3.515s-6.219 1.248-8.485 3.515c-2.266 2.267-3.515 5.28-3.515 8.485s1.248 6.219 3.515 8.485c2.267 2.266 5.28 3.515 8.485 3.515s6.219-1.248 8.485-3.515c0.189-0.189 0.371-0.384 0.546-0.583l3.010 2.634c-2.933 3.349-7.239 5.464-12.041 5.464-8.837 0-16-7.163-16-16s7.163-16 16-16c4.418 0 8.418 1.791 11.313 4.687l4.687-4.687v12z"></path>
+              </symbol>
+            </defs>
+          </svg>
+          <svg class="icon icon-spinner11"><use xlink:href="#icon-spinner11"></use></svg>
+        </button>
       </form>
-      <button class="search-form__search-button">
-        <span class="sr-only">Search</span>
-        <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <symbol id="icon-search" viewBox="0 0 32 32">
-              <title>search</title>
-              <path d="M31.008 27.231l-7.58-6.447c-0.784-0.705-1.622-1.029-2.299-0.998 1.789-2.096 2.87-4.815 2.87-7.787 0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12c2.972 0 5.691-1.081 7.787-2.87-0.031 0.677 0.293 1.515 0.998 2.299l6.447 7.58c1.104 1.226 2.907 1.33 4.007 0.23s0.997-2.903-0.23-4.007zM12 20c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"></path>
-            </symbol>
-          </defs>
-        </svg>
-        <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
-      </button>
-      <button id="refresh-button" class="search-form__refresh-button" >
-        <span class="sr-only">Refresh to do a new search</span>
-        <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <title>refresh</title>
-            <symbol id="icon-spinner11" viewBox="0 0 32 32">
-              <path d="M32 12h-12l4.485-4.485c-2.267-2.266-5.28-3.515-8.485-3.515s-6.219 1.248-8.485 3.515c-2.266 2.267-3.515 5.28-3.515 8.485s1.248 6.219 3.515 8.485c2.267 2.266 5.28 3.515 8.485 3.515s6.219-1.248 8.485-3.515c0.189-0.189 0.371-0.384 0.546-0.583l3.010 2.634c-2.933 3.349-7.239 5.464-12.041 5.464-8.837 0-16-7.163-16-16s7.163-16 16-16c4.418 0 8.418 1.791 11.313 4.687l4.687-4.687v12z"></path>
-            </symbol>
-          </defs>
-        </svg>
-        <svg class="icon icon-spinner11"><use xlink:href="#icon-spinner11"></use></svg>
-      </button>
     </div>
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
-  <section class="recipes">
-    <div class="recipe">
-      <img class="recipe-image" src="./img/example1.png" alt="food picture">
-      <p class="recipe-category">dinner</p>
-      <div class="recipe-title-container">
-        <h2 class="recipe-title">Chili Prawn Linguine</h2>
-      </div>
-      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
-    </div>
-    <div class="recipe">
-      <img class="recipe-image" src="./img/example2.png" alt="food picture">
-      <p class="recipe-category">dinner</p>
-      <div class="recipe-title-container">
-        <h2 class="recipe-title">Kapsalo</h2>
-      </div>
-      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-    </div>
-    <div class="recipe">
-      <img class="recipe-image" src="./img/example3.png" alt="food picture">
-      <p class="recipe-category">dinner</p>
-      <div class="recipe-title-container">
-        <h2 class="recipe-title">Chivito Uruguayo</h2>
-      </div>
-      <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-    </div>
 
+  <section id="landing-page">
+    <section id="static-recipes" class="recipes">
+      <div class="recipe">
+        <div class="recipe-image-container">
+          <img class="recipe-image" src="./img/example1.png" alt="food picture">
+        </div>
+        <p class="recipe-category">dinner</p>
+        <div class="recipe-title-container">
+          <h2 class="recipe-title">Chili Prawn Linguine</h2>
+        </div>
+        <button id="this-button" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+        <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
+      </div>
+      <div class="recipe">
+        <div class="recipe-image-container">
+          <img class="recipe-image" src="./img/example2.png" alt="food picture">
+        </div>
+        <p class="recipe-category">dinner</p>
+        <div class="recipe-title-container">
+          <h2 class="recipe-title">Kapsalo</h2>
+        </div>
+        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+      </div>
+      <div class="recipe">
+        <img class="recipe-image" src="./img/example3.png" alt="food picture">
+        <p class="recipe-category">dinner</p>
+        <div class="recipe-title-container">
+          <h2 class="recipe-title">Chivito Uruguayo</h2>
+        </div>
+        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+      </div>
+    </section>
+    <article class="quote-section">
+      <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
+      <p><strong>Here are some ways you can help the planet by focusing on your food ingredients!</strong></p>
+      <ul>
+        <li>Search for recipes that use the ingredients in your fridge that are about to go bad!</li>
+        <li>Adapt recipes to use ingredients you already have: grains for grains, vegetables for vegetables, etc.!</li>
+        <li>Get inspired to use your ingredients that come in big packages/bundles in multiple ways!</li>
+        <li>Shop seasonally and locally to further decrease your carbon footprint: plan your upcoming meals around your local harvest calendar!</li>
+      </ul>
+    </article>
   </section>
-  <article class="quote-section">
-    <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
-    <p><strong>Here are some ways you can help the planet by focusing on your food ingredients!</strong></p>
-    <ul>
-      <li>Search for recipes that use the ingredients in your fridge that are about to go bad!</li>
-      <li>Adapt recipes to use ingredients you already have: grains for grains, vegetables for vegetables, etc.!</li>
-      <li>Get inspired to use your ingredients that come in big packages/bundles in multiple ways!</li>
-      <li>Shop seasonally and locally to further decrease your carbon footprint: plan your upcoming meals around your local harvest calendar!</li>
-    </ul>
-  </article>
+
+  <section id="search-results-container" class="hidden">
+    <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
+    <ul id="search-results" class="recipes"></ul>
+  </section>
+
+  <dialog id="modal">
+    <div id="recipe-details">
+      <button class="exit-button">
+        X
+        </button>
+        <div class="img-title-row">
+            <div class="img-container">
+                <img id="example1" src="img/example1.png">
+            </div>
+            <div class="title-container">
+                <h1>Chili Prawn Linguini</h1>
+                <div class="meal-label">
+                    <h3>Dinner</h3>
+                </div>
+            </div>
+        </div>
+        <div class="ingredients">
+            <h2>Ingredients:</h2>
+                <ul>
+                    <li>1/2 cup olive oil</li>
+                    <li>2 tablespoons red wine vinegar</li>
+                    <li>1/2 cup finely chopped parsley</li>
+                    <li>3-4 cloves garlic , finely chopped or minced</li>
+                    <li>2 small red chilies , or 1 red chili, deseeded and finely chopped (about 1 tablespoon finely chopped chili)</li>
+                    <li>3/4 teaspoon dried oregano</li>
+                    <li>1 level teaspoon coarse salt</li>
+                    <li>pepper, to taste (about 1/2 teaspoon)</li>
+                </ul>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+                <ol>
+                    <li>
+                        Mix the dressing ingredients in a small bowl and season with 
+                        salt and pepper. Set aside.
+                    </li> 
+                    <li>Cook the pasta according to the packet instructions. </li>
+                    <li>
+                        Add the sugar snap peas for the last minute or so of 
+                        cooking time. 
+                    </li>
+                    <li>
+                        Meanwhile, heat the oil in a wok or large frying pan, 
+                        toss in the garlic and chilli and cook over a fairly 
+                        gentle heat for about 30 seconds without letting the 
+                        garlic brown.
+                    </li>
+                    <li>
+                        Tip in the prawns and cook over a high heat, 
+                        stirring frequently, for about 3 minutes until 
+                        they turn pink.
+                    </li>
+                    <li>
+                        Add the tomatoes and cook, stirring occasionally, 
+                        for 3 minutes until they just start to soften.
+                    </li>
+                    <li>
+                        Drain the pasta and sugar snaps well, then toss 
+                        into the prawn mixture. 
+                    </li>
+                    <li>
+                        Tear in the basil leaves, stir, and season 
+                        with salt and pepper. 
+                    </li>
+                    <li>
+                        Serve with salad leaves drizzled with the lime
+                        dressing, and warm crusty bread.
+                    </li>
+                </ol>
+        </div>
+    </div>
+  </dialog>
 
   <footer>
-    <a aria-label="Github repository for app" href="https://github.com/chingu-voyages/v46-tier1-team-06" target="_blank">
+    <span id="github-link__desc" class="sr-only">Opens a new tab and goes to a different website</span>
+    <a aria-label="Github repository for app" aria-describedby="github-link__desc" class="github-link" href="https://github.com/chingu-voyages/v46-tier1-team-06" target="_blank">
       <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <symbol id="icon-github" viewBox="0 0 32 32">
