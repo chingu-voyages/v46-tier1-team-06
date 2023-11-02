@@ -75,8 +75,10 @@ const showRecipes = function (recipes) {
     for (const recipe in recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
+        //show array of tags for each recipe
         const allRecipeTags = recipes[recipe].tags;
-        console.log(allRecipeTags);
+        //console.log(allRecipeTags);
+        //show each tag object
         for (let tag in allRecipeTags) {
             //console.log(tag, allRecipeTags[tag]);
             let allTags = (tag, allRecipeTags[tag]);
@@ -101,5 +103,5 @@ const showRecipes = function (recipes) {
             <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         recipeList.append(recipeObject);
-    }
+    };
 };
