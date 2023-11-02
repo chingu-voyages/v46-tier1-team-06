@@ -8,14 +8,14 @@ const searchResults = document.querySelector("#search-results-container");
 const refreshButton = document.querySelector("#refresh-button");
 
 // Constants needed for fetching from the TastyAPI
-let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
+/* let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'f3bd08de05mshbc74d5d0d7c6b6ep11586ejsn91973fbdea76',
-		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-	}
-};
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'f3bd08de05mshbc74d5d0d7c6b6ep11586ejsn91973fbdea76',
+        'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+    }
+}; */
 
 /*
 const getData = async function () {
@@ -24,35 +24,58 @@ const getData = async function () {
      localStorage.setItem("recipes", JSON.stringify(data.results));
      console.log(data);
 };
-
-getData();*/
+*/
 
 // get the recipes from localStorage
-const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
+//const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
 //event listeners
-searchBtn.addEventListener('click', () => {
+
+/* searchForm.addEventListener('submit', e => {
+    //prevent the normal submission of the form
+    e.preventDefault();
+    const recipeInput = document.getElementById("search-bar")
+    console.log(recipeInput.value)
+    return recipeInput;
+});*/
+
+/* searchBtn.addEventListener('click', () => {
+    getData(recipeInput);
     showRecipes(recipes);
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
-});
-
-searchForm.addEventListener('submit', e => {
-    //prevent the normal submission of the form
-    e.preventDefault();
-    var recipeInput = document.getElementById("search-bar")
-    console.log(recipeInput.value)
-});
+});*/
 
 refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
-})
+});
+
+searchBtn.addEventListener('click', showRecipes);
+
+// Constants needed for fetching from the TastyAPI
+    //let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f3bd08de05mshbc74d5d0d7c6b6ep11586ejsn91973fbdea76',
+            'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
+        }
+    };
 
 const showRecipes = function (recipes) {
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
     }
+    const recipeInput = document.getElementById("search-bar");
+    const getData = async function () {
+        const res = await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`, options);
+         const data = await res.json();
+         localStorage.setItem("recipes", JSON.stringify(data.results));
+         console.log(data);
+    };
+    getData();
+    const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
     for (const recipe in recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
