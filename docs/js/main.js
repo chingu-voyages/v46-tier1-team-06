@@ -7,26 +7,6 @@ const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 const refreshButton = document.querySelector("#refresh-button");
 
-/* from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog */
-
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("#this-button"); // changed to our button
-const closeButton = document.querySelector(".exit-button"); // changed to our button
-
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-
-/* end of code from mozilla */
-
-
-
 // Constants needed for fetching from the TastyAPI
 let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
 const options = {
@@ -85,8 +65,64 @@ const showRecipes = function (recipes) {
             <div class="recipe-title__container">
                 <h2 class="recipe-title">${title}</h2>
             </div>
-            <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+            <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         recipeList.append(recipeObject);
     }
 };
+
+// Modal Functionality
+
+// Opening and Closing
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("#this-button"); // changed to our button
+const closeButton = document.querySelector(".exit-button"); // changed to our button
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+
+// Listening for View Recipe Button clicks through Event Delegation
+recipeList.addEventListener("click", createModal)
+
+// DOM references needed to place modal content
+const modalImage = document.querySelector("#example1");
+const modalTitle = document.querySelector(".title-container h1");
+const modalCategory = document.querySelector(".meal-label h3")
+const modalIngredientsList = document.querySelector("#ingredients-list");
+const modalInstructionsList = document.querySelector("#instructions-list");
+
+function createModal(event) {
+    let recipeID = event.target.id.slice(2);
+    for (index in recipes) {
+        if (recipes[index].id == recipeID) {
+            const thumbnail = recipes[index].thumbnail_url;
+            modalImage.src = thumbnail;
+
+            const title = recipes[index].name;
+            modalTitle.innerHTML = title;
+            modalImage.alt = title;
+
+            // const category = recipes[index] ... ;
+            // modalCategory.innerHTML = category;
+
+            const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
+            ingredientArray.forEach(ingredient => {
+                let nextIngredient = document.createElement("li");
+                nextIngredient.innerHTML = ingredient;
+                modalIngredientsList.appendChild(nextIngredient);
+            });
+
+            const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
+            instructionsArray.forEach(instruction => {
+                let nextInstruction = document.createElement("li");
+                nextInstruction.innerHTML = instruction;
+                modalInstructionsList.appendChild(nextInstruction);
+            })
+            break;
+        }
+    }
+    dialog.showModal();
+}
