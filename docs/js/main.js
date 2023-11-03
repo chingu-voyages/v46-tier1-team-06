@@ -51,10 +51,8 @@ refreshButton.addEventListener("click", () => {
     searchResults.classList.add("hidden");
 });
 
-searchBtn.addEventListener('click', showRecipes);
-
 // Constants needed for fetching from the TastyAPI
-    //let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    //let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
     const options = {
         method: 'GET',
         headers: {
@@ -63,6 +61,8 @@ searchBtn.addEventListener('click', showRecipes);
         }
     };
 
+
+
 const showRecipes = function (recipes) {
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
@@ -70,12 +70,10 @@ const showRecipes = function (recipes) {
     const recipeInput = document.getElementById("search-bar");
     const getData = async function () {
         const res = await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`, options);
-         const data = await res.json();
-         localStorage.setItem("recipes", JSON.stringify(data.results));
-         console.log(data);
+         const recipes = await res.json();
+         console.log(recipes);
     };
     getData();
-    const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
     for (const recipe in recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
@@ -93,6 +91,8 @@ const showRecipes = function (recipes) {
         recipeList.append(recipeObject);
     }
 };
+
+searchBtn.addEventListener('click', showRecipes);
 
 // Modal Functionality
 
