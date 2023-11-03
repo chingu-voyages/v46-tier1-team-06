@@ -37,6 +37,41 @@ searchBtn.addEventListener('click', () => {
     searchResults.classList.remove("hidden");
 });
 
+/* Terri's Search Function Notes:
+We only need one eventListener to initiate Search.  Begum, I don't remember if you had
+the above listener on the Search Button and this below listener on the form itself.
+Begum's listener here below on the form is more traditional - and actually maybe better
+"form".  I'm not sure.
+
+If we use the below method, we should probably add type="submit" on our Search button.
+Then, yes, we need the e.preventDefault() just like you have.  Then your code grabs the
+search input exactly right.
+
+The next step here would be to set the url (currently line 11) for the fetch to TastyAPI
+by replacing the q parameter with the search input.  (Currently q is hard-coded as 'blueberry
+and the search input is held in the recipeInput variable below.)
+
+The url should probably be passed into the getData() function.  So update the getData() 
+function above to getData(url).  Then you would call getData(url) from within this
+eventListener.
+
+Off-shoot - Declaring functions.  If a function is declared with the function keyword, for example
+
+async function getData(url) {
+
+}
+
+the function is hoisted and can be used in code before it is actually declared.  Functions declared
+as function expressions, for example
+
+const getData() = async function(url) {
+
+}
+
+are NOT hoisted.  They need to be declared before they are used in other code.
+*/
+
+
 searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
     e.preventDefault();
