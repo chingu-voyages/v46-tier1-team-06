@@ -105,8 +105,14 @@ function createModal(event) {
             modalTitle.innerHTML = title;
             modalImage.alt = title;
 
-            // const category = recipes[index] ... ;
-            // modalCategory.innerHTML = category;
+            const tagsArray = recipes[index].tags
+            for (const index in tagsArray) {
+                if (tagsArray[index].root_tag_type == "meal") {
+                    const mealCategory = tagsArray[index].display_name;
+                    modalCategory.innerHTML = mealCategory;
+                    break;
+                }
+            }
 
             const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
             ingredientArray.forEach(ingredient => {
