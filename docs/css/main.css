@@ -121,17 +121,18 @@ header .search-form__search-button {
   background-color: #196160;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 0 50px 50px 0;
+  cursor: pointer;
   margin-right: 20px;
   padding: 8px 11px;
 }
-header .search-form__search-button:hover,
-header .search-form__search-button:focus {
+header .search-form__search-button:hover, header .search-form__search-button:focus {
   background-color: #0D9D9B;
 }
 header .search-form__refresh-button {
   background-color: #8F2D56;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  cursor: pointer;
   height: 55px;
   padding: 0 10px;
 }
@@ -217,6 +218,7 @@ header .app-instructions {
   background-color: #196160;
   border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  cursor: pointer;
 }
 .recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
@@ -244,13 +246,22 @@ header .app-instructions {
 #modal h1, #modal h2, #modal ul, #modal li {
   color: white;
 }
-#modal .exit-button {
+#modal .recipe-details__exit-button {
   background-color: #196160;
+  border: 0.1em solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
+  cursor: pointer;
   padding: 5px 5px;
   color: white;
   float: right;
   margin-right: 50px;
+}
+#modal .recipe-details__exit-button:hover, #modal .recipe-details__exit-button:focus {
+  background-color: #0D9D9B;
+}
+#modal .recipe-details__exit-button .icon-cross {
+  color: white;
+  font-size: 16px;
 }
 #modal .img-title-row {
   display: flex;

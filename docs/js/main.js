@@ -76,7 +76,7 @@ const showRecipes = function (recipes) {
 // Opening and Closing
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector("#this-button"); // changed to our button
-const closeButton = document.querySelector(".exit-button"); // changed to our button
+const closeButton = document.querySelector(".recipe-details__exit-button"); // changed to our button
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
