@@ -24,22 +24,22 @@ searchForm.addEventListener('submit', e => {
     e.preventDefault();
     let recipeInput = document.getElementById("search-bar").value.trim();
     console.log(recipeInput);
+    return recipeInput;
 });
 
 //event listeners
 searchBtn.addEventListener('click', (recipeInput) => {
-    showRecipes(recipes);
-    landingPage.classList.add("hidden");
-    searchResults.classList.remove("hidden");
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     const getData = async function () {
         const res = await fetch(url, options);
-         const data = await res.json();
+         const recipes = await res.json();
          localStorage.setItem("recipes", JSON.stringify(data.results));
-         console.log(data);
+         console.log(recipes);
     };
-    
     getData();
+    showRecipes(recipes);
+    landingPage.classList.add("hidden");
+    searchResults.classList.remove("hidden");
 });
 
 refreshButton.addEventListener("click", () => {
