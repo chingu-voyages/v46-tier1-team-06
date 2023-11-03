@@ -16,9 +16,6 @@ const options = {
 	}
 };
 
-// get the recipes from localStorage
-const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
-
 searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
     e.preventDefault();
@@ -28,15 +25,17 @@ searchForm.addEventListener('submit', e => {
 });
 
 //event listeners
-searchBtn.addEventListener('click', (recipeInput) => {
+searchBtn.addEventListener('click', function () {
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     const getData = async function () {
         const res = await fetch(url, options);
-         const recipes = await res.json();
+         const data = await res.json();
          localStorage.setItem("recipes", JSON.stringify(data.results));
-         console.log(recipes);
+         console.log(data);
     };
     getData();
+    // get the recipes from localStorage
+    const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
     showRecipes(recipes);
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
