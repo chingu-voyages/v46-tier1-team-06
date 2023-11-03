@@ -96,7 +96,7 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 
 function createModal(event) {
     let recipeID = event.target.id.slice(2);
-    for (index in recipes) {
+    for (const index in recipes) {
         if (recipes[index].id == recipeID) {
             const thumbnail = recipes[index].thumbnail_url;
             modalImage.src = thumbnail;
