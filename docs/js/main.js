@@ -17,7 +17,6 @@ const options = {
 	}
 };
 
-/*
 const getData = async function () {
     const res = await fetch(url, options);
      const data = await res.json();
@@ -25,7 +24,7 @@ const getData = async function () {
      console.log(data);
 };
 
-getData();*/
+getData();
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
@@ -40,8 +39,8 @@ searchBtn.addEventListener('click', () => {
 searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
     e.preventDefault();
-    var recipeInput = document.getElementById("search-bar")
-    console.log(recipeInput.value)
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    console.log(recipeInput);
 });
 
 refreshButton.addEventListener("click", () => {
