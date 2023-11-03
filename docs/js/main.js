@@ -33,13 +33,13 @@ searchBtn.addEventListener('click', function (e) {
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     const getData = async function () {
         const res = await fetch(url, options);
-         const data = await res.json();
-         localStorage.setItem("recipes", JSON.stringify(data.results));
-         console.log(data);
+         const recipes = await res.json();
+         //localStorage.setItem("recipes", JSON.stringify(data.results));
+         console.log(recipes);
     };
     getData();
     // get the recipes from localStorage
-    const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
+    //const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
     showRecipes(recipes);
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
