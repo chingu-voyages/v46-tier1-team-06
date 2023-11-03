@@ -7,24 +7,6 @@ const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 const refreshButton = document.querySelector("#refresh-button");
 
-/* from https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog */
-
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("#this-button"); // changed to our button
-const closeButton = document.querySelector(".recipe-details__exit-button"); // changed to our button
-
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-
-/* end of code from mozilla */
-
 // Constants needed for fetching from the TastyAPI
 let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
 const options = {
