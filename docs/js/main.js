@@ -16,16 +16,20 @@ const options = {
 	}
 };
 
-searchForm.addEventListener('submit', e => {
+/*searchForm.addEventListener('submit', e => {
     //prevent the normal submission of the form
     e.preventDefault();
     let recipeInput = document.getElementById("search-bar").value.trim();
     console.log(recipeInput);
     return recipeInput;
-});
+});*/
 
 //event listeners
-searchBtn.addEventListener('click', function () {
+searchBtn.addEventListener('click', function (e) {
+    //prevent the normal submission of the form
+    e.preventDefault();
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    console.log(recipeInput);
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     const getData = async function () {
         const res = await fetch(url, options);
