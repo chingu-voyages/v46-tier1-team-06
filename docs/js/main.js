@@ -67,7 +67,7 @@ const showRecipes = function (recipes) {
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
     }
-    const recipeInput = document.getElementById("search-bar");
+    const recipeInput = document.getElementById("search-bar").value.trim();
     const getData = async function () {
         const res = await fetch(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`, options);
          const recipes = await res.json();
