@@ -8,7 +8,6 @@ const searchResults = document.querySelector("#search-results-container");
 const refreshButton = document.querySelector("#refresh-button");
 
 // Constants needed for fetching from the TastyAPI
-let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
 const options = {
 	method: 'GET',
 	headers: {
@@ -16,15 +15,6 @@ const options = {
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
-
-const getData = async function () {
-    const res = await fetch(url, options);
-     const data = await res.json();
-     localStorage.setItem("recipes", JSON.stringify(data.results));
-     console.log(data);
-};
-
-getData();
 
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
@@ -34,6 +24,15 @@ searchBtn.addEventListener('click', () => {
     showRecipes(recipes);
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    const getData = async function () {
+        const res = await fetch(url, options);
+         const data = await res.json();
+         localStorage.setItem("recipes", JSON.stringify(data.results));
+         console.log(data);
+    };
+    
+    getData();
 });
 
 searchForm.addEventListener('submit', e => {
@@ -41,6 +40,7 @@ searchForm.addEventListener('submit', e => {
     e.preventDefault();
     let recipeInput = document.getElementById("search-bar").value.trim();
     console.log(recipeInput);
+    return recipeInput;
 });
 
 refreshButton.addEventListener("click", () => {
