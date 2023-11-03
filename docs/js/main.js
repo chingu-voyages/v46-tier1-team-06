@@ -19,8 +19,15 @@ const options = {
 // get the recipes from localStorage
 const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
 
+searchForm.addEventListener('submit', e => {
+    //prevent the normal submission of the form
+    e.preventDefault();
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    console.log(recipeInput);
+});
+
 //event listeners
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener('click', (recipeInput) => {
     showRecipes(recipes);
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
@@ -33,14 +40,6 @@ searchBtn.addEventListener('click', () => {
     };
     
     getData();
-});
-
-searchForm.addEventListener('submit', e => {
-    //prevent the normal submission of the form
-    e.preventDefault();
-    let recipeInput = document.getElementById("search-bar").value.trim();
-    console.log(recipeInput);
-    return recipeInput;
 });
 
 refreshButton.addEventListener("click", () => {
