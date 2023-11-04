@@ -8,7 +8,6 @@ const searchResults = document.querySelector("#search-results-container");
 const refreshButton = document.querySelector("#refresh-button");
 
 // Constants needed for fetching from the TastyAPI
-let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=blueberry`;
 const options = {
 	method: 'GET',
 	headers: {
@@ -17,31 +16,25 @@ const options = {
 	}
 };
 
-/*
-const getData = async function () {
-    const res = await fetch(url, options);
-     const data = await res.json();
-     localStorage.setItem("recipes", JSON.stringify(data.results));
-     console.log(data);
-};
-
-getData();*/
-
-// get the recipes from localStorage
-const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
-
 //event listeners
-searchBtn.addEventListener('click', () => {
+searchBtn.addEventListener('click', async function (e) {
+    //prevent the normal submission of the form
+    e.preventDefault();
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    console.log(recipeInput); //see what is typed into the search form
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    const getData = async function () {
+        const res = await fetch(url, options);
+         const data = await res.json();
+         console.log(data); //shows 20 recipes based on what is typed into search
+         let recipes = data.results;
+         return recipes;
+    };
+    let recipes = await getData();
+    console.log(recipes);
     showRecipes(recipes);
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
-});
-
-searchForm.addEventListener('submit', e => {
-    //prevent the normal submission of the form
-    e.preventDefault();
-    var recipeInput = document.getElementById("search-bar")
-    console.log(recipeInput.value)
 });
 
 refreshButton.addEventListener("click", () => {
