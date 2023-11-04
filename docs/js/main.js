@@ -22,24 +22,10 @@ const options = {
 };
 
 // Event listeners
-searchForm.addEventListener('click', async function (e) {
-    //prevent the normal submission of the form
+searchForm.addEventListener('click', async function () {
     e.preventDefault();
-    let recipeInput = document.getElementById("search-bar").value.trim();
-    console.log(recipeInput); //see what is typed into the search form
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
-    const getData = async function () {
-        const res = await fetch(url, options);
-         const data = await res.json();
-         console.log(data); //shows 20 recipes based on what is typed into search
-         let recipes = data.results;
-         return recipes;
-    };
     let recipes = await getData();
-    console.log(recipes);
     showRecipes(recipes);
-    landingPage.classList.add("hidden");
-    searchResults.classList.remove("hidden");
 });
 
 refreshButton.addEventListener("click", () => {
@@ -47,7 +33,18 @@ refreshButton.addEventListener("click", () => {
     searchResults.classList.add("hidden");
 })
 
-const showRecipes = function (recipes) {
+// Functions
+async function getData() {
+    // create fetch url with user-entered search term
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    // fetch recipes
+    const res = await fetch(url, options);
+    const data = await res.json();
+    let recipes = data.results;
+    return recipes;
+};
+
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
     }
