@@ -45,6 +45,7 @@ async function getData() {
     return recipes;
 };
 
+function showRecipes(recipes) {
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
     }
