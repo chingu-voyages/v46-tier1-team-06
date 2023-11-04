@@ -29,18 +29,21 @@ searchBtn.addEventListener('click', function (e) {
     //prevent the normal submission of the form
     e.preventDefault();
     let recipeInput = document.getElementById("search-bar").value.trim();
-    console.log(recipeInput);
+    console.log(recipeInput); //gives me whatever is typed into the search form
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     const getData = async function () {
         const res = await fetch(url, options);
-         const recipes = await res.json();
+         const data = await res.json().results;
+         //let recipes = JSON.stringify(data.results);
+         console.log(data); //shows me 20 recipes based on what is typed into search
+         return data;
          //localStorage.setItem("recipes", JSON.stringify(data.results));
-         console.log(recipes);
     };
     getData();
+    let recipes = data.results;
     // get the recipes from localStorage
     //const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
-    showRecipes(recipes);
+    showRecipes(recipes); //error shows this line recipes is undefined
     landingPage.classList.add("hidden");
     searchResults.classList.remove("hidden");
 });
