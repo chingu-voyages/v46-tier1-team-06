@@ -34,12 +34,13 @@ searchBtn.addEventListener('click', function (e) {
     const getData = async function () {
         const res = await fetch(url, options);
          const data = await res.json();
-         //let recipes = JSON.stringify(data.results);
          console.log(data); //shows me 20 recipes based on what is typed into search
          //localStorage.setItem("recipes", JSON.stringify(data.results));
-         return data;
+         const recipes = data.results;
+         return recipes;
     };
     let recipes = getData();
+    console.log(recipes);
     // get the recipes from localStorage
     //const recipes = JSON.parse(localStorage.getItem("recipes")); // has to be parsed back into a js object
     showRecipes(recipes);
