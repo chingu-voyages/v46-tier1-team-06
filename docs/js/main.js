@@ -1,11 +1,17 @@
-// DOM reference constant
-const recipeList = document.querySelector("#search-results");
-const searchBtn = document.querySelector(".search-form__search-button");
-const searchBarInput = document.querySelector('#search-bar');
+// DOM elements to listen to
 const searchForm = document.querySelector('form.search-form');
+const searchBtn = document.querySelector(".search-form__search-button");
+const refreshButton = document.querySelector("#refresh-button");
+
+// DOM elements to get user input from
+const searchBarInput = document.querySelector('#search-bar');
+
+// DOM element recieving data
+const recipeList = document.querySelector("#search-results");
+
+// DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
-const refreshButton = document.querySelector("#refresh-button");
 
 // Constants needed for fetching from the TastyAPI
 const options = {
