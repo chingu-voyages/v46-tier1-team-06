@@ -56,7 +56,6 @@ async function getData() {
     let recipes = data.results;
     return recipes;
 };
-
 function showRecipes(recipes) {
     // remove previous search results
     while (recipeList.hasChildNodes()) {
@@ -83,7 +82,6 @@ function showRecipes(recipes) {
         searchResults.classList.remove("hidden");
     }
 };
-
 function createModal(e) {
     // get id of recipe card clicked
     let recipeID = e.target.id.slice(2);
