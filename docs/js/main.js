@@ -25,7 +25,7 @@ const options = {
 });*/
 
 //event listeners
-searchBtn.addEventListener('click', function (e) {
+searchBtn.addEventListener('click', async function (e) {
     //prevent the normal submission of the form
     e.preventDefault();
     let recipeInput = document.getElementById("search-bar").value.trim();
@@ -36,7 +36,7 @@ searchBtn.addEventListener('click', function (e) {
          const data = await res.json();
          console.log(data); //shows me 20 recipes based on what is typed into search
          //localStorage.setItem("recipes", JSON.stringify(data.results));
-         const recipes = data.results;
+         let recipes = data.results;
          return recipes;
     };
     let recipes = getData();
