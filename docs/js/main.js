@@ -58,10 +58,12 @@ async function getData() {
 };
 
 function showRecipes(recipes) {
+    // remove previous search results
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
     }
     for (const recipe in recipes) {
+        // create recipe summary cards from fetched data
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
@@ -74,7 +76,9 @@ function showRecipes(recipes) {
             </div>
             <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
+        // add to DOM
         recipeList.append(recipeObject);
+        // switch from landing page to search results
         landingPage.classList.add("hidden");
         searchResults.classList.remove("hidden");
     }
