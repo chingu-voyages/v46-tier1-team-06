@@ -31,12 +31,11 @@ const options = {
 };
 
 // Event listeners
-searchForm.addEventListener('click', async function () {
+searchForm.addEventListener('click', async function (e) {
     e.preventDefault();
     let recipes = await getData();
     showRecipes(recipes);
 });
-
 refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
