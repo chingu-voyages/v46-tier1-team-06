@@ -1,16 +1,23 @@
 // DOM elements to listen to
 const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
+const modalCloseButton = document.querySelector(".recipe-details__exit-button");
+
 
 // DOM elements to get user input from
 const searchBarInput = document.querySelector('#search-bar');
 
-// DOM element recieving data
-const recipeList = document.querySelector("#search-results");
+// Modal element recieving data
+const modalImage = document.querySelector("#example1");
+const modalTitle = document.querySelector(".title-container h1");
+const modalCategory = document.querySelector(".meal-label h3")
+const modalIngredientsList = document.querySelector("#ingredients-list");
+const modalInstructionsList = document.querySelector("#instructions-list");
 
 // DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
+const modal = document.querySelector("dialog");
 
 // Constant needed for fetching from the TastyAPI
 const options = {
@@ -32,6 +39,10 @@ refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
+recipeList.addEventListener("click", createModal)
+modalCloseButton.addEventListener("click", () => {
+    modal.close();
+});
 
 // Functions
 async function getData() {
@@ -69,31 +80,9 @@ function showRecipes(recipes) {
     }
 };
 
-// Modal Functionality
-
-// Opening and Closing
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("#this-button"); // changed to our button
-const closeButton = document.querySelector(".recipe-details__exit-button"); // changed to our button
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-
-// Listening for View Recipe Button clicks through Event Delegation
-recipeList.addEventListener("click", createModal)
-
-// DOM references needed to place modal content
-const modalImage = document.querySelector("#example1");
-const modalTitle = document.querySelector(".title-container h1");
-const modalCategory = document.querySelector(".meal-label h3")
-const modalIngredientsList = document.querySelector("#ingredients-list");
-const modalInstructionsList = document.querySelector("#instructions-list");
-
-function createModal(event) {
-    let recipeID = event.target.id.slice(2);
+function createModal(e) {
+    // get id of recipe card clicked
+    let recipeID = e.target.id.slice(2);
     for (const index in recipes) {
         if (recipes[index].id == recipeID) {
             const thumbnail = recipes[index].thumbnail_url;
