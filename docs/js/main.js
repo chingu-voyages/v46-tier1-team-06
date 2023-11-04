@@ -1,6 +1,5 @@
 // DOM elements to listen to
 const searchForm = document.querySelector('form.search-form');
-const searchBtn = document.querySelector(".search-form__search-button");
 const refreshButton = document.querySelector("#refresh-button");
 
 // DOM elements to get user input from
@@ -22,8 +21,8 @@ const options = {
 	}
 };
 
-//event listeners
-searchBtn.addEventListener('click', async function (e) {
+// Event listeners
+searchForm.addEventListener('click', async function (e) {
     //prevent the normal submission of the form
     e.preventDefault();
     let recipeInput = document.getElementById("search-bar").value.trim();
