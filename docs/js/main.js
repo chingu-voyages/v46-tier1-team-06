@@ -13,7 +13,7 @@ const recipeList = document.querySelector("#search-results");
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 
-// Constants needed for fetching from the TastyAPI
+// Constant needed for fetching from the TastyAPI
 const options = {
 	method: 'GET',
 	headers: {
