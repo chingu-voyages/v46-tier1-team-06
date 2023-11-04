@@ -1,13 +1,27 @@
-// DOM reference constant
-const recipeList = document.querySelector("#search-results");
-const searchBtn = document.querySelector(".search-form__search-button");
-const searchBarInput = document.querySelector('#search-bar');
+// DOM elements to listen to
 const searchForm = document.querySelector('form.search-form');
+const refreshButton = document.querySelector("#refresh-button");
+const modalCloseButton = document.querySelector(".recipe-details__exit-button");
+
+// DOM element to listen to and recieve data
+const recipeList = document.querySelector("#search-results");
+
+// DOM elements to get user input from
+const searchBarInput = document.querySelector('#search-bar');
+
+// Modal element recieving data
+const modalImage = document.querySelector("#example1");
+const modalTitle = document.querySelector(".title-container h1");
+const modalCategory = document.querySelector(".meal-label h3")
+const modalIngredientsList = document.querySelector("#ingredients-list");
+const modalInstructionsList = document.querySelector("#instructions-list");
+
+// DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
-const refreshButton = document.querySelector("#refresh-button");
+const modal = document.querySelector("dialog");
 
-// Constants needed for fetching from the TastyAPI
+// Constant needed for fetching from the TastyAPI
 const options = {
 	method: 'GET',
 	headers: {
@@ -16,88 +30,71 @@ const options = {
 	}
 };
 
-//event listeners
-searchBtn.addEventListener('click', async function (e) {
-    //prevent the normal submission of the form
+// Event listeners
+searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    let recipeInput = document.getElementById("search-bar").value.trim();
-    console.log(recipeInput); //see what is typed into the search form
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
-    const getData = async function () {
-        const res = await fetch(url, options);
-         const data = await res.json();
-         console.log(data); //shows 20 recipes based on what is typed into search
-         let recipes = data.results;
-         return recipes;
-    };
     let recipes = await getData();
-    console.log(recipes);
     showRecipes(recipes);
-    landingPage.classList.add("hidden");
-    searchResults.classList.remove("hidden");
 });
-
 refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
+recipeList.addEventListener("click", createModal)
+modalCloseButton.addEventListener("click", () => {
+    modal.close();
+});
 
-const showRecipes = function (recipes) {
+// Functions
+async function getData() {
+    // create fetch url with user-entered search term
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    // fetch recipes
+    const res = await fetch(url, options);
+    const data = await res.json();
+    let recipes = data.results;
+    return recipes;
+};
+function showRecipes(recipes) {
+    // remove previous search results
     while (recipeList.hasChildNodes()) {
         recipeList.firstElementChild.remove();
     }
     for (const recipe in recipes) {
+        // create recipe summary cards from fetched data
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
-            <p class="recipe-id hidden">${recipeID}</p>
             <img class="recipe-image" src="${thumbnail}" alt="food picture">
             <div class="recipe-title__container">
                 <h2 class="recipe-title">${title}</h2>
             </div>
             <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
+        // add to DOM
         recipeList.append(recipeObject);
+        // switch from landing page to search results
+        landingPage.classList.add("hidden");
+        searchResults.classList.remove("hidden");
     }
 };
-
-// Modal Functionality
-
-// Opening and Closing
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("#this-button"); // changed to our button
-const closeButton = document.querySelector(".recipe-details__exit-button"); // changed to our button
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
-
-// Listening for View Recipe Button clicks through Event Delegation
-recipeList.addEventListener("click", createModal)
-
-// DOM references needed to place modal content
-const modalImage = document.querySelector("#example1");
-const modalTitle = document.querySelector(".title-container h1");
-const modalCategory = document.querySelector(".meal-label h3")
-const modalIngredientsList = document.querySelector("#ingredients-list");
-const modalInstructionsList = document.querySelector("#instructions-list");
-
-function createModal(event) {
-    let recipeID = event.target.id.slice(2);
+function createModal(e) {
+    // get id of recipe card clicked
+    let recipeID = e.target.id.slice(2);
     for (const index in recipes) {
+        // find correct recipe
         if (recipes[index].id == recipeID) {
+        // create modal elements from fetched recipe data
             const thumbnail = recipes[index].thumbnail_url;
             modalImage.src = thumbnail;
-
             const title = recipes[index].name;
             modalTitle.innerHTML = title;
             modalImage.alt = title;
-
+            // get meal category from first meal tag
             const tagsArray = recipes[index].tags
             for (const index in tagsArray) {
                 if (tagsArray[index].root_tag_type == "meal") {
@@ -106,20 +103,19 @@ function createModal(event) {
                     break;
                 }
             }
-
+            // create ingredients list items
             const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
             ingredientArray.forEach(ingredient => {
                 let nextIngredient = document.createElement("li");
                 nextIngredient.innerHTML = ingredient;
                 modalIngredientsList.appendChild(nextIngredient);
             });
-
+            // create instruction list items
             const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
             instructionsArray.forEach(instruction => {
                 let nextInstruction = document.createElement("li");
                 nextInstruction.innerHTML = instruction;
-                modalInstructionsList.appendChild(nextInstruction);
-            })
+                modalInstructionsList.appendChild(nextInstruction);})
             break;
         }
     }
