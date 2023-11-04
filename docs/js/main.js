@@ -64,6 +64,8 @@ function showRecipes(recipes) {
             <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         recipeList.append(recipeObject);
+        landingPage.classList.add("hidden");
+        searchResults.classList.remove("hidden");
     }
 };
 
