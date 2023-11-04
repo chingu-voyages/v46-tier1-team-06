@@ -88,14 +88,15 @@ function createModal(e) {
     // get id of recipe card clicked
     let recipeID = e.target.id.slice(2);
     for (const index in recipes) {
+        // find correct recipe
         if (recipes[index].id == recipeID) {
+        // create modal elements from fetched recipe data
             const thumbnail = recipes[index].thumbnail_url;
             modalImage.src = thumbnail;
-
             const title = recipes[index].name;
             modalTitle.innerHTML = title;
             modalImage.alt = title;
-
+            // get meal category from first meal tag
             const tagsArray = recipes[index].tags
             for (const index in tagsArray) {
                 if (tagsArray[index].root_tag_type == "meal") {
@@ -104,20 +105,19 @@ function createModal(e) {
                     break;
                 }
             }
-
+            // create ingredients list items
             const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
             ingredientArray.forEach(ingredient => {
                 let nextIngredient = document.createElement("li");
                 nextIngredient.innerHTML = ingredient;
                 modalIngredientsList.appendChild(nextIngredient);
             });
-
+            // create instruction list items
             const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
             instructionsArray.forEach(instruction => {
                 let nextInstruction = document.createElement("li");
                 nextInstruction.innerHTML = instruction;
-                modalInstructionsList.appendChild(nextInstruction);
-            })
+                modalInstructionsList.appendChild(nextInstruction);})
             break;
         }
     }
