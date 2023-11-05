@@ -36,7 +36,7 @@ const options = {
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    let recipes = await getData();
+    await getData();
     showRecipes(recipes);
 });
 refreshButton.addEventListener("click", () => {
