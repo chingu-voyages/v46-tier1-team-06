@@ -170,6 +170,12 @@ header .app-instructions {
 }
 
 /* ===== RECIPES DISPLAY ===== */
+.static-recipes__desc .icon-redo2 {
+  color: #384547;
+  font-size: 28px;
+  margin-right: 0.25rem;
+}
+
 .recipes {
   padding-top: 3rem;
   width: 75vw;

@@ -86,6 +86,14 @@ header {
 }
 
 /* ===== RECIPES DISPLAY ===== */
+.static-recipes__desc {
+    .icon-redo2 {
+        color: color.$dark-forest-green;
+        font-size: 28px;
+        margin-right: .25rem;
+    }
+}
+
 .recipes {
     padding-top: 3rem;
     width: 75vw;
