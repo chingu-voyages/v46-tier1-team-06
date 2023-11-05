@@ -108,7 +108,7 @@ function createModal(e, recipes) {
                 }
             }
             // create ingredients list items
-            // remove previous search results
+            // remove instructions from previously opened modal
             while (modalIngredientsList.hasChildNodes()) {
                 modalIngredientsList.firstElementChild.remove();
             }
@@ -119,6 +119,10 @@ function createModal(e, recipes) {
                 modalIngredientsList.appendChild(nextIngredient);
             });
             // create instruction list items
+            // remove instructions from previously opened modal
+            while (modalInstructionsList.hasChildNodes()) {
+                modalInstructionsList.firstElementChild.remove();
+            }
             const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
             instructionsArray.forEach(instruction => {
                 let nextInstruction = document.createElement("li");
