@@ -86,7 +86,7 @@ function showRecipes(recipes) {
         searchResults.classList.remove("hidden");
     }
 };
-function createModal(e) {
+function createModal(e, recipes) {
     // get id of recipe card clicked
     let recipeID = e.target.id.slice(2);
     for (const index in recipes) {
