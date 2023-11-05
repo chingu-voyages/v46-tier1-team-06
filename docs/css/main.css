@@ -162,8 +162,8 @@ header .app-instructions {
 /* ===== LANDING PAGE ===== */
 #landing-page {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  align-items: center;
 }
 #landing-page .quote-section {
   padding: 5rem;
