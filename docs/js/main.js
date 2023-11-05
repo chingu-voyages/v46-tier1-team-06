@@ -43,7 +43,9 @@ refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
-recipeList.addEventListener("click", createModal)
+recipeList.addEventListener("click", (e) => {
+    createModal(e, recipes);
+})
 modalCloseButton.addEventListener("click", () => {
     modal.close();
 });
