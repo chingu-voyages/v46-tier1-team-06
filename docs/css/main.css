@@ -6,6 +6,10 @@ h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
 }
 
+li {
+  line-height: 200%;
+}
+
 h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -28,6 +32,10 @@ h2, .recipe-button {
 
 h3 {
   font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, ol, p, ul, li {
@@ -38,6 +46,10 @@ h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
 }
 
+li {
+  line-height: 200%;
+}
+
 h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -60,6 +72,10 @@ h2, .recipe-button {
 
 h3 {
   font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 * {
