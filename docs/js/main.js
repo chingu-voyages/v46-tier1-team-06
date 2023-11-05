@@ -21,6 +21,9 @@ const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
 
+// Global Variable to hold the recipes from the getData() function
+let recipes;
+
 // Constant needed for fetching from the TastyAPI
 const options = {
 	method: 'GET',
