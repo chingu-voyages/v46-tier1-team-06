@@ -123,5 +123,5 @@ function createModal(e, recipes) {
             break;
         }
     }
-    dialog.showModal();
+    modal.showModal();
 }
