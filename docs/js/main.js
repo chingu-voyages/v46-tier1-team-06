@@ -108,6 +108,10 @@ function createModal(e, recipes) {
                 }
             }
             // create ingredients list items
+            // remove previous search results
+            while (modalIngredientsList.hasChildNodes()) {
+                modalIngredientsList.firstElementChild.remove();
+            }
             const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
             ingredientArray.forEach(ingredient => {
                 let nextIngredient = document.createElement("li");
