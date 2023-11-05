@@ -3,7 +3,7 @@ const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
 
-// DOM element to listen to and recieve data
+// DOM element to listen to and receive data
 const recipeList = document.querySelector("#search-results");
 
 // DOM elements to get user input from
@@ -21,6 +21,9 @@ const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
 
+// Global Variable to hold the recipes from the getData() function
+let recipes;
+
 // Constant needed for fetching from the TastyAPI
 const options = {
 	method: 'GET',
@@ -33,14 +36,16 @@ const options = {
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    let recipes = await getData();
+    await getData();
     showRecipes(recipes);
 });
 refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
-recipeList.addEventListener("click", createModal)
+recipeList.addEventListener("click", (e) => {
+    createModal(e, recipes);
+})
 modalCloseButton.addEventListener("click", () => {
     modal.close();
 });
@@ -53,8 +58,7 @@ async function getData() {
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
-    let recipes = data.results;
-    return recipes;
+    recipes = data.results;
 };
 function showRecipes(recipes) {
     // remove previous search results
@@ -82,7 +86,7 @@ function showRecipes(recipes) {
         searchResults.classList.remove("hidden");
     }
 };
-function createModal(e) {
+function createModal(e, recipes) {
     // get id of recipe card clicked
     let recipeID = e.target.id.slice(2);
     for (const index in recipes) {
@@ -119,5 +123,5 @@ function createModal(e) {
             break;
         }
     }
-    dialog.showModal();
+    modal.showModal();
 }
