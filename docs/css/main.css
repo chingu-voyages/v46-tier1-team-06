@@ -170,6 +170,9 @@ header .app-instructions {
 }
 
 /* ===== RECIPES DISPLAY ===== */
+.static-recipes__desc {
+  padding-top: 3rem;
+}
 .static-recipes__desc .icon-redo2 {
   color: #384547;
   font-size: 28px;
@@ -177,7 +180,7 @@ header .app-instructions {
 }
 
 .recipes {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   width: 75vw;
   display: flex;
   flex-wrap: wrap;

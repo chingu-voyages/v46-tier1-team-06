@@ -87,7 +87,7 @@ header {
 
 /* ===== RECIPES DISPLAY ===== */
 .static-recipes__desc {
-
+    padding-top: 3rem;
     .icon-redo2 {
         color: color.$dark-forest-green;
         font-size: 28px;
@@ -96,7 +96,7 @@ header {
 }
 
 .recipes {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     width: 75vw;
     display: flex;
     flex-wrap: wrap;
