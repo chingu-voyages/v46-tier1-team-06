@@ -3,7 +3,7 @@ const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
 
-// DOM element to listen to and recieve data
+// DOM element to listen to and receive data
 const recipeList = document.querySelector("#search-results");
 
 // DOM elements to get user input from
