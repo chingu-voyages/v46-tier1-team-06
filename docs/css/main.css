@@ -1,8 +1,8 @@
-h1, h2, h3, ol, p, ul, li {
+h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -30,11 +30,11 @@ h3 {
   font-size: 2rem;
 }
 
-h1, h2, h3, ol, p, ul, li {
+h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
 }
 
