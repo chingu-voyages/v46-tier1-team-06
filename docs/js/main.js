@@ -56,8 +56,7 @@ async function getData() {
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
-    let recipes = data.results;
-    return recipes;
+    recipes = data.results;
 };
 function showRecipes(recipes) {
     // remove previous search results
