@@ -45,7 +45,7 @@ searchForm.addEventListener('submit', async function (e) {
 });
 
 refreshButton.addEventListener("click", () => {
-     window.location.reload("Refresh");
+    window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
