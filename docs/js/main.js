@@ -68,10 +68,10 @@ modalCloseButton.addEventListener("click", () => {
 
 // Functions
 function validateSearch(recipeInput) {
-    const acceptedLetters = /[a-zA-Z]/;
+    const unacceptedCharacters = /[^a-zA-Z]/;
     if (recipeInput.length === 0) {
        searchMessages.innerText = "You didn't input anything!";
-    } else if (recipeInput.match(acceptedLetters)) {
+    } else if (recipeInput.match(unacceptedCharacters)) {
        searchMessages.innerText = "No numbers or special characters needed, search for a food ingredient!";
     } else {
     return recipeInput;
