@@ -45,8 +45,8 @@ searchForm.addEventListener('submit', async function (e) {
     if (goodSearch) {
         await getData(recipeInput);
         searchBar.value = "";
+        showRecipes(recipes);
     }
-    showRecipes(recipes);
 });
 refreshButton.addEventListener("click", () => {
     landingPage.classList.remove("hidden");
