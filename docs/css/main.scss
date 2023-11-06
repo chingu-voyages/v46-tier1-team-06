@@ -300,7 +300,13 @@ footer {
         }
     }
 
-}
+    /* Search Results */
+    #search-results-container {
+        ul {
+            padding: 0;
+        }
+    }
+
 
 /* For tablets */
 @media screen and (min-width: 501px) and (max-width: 1200px) {
