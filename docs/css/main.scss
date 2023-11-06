@@ -248,6 +248,54 @@ footer {
 
 /* For phones in Portrait Mode */
 @media screen and (max-width: 500px) {
+    header {
+        .brand {
+            font-size: 2rem;
+        }
+        .search-container {
+            margin: 0 10px;
+        }
+        .search-form {
+            justify-content: center;
+        }
+        .search-form__input {
+            min-width: 200px;
+            font-size: 1rem;
+            padding-left: 10px;
+            flex-grow: 2;
+        }
+        .search-form__search-button {
+            margin-right: 5px;
+        }
+        .app-instructions {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    }
+    .static-recipes__desc {
+        margin: 0 25px;
+        padding-top: 0;
+        font-size: 0.9rem;
+    }
+    .recipes {
+        padding-top: 0.5rem;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    #landing-page {
+        .quote-section {
+            padding: 0;
+            width: 90vw;
+            align-self: center;
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
 
 }
 
