@@ -1,9 +1,13 @@
-h1, h2, h3, ol, p, ul, li {
+h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
+}
+
+li {
+  line-height: 200%;
 }
 
 h1 {
@@ -30,12 +34,20 @@ h3 {
   font-size: 2rem;
 }
 
-h1, h2, h3, ol, p, ul, li {
+h4 {
+  font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Josefin Sans", sans-serif;
+}
+
+li {
+  line-height: 200%;
 }
 
 h1 {
@@ -60,6 +72,10 @@ h2, .recipe-button {
 
 h3 {
   font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
 }
 
 * {
@@ -162,16 +178,25 @@ header .app-instructions {
 /* ===== LANDING PAGE ===== */
 #landing-page {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  align-items: center;
 }
 #landing-page .quote-section {
   padding: 5rem;
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes {
+.static-recipes__desc {
   padding-top: 3rem;
+}
+.static-recipes__desc .icon-redo2 {
+  color: #384547;
+  font-size: 28px;
+  margin-right: 0.25rem;
+}
+
+.recipes {
+  padding-top: 1.5rem;
   width: 75vw;
   display: flex;
   flex-wrap: wrap;
