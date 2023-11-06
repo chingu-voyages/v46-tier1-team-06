@@ -2,6 +2,7 @@
 const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
+const searchMessages = document.querySelector(".app-instructions");
 
 // DOM element to listen to and receive data
 const recipeList = document.querySelector("#search-results");
@@ -60,6 +61,7 @@ async function getData() {
     const data = await res.json();
     recipes = data.results;
 };
+
 function showRecipes(recipes) {
     // remove previous search results
     while (recipeList.hasChildNodes()) {
@@ -86,6 +88,7 @@ function showRecipes(recipes) {
         searchResults.classList.remove("hidden");
     }
 };
+
 function createModal(e, recipes) {
     // get id of recipe card clicked
     let recipeID = e.target.id.slice(2);
