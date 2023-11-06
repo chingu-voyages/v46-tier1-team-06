@@ -3,7 +3,6 @@ const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
 const searchMessages = document.querySelector(".app-instructions");
-const searchBar = document.getElementById("search-bar");
 
 // DOM element to listen to and receive data
 const recipeList = document.querySelector("#search-results");
@@ -39,12 +38,12 @@ const options = {
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
     searchMessages.innerText = "Start decreasing your food waste by searching for recipes by ingredient!";
-    let recipeInput = searchBar.value.trim();
+    let recipeInput = searchBarInput.value.trim();
     const goodSearch = validateSearch(recipeInput);
     
     if (goodSearch) {
         await getData(recipeInput)
-        searchBar.value = "";
+        searchBarInput.value = "";
         showRecipes(recipes);
     }
     if (!recipeList.hasChildNodes()) {
@@ -77,7 +76,7 @@ function validateSearch(recipeInput) {
 
 async function getData() {
     // create fetch url with user-entered search term
-    let recipeInput = searchBar.value.trim();
+    let recipeInput = searchBarInput.value.trim();
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     // fetch recipes
     const res = await fetch(url, options);
