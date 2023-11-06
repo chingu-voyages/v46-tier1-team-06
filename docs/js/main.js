@@ -46,14 +46,22 @@ searchForm.addEventListener('submit', async function (e) {
         searchBarInput.value = "";
         showRecipes(recipes);
     }
+    if (!recipeList.hasChildNodes()) {
+        landingPage.innerHTML = `<p>No recipes found!</p>`;
+        landingPage.classList.remove("hidden");
+    }
 });
+
 refreshButton.addEventListener("click", () => {
+     window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
+
 recipeList.addEventListener("click", (e) => {
     createModal(e, recipes);
 })
+
 modalCloseButton.addEventListener("click", () => {
     modal.close();
 });
@@ -130,6 +138,10 @@ function createModal(e, recipes) {
                 }
             }
             // create ingredients list items
+            // remove instructions from previously opened modal
+            while (modalIngredientsList.hasChildNodes()) {
+                modalIngredientsList.firstElementChild.remove();
+            }
             const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
             ingredientArray.forEach(ingredient => {
                 let nextIngredient = document.createElement("li");
@@ -137,6 +149,10 @@ function createModal(e, recipes) {
                 modalIngredientsList.appendChild(nextIngredient);
             });
             // create instruction list items
+            // remove instructions from previously opened modal
+            while (modalInstructionsList.hasChildNodes()) {
+                modalInstructionsList.firstElementChild.remove();
+            }
             const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
             instructionsArray.forEach(instruction => {
                 let nextInstruction = document.createElement("li");
