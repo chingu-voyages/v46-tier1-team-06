@@ -43,9 +43,13 @@ searchForm.addEventListener('submit', async function (e) {
     const goodSearch = validateSearch(recipeInput);
     
     if (goodSearch) {
-        await getData(recipeInput);
+        await getData(recipeInput)
         searchBar.value = "";
         showRecipes(recipes);
+    }
+    if (!recipeList.hasChildNodes()) {
+        landingPage.innerHTML = `<p>No recipes found!</p>`;
+        landingPage.classList.remove("hidden");
     }
 });
 refreshButton.addEventListener("click", () => {
@@ -56,7 +60,7 @@ recipeList.addEventListener("click", (e) => {
     createModal(e, recipes);
 })
 modalCloseButton.addEventListener("click", () => {
-    modal.close();S
+    modal.close();
 });
 
 // Functions
@@ -79,6 +83,7 @@ async function getData() {
     const res = await fetch(url, options);
     const data = await res.json();
     recipes = data.results;
+    return recipes;
 };
 
 function showRecipes(recipes) {
