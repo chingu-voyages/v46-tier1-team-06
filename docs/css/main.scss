@@ -307,6 +307,49 @@ footer {
         }
     }
 
+    /* Modal */
+    #modal {
+        margin-top: 1rem;
+        width: 85vw;
+        position: relative;
+        .recipe-details__exit-button {
+            margin: 5px 5px 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .img-title-row {
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+            .img-container {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .title-container {
+                h1 {
+                    font-size: 2rem;
+                }
+                .meal-label {
+                    height: 40px;
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .ingredients {
+            margin: 0;
+            margin-right: 10px;
+        }
+        .instructions {
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
+}
 
 /* For tablets */
 @media screen and (min-width: 501px) and (max-width: 1200px) {
