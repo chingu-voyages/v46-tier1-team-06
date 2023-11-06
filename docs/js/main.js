@@ -80,12 +80,13 @@ function showRecipes(recipes) {
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
+        recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
-            <img class="recipe-image" src="${thumbnail}" alt="food picture">
-            <div class="recipe-title__container">
-                <h2 class="recipe-title">${title}</h2>
+            <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
+            <div id="tcid${recipeID}" class="recipe-title__container">
+                <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
             </div>
-            <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+            <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         // add to DOM
         recipeList.append(recipeObject);
