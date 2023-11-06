@@ -78,16 +78,25 @@ header {
 /* ===== LANDING PAGE ===== */
 #landing-page {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    align-items: center;
     .quote-section {
         padding: 5rem;
     }
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.recipes {
+.static-recipes__desc {
     padding-top: 3rem;
+    .icon-redo2 {
+        color: color.$dark-forest-green;
+        font-size: 28px;
+        margin-right: .25rem;
+    }
+}
+
+.recipes {
+    padding-top: 1.5rem;
     width: 75vw;
     display: flex;
     flex-wrap: wrap;
