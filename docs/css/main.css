@@ -18,6 +18,10 @@ h2, .recipe-button {
   text-align: center;
 }
 
+.no-results {
+  color:lightslategrey;
+}
+
 .recipe-button {
   color: white;
 }
