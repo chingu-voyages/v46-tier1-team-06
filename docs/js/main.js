@@ -37,6 +37,7 @@ const options = {
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
+    searchMessages.innerText = "Start decreasing your food waste by searching for recipes by ingredient!";
     let recipeInput = document.getElementById("search-bar").value.trim();
     const goodSearch = validateSearch(recipeInput);
     
