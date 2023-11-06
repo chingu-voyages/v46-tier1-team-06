@@ -178,7 +178,7 @@ header .app-instructions {
 /* ===== LANDING PAGE ===== */
 #landing-page {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 #landing-page .quote-section {
@@ -336,9 +336,15 @@ footer .github-link:focus {
 
 /* ===== Media Queries ===== */
 /* For phones in Portrait Mode */
-/* For tablets */
-/* For laptops and regular-size desktops */
-/* For widescreen desktops */
+/* For screens larger than phones that move down to one card per row */
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .recipes {
+    width: 85vw;
+  }
+  article {
+    width: 100vw;
+  }
+}
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
