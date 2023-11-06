@@ -205,11 +205,17 @@ header {
         }
         .title-container {
             .meal-label {
-                padding: 5px 28px;
-                background-color: #58BC82;
-                width: 225px;
-                border-radius: 20%;
+            display: inline-flex;
+            padding: 20px 20px;
+            justify-content: space-around;
+            background-color: #58BC82;
+           height: 75px;
+           min-width: 150px;
+           align-items: center;
+           text-align: center;
+           border-radius: 20px;
             }
+            
         }
     }
     .ingredients {
