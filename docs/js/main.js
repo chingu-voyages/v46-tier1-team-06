@@ -37,7 +37,12 @@ const options = {
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    await getData();
+    let recipeInput = document.getElementById("search-bar").value.trim();
+    const goodSearch = validateSearch(recipeInput);
+    
+    if (goodSearch) {
+        await getData(recipeInput);
+    }
     showRecipes(recipes);
 });
 refreshButton.addEventListener("click", () => {
@@ -48,10 +53,21 @@ recipeList.addEventListener("click", (e) => {
     createModal(e, recipes);
 })
 modalCloseButton.addEventListener("click", () => {
-    modal.close();
+    modal.close();S
 });
 
 // Functions
+function validateSearch(recipeInput) {
+    const acceptedLetter = /[a-zA-Z]/;
+    if (recipeInput.length === 0) {
+       searchMessages.innerText = "You didn't input anything!";
+    } else if (!recipeInput.match(acceptedLetter)) {
+       searchMessages.innerText = "Search for a food ingredient, no numbers of special characters needed!";
+   } else {
+    return recipeInput;
+    }
+};
+
 async function getData() {
     // create fetch url with user-entered search term
     let recipeInput = document.getElementById("search-bar").value.trim();
