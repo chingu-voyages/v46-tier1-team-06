@@ -85,7 +85,6 @@ async function getData(recipeInput) {
     const res = await fetch(url, options);
     const data = await res.json();
     recipes = data.results;
-    return recipes;
 };
 
 function showRecipes(recipes) {
