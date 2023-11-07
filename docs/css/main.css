@@ -22,10 +22,6 @@ h2, .recipe-button {
   text-align: center;
 }
 
-.no-results {
-  color:lightslategrey;
-}
-
 .recipe-button {
   color: white;
 }
@@ -190,7 +186,7 @@ header .app-instructions {
 }
 
 .no-results {
-  font-size: 20px;
+  font-size: 24px;
   color: grey;
 }
 
