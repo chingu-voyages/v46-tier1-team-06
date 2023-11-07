@@ -322,8 +322,11 @@ header .app-instructions {
 /* ===== FOOTER ===== */
 footer {
   background-color: #196160;
-  padding: 5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 footer .icon-github {
   color: white;
@@ -332,6 +335,12 @@ footer .icon-github {
 footer .github-link:hover,
 footer .github-link:focus {
   border: 0.1em solid rgba(0, 0, 0, 0.2);
+}
+footer .socials-and-attributions {
+  padding-top: 3rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  justify-self: flex-end;
 }
 
 /* ===== Media Queries ===== */
