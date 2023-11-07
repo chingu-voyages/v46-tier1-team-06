@@ -185,6 +185,11 @@ header .app-instructions {
   padding: 5rem;
 }
 
+.no-results {
+  font-size: 24px;
+  color: grey;
+}
+
 /* ===== RECIPES DISPLAY ===== */
 .static-recipes__desc {
   padding-top: 3rem;
@@ -317,6 +322,7 @@ header .app-instructions {
   border-radius: 20px;
 }
 #modal .img-title-row .title-container .meal-label h2 {
+  color: black;
   font-size: 1.25rem;
   margin: 0;
 }

@@ -47,7 +47,7 @@ searchForm.addEventListener('submit', async function (e) {
         showRecipes(recipes);
     }
     if (!recipeList.hasChildNodes()) {
-        landingPage.innerHTML = `<p>No recipes found!</p>`;
+        landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
         landingPage.classList.remove("hidden");
     }
 });
@@ -103,7 +103,6 @@ function showRecipes(recipes) {
         for (const recipe in tagsArray) {
             if (tagsArray[recipe].root_tag_type == "meal") {
                 let mealCategory = tagsArray[recipe].display_name;
-                //modalCategory.innerHTML = mealCategory;
                 foundMealCategory += mealCategory;
                 break;
             };
@@ -112,16 +111,10 @@ function showRecipes(recipes) {
         recipeObject.classList.add("recipe");
         recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
-<<<<<<< HEAD
-            <img class="recipe-image" src="${thumbnail}" alt="food picture">
-            <p class="recipe-category">${foundMealCategory}</p>
-            <div class="recipe-title__container">
-                <h2 class="recipe-title">${title}</h2>
-=======
             <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
+            <p class="recipe-category">${foundMealCategory}</p>
             <div id="tcid${recipeID}" class="recipe-title__container">
                 <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
->>>>>>> b5ecfdf069d5c207def24667e310de3e6faa733b
             </div>
             <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
