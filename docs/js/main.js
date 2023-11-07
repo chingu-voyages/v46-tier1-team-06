@@ -80,18 +80,20 @@ function showRecipes(recipes) {
         const thumbnail = recipes[recipe].thumbnail_url;
         // get meal category from first meal tag
         const tagsArray = recipes[recipe].tags
+        let foundMealCategory = "";
         for (const recipe in tagsArray) {
             if (tagsArray[recipe].root_tag_type == "meal") {
-                const mealCategory = tagsArray[recipe].display_name;
-                modalCategory.innerHTML = mealCategory;
+                let mealCategory = tagsArray[recipe].display_name;
+                //modalCategory.innerHTML = mealCategory;
+                foundMealCategory += mealCategory;
                 break;
-            }
+            };
         }
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
             <img class="recipe-image" src="${thumbnail}" alt="food picture">
-            <p class="recipe-category">dinner</p>
+            <p class="recipe-category">${foundMealCategory}</p>
             <div class="recipe-title__container">
                 <h2 class="recipe-title">${title}</h2>
             </div>
