@@ -47,7 +47,7 @@ searchForm.addEventListener('submit', async function (e) {
         showRecipes(recipes);
     }
     if (!recipeList.hasChildNodes()) {
-        landingPage.innerHTML = `<p>No recipes found!</p>`;
+        landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
         landingPage.classList.remove("hidden");
     }
 });
