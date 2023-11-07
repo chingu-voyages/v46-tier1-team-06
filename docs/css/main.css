@@ -211,6 +211,7 @@ header .app-instructions {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
   border-radius: 20px;
   box-shadow: 3px 3px 5px silver;
 }
