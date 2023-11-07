@@ -13,7 +13,7 @@ const searchBarInput = document.querySelector('#search-bar');
 // Modal element recieving data
 const modalImage = document.querySelector("#example1");
 const modalTitle = document.querySelector(".title-container h1");
-const modalCategory = document.querySelector(".meal-label h3")
+const modalCategory = document.querySelector(".meal-label h2")
 const modalIngredientsList = document.querySelector("#ingredients-list");
 const modalInstructionsList = document.querySelector("#instructions-list");
 
@@ -97,13 +97,24 @@ function showRecipes(recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
+        // get meal category from first meal tag
+        const tagsArray = recipes[recipe].tags
+        let foundMealCategory = "";
+        for (const recipe in tagsArray) {
+            if (tagsArray[recipe].root_tag_type == "meal") {
+                let mealCategory = tagsArray[recipe].display_name;
+                foundMealCategory += mealCategory;
+                break;
+            };
+        }
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
         recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
-            <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
-            <div id="tcid${recipeID}" class="recipe-title__container">
-                <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
+            <img class="recipe-image" src="${thumbnail}" alt="food picture">
+            <p class="recipe-category">${foundMealCategory}</p>
+            <div class="recipe-title__container">
+                <h2 class="recipe-title">${title}</h2>
             </div>
             <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;

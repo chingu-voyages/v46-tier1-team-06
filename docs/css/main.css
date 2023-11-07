@@ -228,8 +228,9 @@ header .app-instructions {
   border-radius: 20px 20px 0 0;
 }
 .recipes .recipe .recipe-category {
+  font-weight: bold;
   margin: 0;
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   background-color: #58BC82;
   align-self: flex-start;
 }
@@ -274,8 +275,11 @@ header .app-instructions {
   width: 950px;
   background-color: #8F2D56;
 }
-#modal h1, #modal h2, #modal ul, #modal li {
+#modal h1, #modal h3, #modal ul, #modal li {
   color: white;
+}
+#modal h1 {
+  font-size: 3rem;
 }
 #modal .recipe-details__exit-button {
   background-color: #196160;
@@ -309,14 +313,18 @@ header .app-instructions {
 }
 #modal .img-title-row .title-container .meal-label {
   display: inline-flex;
-  padding: 20px 20px;
+  padding: 10px;
   justify-content: space-around;
   background-color: #58BC82;
-  height: 75px;
   min-width: 150px;
   align-items: center;
   text-align: center;
   border-radius: 20px;
+}
+#modal .img-title-row .title-container .meal-label h2 {
+  color: black;
+  font-size: 1.25rem;
+  margin: 0;
 }
 #modal .ingredients {
   margin: 50px;

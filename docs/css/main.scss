@@ -126,8 +126,9 @@ header {
             border-radius: 20px 20px 0 0;
         }
         .recipe-category {
+            font-weight: bold;
             margin: 0;
-            padding: 0.5rem 0.75rem;
+            padding: 0.25rem 0.75rem;
             background-color: color.$emerald;
             align-self: flex-start;
         }
@@ -174,8 +175,11 @@ header {
     font-family: 'Open Sans';
     width: 950px;
     background-color: color.$dark-magenta;
-    h1, h2, ul, li {
+    h1, h3, ul, li {
         color:white;
+    }
+    h1 {
+        font-size: 3rem;
     }
     .recipe-details__exit-button {
         background-color: color.$dark-teal;
@@ -211,15 +215,19 @@ header {
         }
         .title-container {
             .meal-label {
-            display: inline-flex;
-            padding: 20px 20px;
-            justify-content: space-around;
-            background-color: #58BC82;
-           height: 75px;
-           min-width: 150px;
-           align-items: center;
-           text-align: center;
-           border-radius: 20px;
+                display: inline-flex;
+                padding: 10px;
+                justify-content: space-around;
+                background-color: #58BC82;
+                min-width: 150px;
+                align-items: center;
+                text-align: center;
+                border-radius: 20px;
+                h2 {
+                    color: black;
+                    font-size: 1.25rem;
+                    margin: 0;
+                }
             }
             
         }
