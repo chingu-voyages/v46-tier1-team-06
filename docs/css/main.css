@@ -272,6 +272,9 @@ header .app-instructions {
 #modal h1, #modal h3, #modal ul, #modal li {
   color: white;
 }
+#modal h1 {
+  font-size: 3rem;
+}
 #modal .recipe-details__exit-button {
   background-color: #196160;
   border: 0.1em solid rgba(0, 0, 0, 0.2);

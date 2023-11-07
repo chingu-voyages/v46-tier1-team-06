@@ -172,6 +172,9 @@ header {
     h1, h3, ul, li {
         color:white;
     }
+    h1 {
+        font-size: 3rem;
+    }
     .recipe-details__exit-button {
         background-color: color.$dark-teal;
         border: 0.1em solid rgb(0 0 0 / 0.2);
