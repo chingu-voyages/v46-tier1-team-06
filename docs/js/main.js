@@ -82,6 +82,7 @@ function showRecipes(recipes) {
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
             <img class="recipe-image" src="${thumbnail}" alt="food picture">
+            <p class="recipe-category">dinner</p>
             <div class="recipe-title__container">
                 <h2 class="recipe-title">${title}</h2>
             </div>
