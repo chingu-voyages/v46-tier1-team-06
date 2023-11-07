@@ -316,6 +316,7 @@ header .app-instructions {
   border-radius: 20px;
 }
 #modal .img-title-row .title-container .meal-label h2 {
+  color: black;
   font-size: 1.25rem;
   margin: 0;
 }
