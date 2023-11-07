@@ -103,7 +103,6 @@ function showRecipes(recipes) {
         for (const recipe in tagsArray) {
             if (tagsArray[recipe].root_tag_type == "meal") {
                 let mealCategory = tagsArray[recipe].display_name;
-                //modalCategory.innerHTML = mealCategory;
                 foundMealCategory += mealCategory;
                 break;
             };
