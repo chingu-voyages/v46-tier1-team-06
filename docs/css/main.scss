@@ -78,7 +78,7 @@ header {
 /* ===== LANDING PAGE ===== */
 #landing-page {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     .quote-section {
         padding: 5rem;
@@ -116,6 +116,7 @@ header {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        cursor: pointer;
         border-radius: 20px;
         box-shadow: 3px 3px 5px silver;
         .recipe-image {
@@ -368,23 +369,15 @@ footer {
     }
 }
 
-/* For tablets */
-@media screen and (min-width: 501px) and (max-width: 1200px) {
-
+/* For screens larger than phones that move down to one card per row */
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+    .recipes {
+        width: 85vw;
+    }
+    article {
+        width: 100vw;
+    }
 }
-
-/* For laptops and regular-size desktops */
-@media screen and (min-width: 1201px) and (max-width: 2000px) {
-
-}
-
-/* For widescreen desktops */
-@media screen and (min-width: 2001px) {
-    
-}
-
-
-
 
 
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
