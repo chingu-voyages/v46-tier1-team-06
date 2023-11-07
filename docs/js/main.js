@@ -2,6 +2,7 @@
 const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
+const searchMessages = document.querySelector(".app-instructions");
 
 // DOM element to listen to and receive data
 const recipeList = document.querySelector("#search-results");
@@ -36,8 +37,15 @@ const options = {
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
-    await getData();
-    showRecipes(recipes);
+    searchMessages.innerText = "Start decreasing your food waste by searching for recipes by ingredient!";
+    let recipeInput = searchBarInput.value.trim();
+    const goodSearch = validateSearch(recipeInput);
+    
+    if (goodSearch) {
+        await getData(recipeInput)
+        searchBarInput.value = "";
+        showRecipes(recipes);
+    }
     if (!recipeList.hasChildNodes()) {
         landingPage.innerHTML = `<p>No recipes found!</p>`;
         landingPage.classList.remove("hidden");
@@ -59,15 +67,26 @@ modalCloseButton.addEventListener("click", () => {
 });
 
 // Functions
-async function getData() {
+function validateSearch(recipeInput) {
+    const unacceptedCharacters = /[^a-zA-Z]/;
+    if (recipeInput.length === 0) {
+       searchMessages.innerText = "You didn't input anything!";
+    } else if (recipeInput.match(unacceptedCharacters)) {
+       searchMessages.innerText = "No numbers or special characters needed, search for a food ingredient!";
+    } else {
+    return recipeInput;
+    };
+};
+
+async function getData(recipeInput) {
     // create fetch url with user-entered search term
-    let recipeInput = document.getElementById("search-bar").value.trim();
     let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
     recipes = data.results;
 };
+
 function showRecipes(recipes) {
     // remove previous search results
     while (recipeList.hasChildNodes()) {
@@ -106,6 +125,7 @@ function showRecipes(recipes) {
         searchResults.classList.remove("hidden");
     }
 };
+
 function createModal(e, recipes) {
     // get id of recipe card clicked
     let recipeID = e.target.id.slice(2);
