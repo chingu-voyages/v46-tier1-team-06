@@ -78,6 +78,15 @@ function showRecipes(recipes) {
         const recipeID = recipes[recipe].id;
         const title = recipes[recipe].name;
         const thumbnail = recipes[recipe].thumbnail_url;
+        // get meal category from first meal tag
+        const tagsArray = recipes[recipe].tags
+        for (const recipe in tagsArray) {
+            if (tagsArray[recipe].root_tag_type == "meal") {
+                const mealCategory = tagsArray[recipe].display_name;
+                modalCategory.innerHTML = mealCategory;
+                break;
+            }
+        }
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
         recipeObject.innerHTML = `
