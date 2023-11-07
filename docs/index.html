@@ -22,7 +22,6 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/api-test.css">
 
   <meta name="theme-color" content="#fafafa">
 
@@ -52,7 +51,7 @@
           </svg>
           <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
         </button>
-        <button id="refresh-button" class="search-form__refresh-button" >
+        <button id="refresh-button" class="search-form__refresh-button"  value="Refresh" type="button" onclick="refresh(this)">
           <span class="sr-only">Refresh to do a new search</span>
           <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
@@ -70,6 +69,18 @@
   </header>
 
   <section id="landing-page">
+    <section class="static-recipes__desc">
+      <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <symbol id="icon-redo2" viewBox="0 0 32 32">
+            <title>pointing arrow</title>
+            <path d="M18 7.762v-7.762l12 12-12 12v-7.932c-13.961-0.328-13.362 9.493-9.808 15.932-8.772-9.482-6.909-24.674 9.808-24.238z"></path>
+          </symbol>
+        </defs>
+      </svg>
+      <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
+      <p>Some examples of what you could make with that lettuce from last week!</p>
+    </section>
     <section id="static-recipes" class="recipes">
       <div class="recipe">
         <div class="recipe-image-container">
@@ -102,7 +113,7 @@
     </section>
     <article class="quote-section">
       <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
-      <p><strong>Here are some ways you can help the planet by focusing on your food ingredients!</strong></p>
+      <h4>Here are some ways you can help the planet by focusing on your food ingredients!</h4>
       <ul>
         <li>Search for recipes that use the ingredients in your fridge that are about to go bad!</li>
         <li>Adapt recipes to use ingredients you already have: grains for grains, vegetables for vegetables, etc.!</li>
@@ -154,8 +165,8 @@
   </dialog>
 
   <footer>
-    <span id="github-link__desc" class="sr-only">Opens a new tab and goes to a different website</span>
-    <a aria-label="Github repository for app" aria-describedby="github-link__desc" class="github-link" href="https://github.com/chingu-voyages/v46-tier1-team-06" target="_blank">
+    <span id="link__desc" class="sr-only">Opens a new tab and goes to a different website</span>
+    <a aria-label="Github repository for app" aria-describedby="link__desc" class="github-link" target="_blank" href="https://github.com/chingu-voyages/v46-tier1-team-06">
       <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <symbol id="icon-github" viewBox="0 0 32 32">
@@ -166,6 +177,19 @@
         </svg>
       <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
     </a>
+    <p class="socials-and-attributions">
+      A 
+      <a aria-label="Chingu Inc homepage" aria-describedby="link__desc" target="_blank" href="https://www.chingu.io/">Chingu</a>
+      Project made with love by
+      <a aria-label="Begum's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/begumvernondeveloper/">Begum</a>
+      ,
+      <a aria-label="Erica's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/charwaeericachong/">Erica</a>
+      ,
+      <a aria-label="Tauri's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/tauri-stclaire/">Tauri</a>
+      , and
+      <a aria-label="Terri's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/terri-fricker/">Terri</a>
+      !
+    </p>
   </footer>
   
 </body>
