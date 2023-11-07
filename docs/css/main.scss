@@ -230,8 +230,11 @@ header {
 /* ===== FOOTER ===== */
 footer {
     background-color: color.$dark-teal;
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 
     .icon-github {
         color: white;
@@ -241,6 +244,15 @@ footer {
     .github-link:hover,
     .github-link:focus {
         border: 0.1em solid rgb(0 0 0 / 0.2);
+    }
+
+    .socials-and-attributions {
+        color: white;
+        font-family: fonts.$heading-font;
+        margin-top: 0;
+        margin-bottom: .5rem;
+        padding-top: 3rem;
+        justify-self: flex-end;
     }
 }
 
