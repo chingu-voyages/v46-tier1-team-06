@@ -53,7 +53,7 @@ searchForm.addEventListener('submit', async function (e) {
 });
 
 refreshButton.addEventListener("click", () => {
-     window.location.reload("Refresh");
+    window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
@@ -99,12 +99,13 @@ function showRecipes(recipes) {
         const thumbnail = recipes[recipe].thumbnail_url;
         const recipeObject = document.createElement("li");
         recipeObject.classList.add("recipe");
+        recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
-            <img class="recipe-image" src="${thumbnail}" alt="food picture">
-            <div class="recipe-title__container">
-                <h2 class="recipe-title">${title}</h2>
+            <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
+            <div id="tcid${recipeID}" class="recipe-title__container">
+                <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
             </div>
-            <button id="id${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
+            <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         // add to DOM
         recipeList.append(recipeObject);
@@ -115,49 +116,52 @@ function showRecipes(recipes) {
 };
 
 function createModal(e, recipes) {
-    // get id of recipe card clicked
-    let recipeID = e.target.id.slice(2);
-    for (const index in recipes) {
-        // find correct recipe
-        if (recipes[index].id == recipeID) {
-        // create modal elements from fetched recipe data
-            const thumbnail = recipes[index].thumbnail_url;
-            modalImage.src = thumbnail;
-            const title = recipes[index].name;
-            modalTitle.innerHTML = title;
-            modalImage.alt = title;
-            // get meal category from first meal tag
-            const tagsArray = recipes[index].tags
-            for (const index in tagsArray) {
-                if (tagsArray[index].root_tag_type == "meal") {
-                    const mealCategory = tagsArray[index].display_name;
-                    modalCategory.innerHTML = mealCategory;
-                    break;
+    // check to see if recipe card was clicked
+    if (e.target.id != "search-results") {
+        // get id of recipe card clicked
+        let recipeID = e.target.id.slice(4);
+        for (const index in recipes) {
+            // find correct recipe
+            if (recipes[index].id == recipeID) {
+            // create modal elements from fetched recipe data
+                const thumbnail = recipes[index].thumbnail_url;
+                modalImage.src = thumbnail;
+                const title = recipes[index].name;
+                modalTitle.innerHTML = title;
+                modalImage.alt = title;
+                // get meal category from first meal tag
+                const tagsArray = recipes[index].tags
+                for (const index in tagsArray) {
+                    if (tagsArray[index].root_tag_type == "meal") {
+                        const mealCategory = tagsArray[index].display_name;
+                        modalCategory.innerHTML = mealCategory;
+                        break;
+                    }
                 }
+                // create ingredients list items
+                // remove instructions from previously opened modal
+                while (modalIngredientsList.hasChildNodes()) {
+                    modalIngredientsList.firstElementChild.remove();
+                }
+                const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
+                ingredientArray.forEach(ingredient => {
+                    let nextIngredient = document.createElement("li");
+                    nextIngredient.innerHTML = ingredient;
+                    modalIngredientsList.appendChild(nextIngredient);
+                });
+                // create instruction list items
+                // remove instructions from previously opened modal
+                while (modalInstructionsList.hasChildNodes()) {
+                    modalInstructionsList.firstElementChild.remove();
+                }
+                const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
+                instructionsArray.forEach(instruction => {
+                    let nextInstruction = document.createElement("li");
+                    nextInstruction.innerHTML = instruction;
+                    modalInstructionsList.appendChild(nextInstruction);})
+                break;
             }
-            // create ingredients list items
-            // remove instructions from previously opened modal
-            while (modalIngredientsList.hasChildNodes()) {
-                modalIngredientsList.firstElementChild.remove();
-            }
-            const ingredientArray = recipes[index].sections[0].components.map(ingredient => ingredient.raw_text)
-            ingredientArray.forEach(ingredient => {
-                let nextIngredient = document.createElement("li");
-                nextIngredient.innerHTML = ingredient;
-                modalIngredientsList.appendChild(nextIngredient);
-            });
-            // create instruction list items
-            // remove instructions from previously opened modal
-            while (modalInstructionsList.hasChildNodes()) {
-                modalInstructionsList.firstElementChild.remove();
-            }
-            const instructionsArray = recipes[index].instructions.map(instruction => instruction.display_text)
-            instructionsArray.forEach(instruction => {
-                let nextInstruction = document.createElement("li");
-                nextInstruction.innerHTML = instruction;
-                modalInstructionsList.appendChild(nextInstruction);})
-            break;
         }
+        modal.showModal();
     }
-    modal.showModal();
 }
