@@ -173,6 +173,11 @@ header .app-instructions {
   padding: 5rem;
 }
 
+.no-results {
+  font-size: 20px;
+  color: grey;
+}
+
 /* ===== RECIPES DISPLAY ===== */
 .recipes {
   padding-top: 3rem;
