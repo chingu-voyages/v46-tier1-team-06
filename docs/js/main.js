@@ -12,7 +12,7 @@ const searchBarInput = document.querySelector('#search-bar');
 // Modal element recieving data
 const modalImage = document.querySelector("#example1");
 const modalTitle = document.querySelector(".title-container h1");
-const modalCategory = document.querySelector(".meal-label h3")
+const modalCategory = document.querySelector(".meal-label h2")
 const modalIngredientsList = document.querySelector("#ingredients-list");
 const modalInstructionsList = document.querySelector("#instructions-list");
 

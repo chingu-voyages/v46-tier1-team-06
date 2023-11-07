@@ -169,7 +169,7 @@ header {
     font-family: 'Open Sans';
     width: 950px;
     background-color: color.$dark-magenta;
-    h1, h2, ul, li {
+    h1, h3, ul, li {
         color:white;
     }
     .recipe-details__exit-button {
@@ -214,7 +214,7 @@ header {
                 align-items: center;
                 text-align: center;
                 border-radius: 20px;
-                h3 {
+                h2 {
                     font-size: 1.25rem;
                     margin: 0;
                 }
