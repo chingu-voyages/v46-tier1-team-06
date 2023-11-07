@@ -311,6 +311,9 @@ header .app-instructions {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#modal .img-title-row .title-container {
+  position: relative;
+}
 #modal .img-title-row .title-container .meal-label {
   display: inline-flex;
   padding: 10px;
@@ -360,7 +363,6 @@ footer .socials-and-attributions {
 }
 
 /* ===== Media Queries ===== */
-
 /* For phones in Portrait Mode */
 @media screen and (max-width: 500px) {
   /* Landing Page */
@@ -452,7 +454,6 @@ footer .socials-and-attributions {
     margin-right: 10px;
   }
 }
-
 /* For screens larger than phones that move down to one card per row */
 @media screen and (min-width: 501px) and (max-width: 1000px) {
   .recipes {
@@ -462,8 +463,6 @@ footer .socials-and-attributions {
     width: 100vw;
   }
 }
-
-
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
