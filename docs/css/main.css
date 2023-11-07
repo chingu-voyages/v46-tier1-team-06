@@ -337,9 +337,11 @@ footer .github-link:focus {
   border: 0.1em solid rgba(0, 0, 0, 0.2);
 }
 footer .socials-and-attributions {
-  padding-top: 3rem;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
+  padding-top: 3rem;
   justify-self: flex-end;
 }
 

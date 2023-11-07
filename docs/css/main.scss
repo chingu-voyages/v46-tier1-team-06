@@ -247,9 +247,11 @@ footer {
     }
 
     .socials-and-attributions {
-        padding-top: 3rem;
+        color: white;
+        font-family: fonts.$heading-font;
         margin-top: 0;
         margin-bottom: .5rem;
+        padding-top: 3rem;
         justify-self: flex-end;
     }
 }
