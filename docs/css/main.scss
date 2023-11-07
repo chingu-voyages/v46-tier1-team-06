@@ -249,6 +249,106 @@ footer {
 /* For phones in Portrait Mode */
 @media screen and (max-width: 500px) {
 
+    /* Landing Page */
+    header {
+        .brand {
+            font-size: 2rem;
+        }
+        .search-container {
+            margin: 0 10px;
+        }
+        .search-form {
+            justify-content: center;
+        }
+        .search-form__input {
+            min-width: 200px;
+            font-size: 1rem;
+            padding-left: 10px;
+            flex-grow: 2;
+        }
+        .search-form__search-button {
+            margin-right: 5px;
+        }
+        .app-instructions {
+            margin: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    }
+    .static-recipes__desc {
+        margin: 0 25px;
+        padding-top: 0;
+        font-size: 0.9rem;
+    }
+    .recipes {
+        padding-top: 0.5rem;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    #landing-page {
+        .quote-section {
+            padding: 0;
+            width: 90vw;
+            align-self: center;
+            h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    /* Search Results */
+    #search-results-container {
+        ul {
+            padding: 0;
+        }
+    }
+
+    /* Modal */
+    #modal {
+        margin-top: 1rem;
+        width: 85vw;
+        position: relative;
+        .recipe-details__exit-button {
+            margin: 5px 5px 0 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .img-title-row {
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+            .img-container {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .title-container {
+                h1 {
+                    font-size: 2rem;
+                }
+                .meal-label {
+                    height: 40px;
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .ingredients {
+            margin: 0;
+            margin-right: 10px;
+        }
+        .instructions {
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
 }
 
 /* For screens larger than phones that move down to one card per row */
