@@ -330,8 +330,11 @@ header .app-instructions {
 /* ===== FOOTER ===== */
 footer {
   background-color: #196160;
-  padding: 5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 footer .icon-github {
   color: white;
@@ -341,9 +344,107 @@ footer .github-link:hover,
 footer .github-link:focus {
   border: 0.1em solid rgba(0, 0, 0, 0.2);
 }
+footer .socials-and-attributions {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-top: 3rem;
+  justify-self: flex-end;
+}
 
 /* ===== Media Queries ===== */
 /* For phones in Portrait Mode */
+@media screen and (max-width: 500px) {
+  /* Landing Page */
+  header .brand {
+    font-size: 2rem;
+  }
+  header .search-container {
+    margin: 0 10px;
+  }
+  header .search-form {
+    justify-content: center;
+  }
+  header .search-form__input {
+    min-width: 200px;
+    font-size: 1rem;
+    padding-left: 10px;
+    flex-grow: 2;
+  }
+  header .search-form__search-button {
+    margin-right: 5px;
+  }
+  header .app-instructions {
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .static-recipes__desc {
+    margin: 0 25px;
+    padding-top: 0;
+    font-size: 0.9rem;
+  }
+  .recipes {
+    padding-top: 0.5rem;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  #landing-page .quote-section {
+    padding: 0;
+    width: 90vw;
+    align-self: center;
+  }
+  #landing-page .quote-section h3 {
+    font-size: 2rem;
+  }
+  /* Search Results */
+  #search-results-container ul {
+    padding: 0;
+  }
+  /* Modal */
+  #modal {
+    margin-top: 1rem;
+    width: 85vw;
+    position: relative;
+  }
+  #modal .recipe-details__exit-button {
+    margin: 5px 5px 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #modal .img-title-row {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
+  #modal .img-title-row .img-container img {
+    width: 100%;
+    height: auto;
+  }
+  #modal .img-title-row .title-container h1 {
+    font-size: 2rem;
+  }
+  #modal .img-title-row .title-container .meal-label {
+    height: 40px;
+  }
+  #modal .img-title-row .title-container .meal-label h3 {
+    font-size: 1.5rem;
+  }
+  #modal .ingredients {
+    margin: 0;
+    margin-right: 10px;
+  }
+  #modal .instructions {
+    margin: 0;
+    margin-right: 10px;
+  }
+}
 /* For tablets */
 /* For laptops and regular-size desktops */
 /* For widescreen desktops */
