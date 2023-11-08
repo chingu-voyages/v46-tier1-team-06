@@ -312,7 +312,7 @@ header .app-instructions {
      object-fit: cover;
 }
 #modal .img-title-row .title-container {
-  position: relative;
+  margin: auto;
 }
 #modal .img-title-row .title-container .meal-label {
   display: inline-flex;
@@ -330,10 +330,21 @@ header .app-instructions {
   margin: 0;
 }
 #modal .ingredients {
-  margin: 50px;
+  text-align: center;
+  padding-top: 5px;
+}
+#modal #ingredients-list {
+  display: inline-block;
+  text-align: left;
 }
 #modal .instructions {
-  margin: 50px;
+  text-align: center;
+}
+#modal #instructions-list {
+  display: inline-block;
+  text-align: left;
+  margin: 0 10%;
+  padding-bottom: 10%;
 }
 
 /* ===== FOOTER ===== */
