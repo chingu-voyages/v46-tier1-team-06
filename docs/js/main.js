@@ -48,6 +48,7 @@ searchForm.addEventListener('submit', async function (e) {
         showRecipes(recipes);
         // switch from landing page to search results
         landingPage.classList.add("hidden");
+        exampleRecipesDesc.classList.add("hidden");
     }
     if (!recipeList.hasChildNodes()) {
         landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
@@ -58,6 +59,7 @@ searchForm.addEventListener('submit', async function (e) {
 refreshButton.addEventListener("click", () => {
     window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
+    exampleRecipesDesc.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
 
@@ -77,8 +79,8 @@ async function landingPageExamples() {
     const res = await fetch(url, options);
     const data = await res.json();
     recipes = data.results;
+    exampleRecipesDesc.classList.remove("hidden");
     showRecipes(recipes);
-    //landingPage.classList.add("hidden");
 };
 landingPageExamples();
 
