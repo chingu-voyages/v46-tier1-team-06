@@ -45,6 +45,8 @@ searchForm.addEventListener('submit', async function (e) {
         await getData(recipeInput)
         searchBarInput.value = "";
         showRecipes(recipes);
+        // switch from landing page to search results
+        landingPage.classList.add("hidden");
     }
     if (!recipeList.hasChildNodes()) {
         landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
@@ -75,7 +77,7 @@ async function landingPageExamples() {
     const data = await res.json();
     recipes = data.results;
     showRecipes(recipes);
-    landingPage.classList.add("hidden");
+    //landingPage.classList.add("hidden");
 };
 landingPageExamples();
 
@@ -132,8 +134,6 @@ function showRecipes(recipes) {
         `;
         // add to DOM
         recipeList.append(recipeObject);
-        // switch from landing page to search results
-        landingPage.classList.add("hidden");
         searchResults.classList.remove("hidden");
     }
 };
