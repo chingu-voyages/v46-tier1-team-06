@@ -21,6 +21,7 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
+const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
 
 // Global Variable to hold the recipes from the getData() function
 let recipes;
