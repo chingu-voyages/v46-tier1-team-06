@@ -68,49 +68,25 @@
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
+  <section class="example-recipes__desc hidden">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-redo2" viewBox="0 0 32 32">
+          <title>pointing arrow</title>
+          <path d="M18 7.762v-7.762l12 12-12 12v-7.932c-13.961-0.328-13.362 9.493-9.808 15.932-8.772-9.482-6.909-24.674 9.808-24.238z"></path>
+        </symbol>
+      </defs>
+    </svg>
+    <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
+    <p>Some examples of what you could make with that lettuce from last week!</p>
+  </section>
+
+  <section id="search-results-container" class="hidden">
+    <span id="recipe-button__desc" class="hidden">A popout window will open with recipe details</span>
+    <ul id="search-results" class="recipes"></ul>
+  </section>
+
   <section id="landing-page">
-    <section class="static-recipes__desc">
-      <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <defs>
-          <symbol id="icon-redo2" viewBox="0 0 32 32">
-            <title>pointing arrow</title>
-            <path d="M18 7.762v-7.762l12 12-12 12v-7.932c-13.961-0.328-13.362 9.493-9.808 15.932-8.772-9.482-6.909-24.674 9.808-24.238z"></path>
-          </symbol>
-        </defs>
-      </svg>
-      <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
-      <p>Some examples of what you could make with that lettuce from last week!</p>
-    </section>
-    <section id="static-recipes" class="recipes">
-      <div class="recipe">
-        <div class="recipe-image-container">
-          <img class="recipe-image" src="./img/example1.png" alt="food picture">
-        </div>
-        <p class="recipe-category">dinner</p>
-        <div class="recipe-title-container">
-          <h2 class="recipe-title">Chili Prawn Linguine</h2>
-        </div>
-        <button id="this-button" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      </div>
-      <div class="recipe">
-        <div class="recipe-image-container">
-          <img class="recipe-image" src="./img/example2.png" alt="food picture">
-        </div>
-        <p class="recipe-category">dinner</p>
-        <div class="recipe-title-container">
-          <h2 class="recipe-title">Kapsalo</h2>
-        </div>
-        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      </div>
-      <div class="recipe">
-        <img class="recipe-image" src="./img/example3.png" alt="food picture">
-        <p class="recipe-category">dinner</p>
-        <div class="recipe-title-container">
-          <h2 class="recipe-title">Chivito Uruguayo</h2>
-        </div>
-        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      </div>
-    </section>
     <article class="quote-section">
       <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
       <h4>Here are some ways you can help the planet by focusing on your food ingredients!</h4>
@@ -121,11 +97,6 @@
         <li>Shop seasonally and locally to further decrease your carbon footprint: plan your upcoming meals around your local harvest calendar!</li>
       </ul>
     </article>
-  </section>
-
-  <section id="search-results-container" class="hidden">
-    <span id="recipe-button__desc" class="hidden">A popout window will open with recipe details</span>
-    <ul id="search-results" class="recipes"></ul>
   </section>
 
   <dialog id="modal">

@@ -91,7 +91,7 @@ header {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.static-recipes__desc {
+.example-recipes__desc {
     padding-top: 3rem;
     .icon-redo2 {
         color: color.$dark-forest-green;
@@ -317,11 +317,6 @@ footer {
             font-weight: bold;
             margin-top: 1rem;
         }
-    }
-    .static-recipes__desc {
-        margin: 0 25px;
-        padding-top: 0;
-        font-size: 0.9rem;
     }
     .recipes {
         padding-top: 0.5rem;
