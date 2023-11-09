@@ -29,7 +29,7 @@ attribute so that people who use screen readers are forewarned that a modal will
     - Functions declared so they are hoisted
 
 ## Running the Project:
-- Deployed to: [GH-Pages](link)
+- Deployed to: [GH-Pages](https://chingu-voyages.github.io/v46-tier1-team-06/)
 - [Github Repo](https://github.com/chingu-voyages/v46-tier1-team-06)
 
 ## Dependencies:
