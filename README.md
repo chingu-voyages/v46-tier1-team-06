@@ -15,14 +15,14 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - Fonts no smaller than 16px, larger readable recipe cards
 - All buttons inputs and icons are labeled for screen readers
-    - SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
+- SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
 - The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
 attribute so that people who use screen readers are forewarned that a modal will be opening up then closing with each respective button
 ###Dry Code focused on Readability:
 - Sass: variables, partials, and nesting
-- Semantic Accessible layout:
-    - BEM for classes for easy readbility for anyone reading the code
-    - SVGs are coded into the HTML to decrease processing power, which is more green!
+- Semantic layout:
+    - BEM for classes
+- SVGs are coded into the HTML to decrease processing power, which is more green!
 - Vanilla Javascript that prioritizes readability
     - Async fetch functions
 
