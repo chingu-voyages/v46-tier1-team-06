@@ -29,3 +29,5 @@ attribute so that people who use screen readers are forewarned that a modal will
 
 **TastyAPI**  Our app fetches recipes from the TastyAPI found at [Rapid API: Tasty API](https://rapidapi.com/apidojo/api/tasty).  The call is made to the `recipes/list` endpoint.
 
+**IcoMoon for SVGs** [Main website](https://icomoon.io/), and Terms of Use(https://icomoon.io/#termsofuse)
+
