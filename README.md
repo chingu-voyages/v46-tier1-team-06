@@ -25,6 +25,8 @@ attribute so that people who use screen readers are forewarned that a modal will
 - SVGs are coded into the HTML to decrease processing power, which is more green!
 - Vanilla Javascript that prioritizes readability
     - Async fetch functions
+    - Form validation
+    - Functions declared so they are hoisted
 
 ## Running the Project:
 - Deployed to: [GH-Pages](link)
