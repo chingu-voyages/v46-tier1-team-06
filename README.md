@@ -5,19 +5,24 @@ Reduce food waste by searching our database for an ingredient that you have gett
 
 ## Features:
 
-- Design comp built on Figma, including mobile and tablet versions
-    - All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
-    - Fonts no smaller than 16px, larger readable recipe cards
+###[Design comp built on Figma](https://www.figma.com/file/JLp3V0M7hHHeFnvGYglq5Y/recipe-app?type=design&node-id=0%3A1&mode=design&t=bgoSiYiUgFwDWgln-1)
+###Built using Agile principles and SCRUM methodology 
+- Team of 4 Developers
+- 6 week long sprints
+- Tauri operated as designer and product owner in charge of the backlog on Jira
+- Our team frequently employed pair programming to teach each other Sass and work on Javascript together
+###Focus on Accessibility:
+- All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- Fonts no smaller than 16px, larger readable recipe cards
+- All buttons inputs and icons are labeled for screen readers
+    - SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
+- The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
+attribute so that people who use screen readers are forewarned that a modal will be opening up then closing with each respective button
+###Dry Code focused on Readability:
 - Sass: variables, partials, and nesting
-- Built using Agile principles and SCRUM methodology in a series of sprints
-- Our team frequently employed pair programming to teach other Sass and work on Javascript together
 - Semantic Accessible layout:
     - BEM for classes for easy readbility for anyone reading the code
-    - All buttons inputs and icons are labeled for screen readers
-    - SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
     - SVGs are coded into the HTML to decrease processing power, which is more green!
-    - The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
-attribute so that people who use screen readers are forewarned that a modal will be opening up then closing with each respective button
 - Vanilla Javascript that prioritizes readability
     - Async fetch functions
 
@@ -28,4 +33,6 @@ attribute so that people who use screen readers are forewarned that a modal will
 ## Dependencies:
 
 **TastyAPI**  Our app fetches recipes from the TastyAPI found at [Rapid API: Tasty API](https://rapidapi.com/apidojo/api/tasty).  The call is made to the `recipes/list` endpoint.
+
+**Dart Sass** 
 
