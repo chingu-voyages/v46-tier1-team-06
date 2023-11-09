@@ -14,8 +14,10 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - Semantic Accessible layout:
     - BEM for classes for easy readbility for anyone reading the code
     - All buttons inputs and icons are labeled for screen readers
-    - The "View Recipes" buttons have an additional `aria-describedby`
-attirbute so that people who use screen readers are forewarned that a modal will be opening up
+    - SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
+    - SVGs are coded into the HTML to decrease processing power, which is more green!
+    - The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
+attribute so that people who use screen readers are forewarned that a modal will be opening up then closing with each respective button
 - Vanilla Javascript that prioritizes readability
     - Async fetch functions
 

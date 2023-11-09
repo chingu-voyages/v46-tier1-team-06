@@ -22,7 +22,6 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/api-test.css">
 
   <meta name="theme-color" content="#fafafa">
 
@@ -40,7 +39,7 @@
           <span class="sr-only">Search the recipe app</span>
         </label>
         <input id="search-bar" class="search-form__input" name="search-bar" type="search" placeholder="lettuce...">
-        <button class="search-form__search-button">
+        <button type="submit" class="search-form__search-button">
           <span class="sr-only">Search</span>
           <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
@@ -52,7 +51,7 @@
           </svg>
           <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
         </button>
-        <button id="refresh-button" class="search-form__refresh-button" >
+        <button id="refresh-button" class="search-form__refresh-button"  value="Refresh" type="button" onclick="refresh(this)">
           <span class="sr-only">Refresh to do a new search</span>
           <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
@@ -69,41 +68,28 @@
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
+  <section class="example-recipes__desc hidden">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-redo2" viewBox="0 0 32 32">
+          <title>pointing arrow</title>
+          <path d="M18 7.762v-7.762l12 12-12 12v-7.932c-13.961-0.328-13.362 9.493-9.808 15.932-8.772-9.482-6.909-24.674 9.808-24.238z"></path>
+        </symbol>
+      </defs>
+    </svg>
+    <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
+    <p>Some examples of what you could make with that lettuce from last week!</p>
+  </section>
+
+  <section id="search-results-container" class="hidden">
+    <span id="recipe-button__desc" class="hidden">A popout window will open with recipe details</span>
+    <ul id="search-results" class="recipes"></ul>
+  </section>
+
   <section id="landing-page">
-    <section id="static-recipes" class="recipes">
-      <div class="recipe">
-        <div class="recipe-image-container">
-          <img class="recipe-image" src="./img/example1.png" alt="food picture">
-        </div>
-        <p class="recipe-category">dinner</p>
-        <div class="recipe-title-container">
-          <h2 class="recipe-title">Chili Prawn Linguine</h2>
-        </div>
-        <button id="this-button" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-        <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
-      </div>
-      <div class="recipe">
-        <div class="recipe-image-container">
-          <img class="recipe-image" src="./img/example2.png" alt="food picture">
-        </div>
-        <p class="recipe-category">dinner</p>
-        <div class="recipe-title-container">
-          <h2 class="recipe-title">Kapsalo</h2>
-        </div>
-        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      </div>
-      <div class="recipe">
-        <img class="recipe-image" src="./img/example3.png" alt="food picture">
-        <p class="recipe-category">dinner</p>
-        <div class="recipe-title-container">
-          <h2 class="recipe-title">Chivito Uruguayo</h2>
-        </div>
-        <button class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
-      </div>
-    </section>
     <article class="quote-section">
       <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
-      <p><strong>Here are some ways you can help the planet by focusing on your food ingredients!</strong></p>
+      <h4>Here are some ways you can help the planet by focusing on your food ingredients!</h4>
       <ul>
         <li>Search for recipes that use the ingredients in your fridge that are about to go bad!</li>
         <li>Adapt recipes to use ingredients you already have: grains for grains, vegetables for vegetables, etc.!</li>
@@ -113,87 +99,45 @@
     </article>
   </section>
 
-  <section id="search-results-container" class="hidden">
-    <span id="recipe-button__desc" class="sr-only">A popout window will open with recipe details</span>
-    <ul id="search-results" class="recipes"></ul>
-  </section>
-
   <dialog id="modal">
     <div id="recipe-details">
-      <button class="exit-button">
-        X
-        </button>
+      <button id="x-button" class="recipe-details__exit-button"  aria-describedby="x-button__desc">
+        <span id="x-button__desc" class="hidden">Exit to close pop-up and return to main page with search</span>
+        <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <symbol id="icon-cross" viewBox="0 0 32 32">
+              <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+            </symbol>
+          </defs>
+          </svg>
+          <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+      </button>
         <div class="img-title-row">
             <div class="img-container">
-                <img id="example1" src="img/example1.png">
+                <img id="example1">
             </div>
             <div class="title-container">
-                <h1>Chili Prawn Linguini</h1>
+                <h1></h1>
                 <div class="meal-label">
-                    <h3>Dinner</h3>
+                    <h2></h2>
                 </div>
             </div>
         </div>
-        <div class="ingredients">
-            <h2>Ingredients:</h2>
-                <ul>
-                    <li>1/2 cup olive oil</li>
-                    <li>2 tablespoons red wine vinegar</li>
-                    <li>1/2 cup finely chopped parsley</li>
-                    <li>3-4 cloves garlic , finely chopped or minced</li>
-                    <li>2 small red chilies , or 1 red chili, deseeded and finely chopped (about 1 tablespoon finely chopped chili)</li>
-                    <li>3/4 teaspoon dried oregano</li>
-                    <li>1 level teaspoon coarse salt</li>
-                    <li>pepper, to taste (about 1/2 teaspoon)</li>
-                </ul>
-        </div>
-        <div class="instructions">
-            <h2>Instructions:</h2>
-                <ol>
-                    <li>
-                        Mix the dressing ingredients in a small bowl and season with 
-                        salt and pepper. Set aside.
-                    </li> 
-                    <li>Cook the pasta according to the packet instructions. </li>
-                    <li>
-                        Add the sugar snap peas for the last minute or so of 
-                        cooking time. 
-                    </li>
-                    <li>
-                        Meanwhile, heat the oil in a wok or large frying pan, 
-                        toss in the garlic and chilli and cook over a fairly 
-                        gentle heat for about 30 seconds without letting the 
-                        garlic brown.
-                    </li>
-                    <li>
-                        Tip in the prawns and cook over a high heat, 
-                        stirring frequently, for about 3 minutes until 
-                        they turn pink.
-                    </li>
-                    <li>
-                        Add the tomatoes and cook, stirring occasionally, 
-                        for 3 minutes until they just start to soften.
-                    </li>
-                    <li>
-                        Drain the pasta and sugar snaps well, then toss 
-                        into the prawn mixture. 
-                    </li>
-                    <li>
-                        Tear in the basil leaves, stir, and season 
-                        with salt and pepper. 
-                    </li>
-                    <li>
-                        Serve with salad leaves drizzled with the lime
-                        dressing, and warm crusty bread.
-                    </li>
-                </ol>
-        </div>
+      </div>
+      <div class="ingredients">
+        <h3>Ingredients:</h3>
+        <ul id="ingredients-list"></ul>
+      </div>
+      <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol id="instructions-list"></ol>
+      </div>
     </div>
   </dialog>
 
   <footer>
-    <span id="github-link__desc" class="sr-only">Opens a new tab and goes to a different website</span>
-    <a aria-label="Github repository for app" aria-describedby="github-link__desc" class="github-link" href="https://github.com/chingu-voyages/v46-tier1-team-06" target="_blank">
+    <span id="link__desc" class="sr-only">Opens a new tab and goes to a different website</span>
+    <a aria-label="Github repository for app" aria-describedby="link__desc" class="github-link" target="_blank" href="https://github.com/chingu-voyages/v46-tier1-team-06">
       <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <symbol id="icon-github" viewBox="0 0 32 32">
@@ -204,6 +148,19 @@
         </svg>
       <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
     </a>
+    <p class="socials-and-attributions">
+      A 
+      <a aria-label="Chingu Inc homepage" aria-describedby="link__desc" target="_blank" href="https://www.chingu.io/">Chingu</a>
+      Project made with love by
+      <a aria-label="Begum's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/begumvernondeveloper/">Begum</a>
+      ,
+      <a aria-label="Erica's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/charwaeericachong/">Erica</a>
+      ,
+      <a aria-label="Tauri's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/tauri-stclaire/">Tauri</a>
+      , and
+      <a aria-label="Terri's LinkedIn" aria-describedby="link__desc" target="_blank" href="https://www.linkedin.com/in/terri-fricker/">Terri</a>
+      !
+    </p>
   </footer>
   
 </body>

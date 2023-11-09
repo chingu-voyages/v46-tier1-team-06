@@ -3,12 +3,16 @@
 $default-font: 'Open Sans', sans-serif;
 $heading-font: 'Josefin Sans', sans-serif;
 
-h1, h2, h3, ol, p, ul, li {
+h1, h2, h3, h4, ol, p, ul, li {
     color: color.$dark-forest-green;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: $heading-font;
+}
+
+li {
+    line-height: 200%;
 }
 
 // Brand title
@@ -35,4 +39,7 @@ h2, .recipe-button {
 // "Global food waste ..."
 h3 {
     font-size: 2rem;
+}
+h4 {
+    font-size: 1.25rem;
 }
