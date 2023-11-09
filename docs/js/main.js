@@ -21,6 +21,7 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 const landingPage = document.querySelector("#landing-page");
 const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
+const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
 
 // Global Variable to hold the recipes from the getData() function
 let recipes;
@@ -45,6 +46,9 @@ searchForm.addEventListener('submit', async function (e) {
         await getData(recipeInput)
         searchBarInput.value = "";
         showRecipes(recipes);
+        // switch from landing page to search results
+        landingPage.classList.add("hidden");
+        exampleRecipesDesc.classList.add("hidden");
     }
     if (!recipeList.hasChildNodes()) {
         landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
@@ -55,6 +59,7 @@ searchForm.addEventListener('submit', async function (e) {
 refreshButton.addEventListener("click", () => {
     window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
+    exampleRecipesDesc.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
 
@@ -67,6 +72,18 @@ modalCloseButton.addEventListener("click", () => {
 });
 
 // Functions
+async function landingPageExamples() {
+    // create fetch url with user-entered search term
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+    // fetch recipes
+    const res = await fetch(url, options);
+    const data = await res.json();
+    recipes = data.results;
+    exampleRecipesDesc.classList.remove("hidden");
+    showRecipes(recipes);
+};
+landingPageExamples();
+
 function validateSearch(recipeInput) {
     const unacceptedCharacters = /[^a-zA-Z]/;
     if (recipeInput.length === 0) {
@@ -111,17 +128,15 @@ function showRecipes(recipes) {
         recipeObject.classList.add("recipe");
         recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
-            <img class="recipe-image" src="${thumbnail}" alt="food picture">
+            <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
             <p class="recipe-category">${foundMealCategory}</p>
-            <div class="recipe-title__container">
-                <h2 class="recipe-title">${title}</h2>
+            <div id="tcid${recipeID}" class="recipe-title__container">
+                <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
             </div>
             <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         // add to DOM
         recipeList.append(recipeObject);
-        // switch from landing page to search results
-        landingPage.classList.add("hidden");
         searchResults.classList.remove("hidden");
     }
 };
