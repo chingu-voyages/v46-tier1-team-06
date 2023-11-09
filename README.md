@@ -7,7 +7,7 @@ Reduce food waste by searching our database for an ingredient that you have gett
 
 ###[Design comp built on Figma](https://www.figma.com/file/JLp3V0M7hHHeFnvGYglq5Y/recipe-app?type=design&node-id=0%3A1&mode=design&t=bgoSiYiUgFwDWgln-1)
 ###Built using Agile principles and SCRUM methodology 
-- Team of 4 Developers
+- Team of 4 Developers: [Begum](https://www.linkedin.com/in/begumvernondeveloper/), [Erica](https://www.linkedin.com/in/charwaeericachong/), [Tauri](https://www.linkedin.com/in/tauri-stclaire/), and [Terri](https://www.linkedin.com/in/terri-fricker/).
 - 6 week long sprints
 - Tauri operated as designer and product owner in charge of the backlog on Jira
 - Our team frequently employed pair programming to teach each other Sass and work on Javascript together
