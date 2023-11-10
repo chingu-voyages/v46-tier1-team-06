@@ -418,7 +418,7 @@ footer .socials-and-attributions a:active {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
   #landing-page .quote-section {
     padding: 0;
