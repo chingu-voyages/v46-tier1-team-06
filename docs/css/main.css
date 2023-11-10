@@ -331,14 +331,14 @@ header .app-instructions {
   text-align: center;
   padding-top: 5px;
 }
-#modal #ingredients-list {
+#modal .recipe-details__ingredients #ingredients-list {
   display: inline-block;
   text-align: left;
 }
 #modal .recipe-details__instructions {
   text-align: center;
 }
-#modal #instructions-list {
+#modal .recipe-details__instructions #instructions-list {
   display: inline-block;
   text-align: left;
   margin: 0 10%;
