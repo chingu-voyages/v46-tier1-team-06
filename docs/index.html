@@ -68,26 +68,25 @@
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
-  <div class="example-recipes__desc hidden">
-    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <symbol id="icon-redo2" viewBox="0 0 32 32">
-          <title>pointing arrow</title>
-          <path d="M18 7.762v-7.762l12 12-12 12v-7.932c-13.961-0.328-13.362 9.493-9.808 15.932-8.772-9.482-6.909-24.674 9.808-24.238z"></path>
-        </symbol>
-      </defs>
-    </svg>
-    <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
-    <p>Some examples of what you could make with that lettuce from last week!</p>
-  </div>
-
-  <div id="search-results-container" class="hidden">
+  <div id="search-results-container">
+    <div class="example-recipes__desc hidden">
+      <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <symbol id="icon-redo2" viewBox="0 0 32 32">
+            <title>pointing arrow</title>
+            <path d="M18 7.762v-7.762l12 12-12 12v-7.932c-13.961-0.328-13.362 9.493-9.808 15.932-8.772-9.482-6.909-24.674 9.808-24.238z"></path>
+          </symbol>
+        </defs>
+      </svg>
+      <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
+      <p>Some examples of what you could make with that lettuce from last week!</p>
+    </div>
     <span id="recipe-button__desc" class="hidden">A popout window will open with recipe details</span>
-    <ul id="search-results" class="recipes"></ul>
+    <ul id="search-results" class="recipes hidden"></ul>
   </div>
 
   <section id="landing-page">
-    <article class="quote-section">
+    <article class="quote-and-suggestions-section">
       <h3>Global food waste is the 3rd greatest carbon emitter after the US and China!</h3>
       <h4>Here are some ways you can help the planet by focusing on your food ingredients!</h4>
       <ul>
@@ -112,7 +111,7 @@
           </svg>
           <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
       </button>
-      <div class="img-title-row">
+      <div class="recipe-details__img-title-row">
         <div class="img-container">
             <img id="example1" alt="Recipe picture" src="img/example1.png">
         </div>
@@ -123,11 +122,11 @@
             </div>
         </div>
       </div>
-      <div class="ingredients">
+      <div class="recipe-details__ingredients">
         <h3>Ingredients:</h3>
         <ul id="ingredients-list"></ul>
       </div>
-      <div class="instructions">
+      <div class="recipe-details__instructions">
         <h3>Instructions:</h3>
         <ol id="instructions-list"></ol>
       </div>
