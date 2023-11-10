@@ -189,7 +189,6 @@ header .app-instructions {
   color: grey;
 }
 
-/* ===== RECIPES DISPLAY ===== */
 .example-recipes__desc {
   padding-top: 3rem;
 }
@@ -197,6 +196,17 @@ header .app-instructions {
   color: #384547;
   font-size: 28px;
   margin-right: 0.25rem;
+}
+
+/* ===== SEARCH RESULTS RECIPES DISPLAY ===== */
+#search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#search-results-container ul {
+  margin: 0;
+  padding: 3rem 0;
 }
 
 .recipes {
@@ -253,17 +263,6 @@ header .app-instructions {
 }
 .recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
-}
-
-/* ===== SEARCH RESULTS ===== */
-#search-results-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#search-results-container ul {
-  margin: 0;
-  padding: 3rem 0;
 }
 
 /* ===== MODAL ===== */
