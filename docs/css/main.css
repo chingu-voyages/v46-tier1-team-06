@@ -416,12 +416,12 @@ footer .socials-and-attributions a:active {
     align-items: center;
     gap: 10px;
   }
-  #landing-page .quote-section {
+  #landing-page .quote-and-suggestions-section {
     padding: 0;
     width: 90vw;
     align-self: center;
   }
-  #landing-page .quote-section h3 {
+  #landing-page .quote-and-suggestions-section h3 {
     font-size: 2rem;
   }
   /* Search Results */
