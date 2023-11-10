@@ -184,6 +184,9 @@ header .app-instructions {
 #landing-page .quote-section {
   padding: 5rem;
 }
+#landing-page .quote-section .citations {
+  font-size: 1rem;
+}
 
 .no-results {
   font-size: 24px;

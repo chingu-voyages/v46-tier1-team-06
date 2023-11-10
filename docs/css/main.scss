@@ -82,6 +82,9 @@ header {
     flex-direction: column;
     .quote-section {
         padding: 5rem;
+        .citations {
+            font-size: 1rem;
+        }
     }
 }
 
