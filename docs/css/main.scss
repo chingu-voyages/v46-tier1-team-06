@@ -283,6 +283,16 @@ footer {
         margin-bottom: .5rem;
         padding-top: 3rem;
         justify-self: flex-end;
+
+        a:link {
+            color: color.$light-blue;
+        }
+        a:visited {
+            color: color.$light-purple;
+        }
+        a:active {
+            color: color.$pink;
+        }
     }
 }
 
