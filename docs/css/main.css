@@ -191,10 +191,12 @@ header .app-instructions {
 }
 
 /* ===== RECIPES DISPLAY ===== */
-.example-recipes__desc {
+.example-recipes__desc .example-recipes__desc-container {
   padding-top: 3rem;
+  display: flex;
+  align-items: center;
 }
-.example-recipes__desc .icon-redo2 {
+.example-recipes__desc .example-recipes__desc-container .icon-redo2 {
   color: #384547;
   font-size: 28px;
   margin-right: 0.25rem;

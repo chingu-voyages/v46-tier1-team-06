@@ -92,11 +92,15 @@ header {
 
 /* ===== RECIPES DISPLAY ===== */
 .example-recipes__desc {
-    padding-top: 3rem;
-    .icon-redo2 {
-        color: color.$dark-forest-green;
-        font-size: 28px;
-        margin-right: .25rem;
+    .example-recipes__desc-container {
+        padding-top: 3rem;
+        display: flex;
+        align-items: center;
+        .icon-redo2 {
+            color: color.$dark-forest-green;
+            font-size: 28px;
+            margin-right: .25rem;
+        }
     }
 }
 
