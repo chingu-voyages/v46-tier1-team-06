@@ -188,6 +188,7 @@ header .app-instructions {
 .no-results {
   font-size: 24px;
   color: grey;
+  margin-bottom: 4rem;
 }
 
 /* ===== RECIPES DISPLAY ===== */
