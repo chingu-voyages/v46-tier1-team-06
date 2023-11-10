@@ -296,23 +296,23 @@ header .app-instructions {
   color: white;
   font-size: 16px;
 }
-#modal .img-title-row {
+#modal .recipe-details__img-title-row {
   display: flex;
   flex: 2;
   margin: 20px;
   align-items: center;
   text-align: center;
 }
-#modal .img-title-row .img-container img {
+#modal .recipe-details__img-title-row .img-container img {
   width: 325px;
   height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#modal .img-title-row .title-container {
+#modal .recipe-details__img-title-row .title-container {
   margin: auto;
 }
-#modal .img-title-row .title-container .meal-label {
+#modal .recipe-details__img-title-row .title-container .meal-label {
   display: inline-flex;
   padding: 10px;
   justify-content: space-around;
@@ -322,12 +322,12 @@ header .app-instructions {
   text-align: center;
   border-radius: 20px;
 }
-#modal .img-title-row .title-container .meal-label h2 {
+#modal .recipe-details__img-title-row .title-container .meal-label h2 {
   color: black;
   font-size: 1.25rem;
   margin: 0;
 }
-#modal .ingredients {
+#modal .recipe-details__ingredients {
   text-align: center;
   padding-top: 5px;
 }
@@ -335,7 +335,7 @@ header .app-instructions {
   display: inline-block;
   text-align: left;
 }
-#modal .instructions {
+#modal .recipe-details__instructions {
   text-align: center;
 }
 #modal #instructions-list {

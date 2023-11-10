@@ -198,7 +198,7 @@ header {
             font-size: 16px;
         }
     }
-    .img-title-row {
+    .recipe-details__img-title-row {
         display:flex;
         flex:2;
         margin:20px;
@@ -233,7 +233,7 @@ header {
             
         }
     }
-    .ingredients{
+    .recipe-details__ingredients{
         text-align: center;
         padding-top: 5px;
     }
@@ -243,7 +243,7 @@ header {
    }
   
     
-    .instructions {
+    .recipe-details__instructions {
     text-align: center;
     }
     #instructions-list {
