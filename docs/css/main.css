@@ -373,6 +373,7 @@ footer .socials-and-attributions {
   margin-bottom: 0.5rem;
   padding-top: 3rem;
   justify-self: flex-end;
+  text-align: center;
 }
 footer .socials-and-attributions a:link {
   color: #bfdbff;
