@@ -428,6 +428,9 @@ footer .socials-and-attributions a:active {
   #landing-page .quote-section h3 {
     font-size: 2rem;
   }
+  #landing-page .suggestions-headline {
+    margin: 0;
+  }
   /* Search Results */
   #search-results-container ul {
     padding: 0;
