@@ -421,7 +421,7 @@ footer .socials-and-attributions a:active {
     gap: 30px;
   }
   #landing-page .quote-section {
-    padding: 0;
+    padding: 2rem 0;
     width: 90vw;
     align-self: center;
   }
