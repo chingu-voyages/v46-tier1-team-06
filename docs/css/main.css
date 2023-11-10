@@ -174,6 +174,14 @@ header .app-instructions {
   font-weight: bold;
   margin-top: 2rem;
 }
+header .example-recipes__desc {
+  padding-top: 3rem;
+}
+header .example-recipes__desc .icon-redo2 {
+  color: #384547;
+  font-size: 28px;
+  margin-right: 0.25rem;
+}
 
 /* ===== LANDING PAGE ===== */
 #landing-page {
@@ -187,15 +195,6 @@ header .app-instructions {
 #landing-page .no-results {
   font-size: 24px;
   color: grey;
-}
-
-.example-recipes__desc {
-  padding-top: 3rem;
-}
-.example-recipes__desc .icon-redo2 {
-  color: #384547;
-  font-size: 28px;
-  margin-right: 0.25rem;
 }
 
 /* ===== SEARCH RESULTS RECIPES DISPLAY ===== */

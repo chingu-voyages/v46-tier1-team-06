@@ -73,6 +73,15 @@ header {
         font-weight: bold;
         margin-top: 2rem;
     }
+
+    .example-recipes__desc {
+        padding-top: 3rem;
+        .icon-redo2 {
+            color: color.$dark-forest-green;
+            font-size: 28px;
+            margin-right: .25rem;
+        }
+    }
 }
 
 /* ===== LANDING PAGE ===== */
@@ -86,15 +95,6 @@ header {
     .no-results {
         font-size:24px;
         color:grey;
-    }
-}
-
-.example-recipes__desc {
-    padding-top: 3rem;
-    .icon-redo2 {
-        color: color.$dark-forest-green;
-        font-size: 28px;
-        margin-right: .25rem;
     }
 }
 

@@ -19,9 +19,9 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 
 // DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
-const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
 const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
+//recipeList declared above also falls under this category
 
 // Global Variable to hold the recipes from the getData() function
 let recipes;
@@ -60,7 +60,7 @@ refreshButton.addEventListener("click", () => {
     window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
     exampleRecipesDesc.classList.remove("hidden");
-    searchResults.classList.add("hidden");
+    recipeList.classList.add("hidden");
 })
 
 recipeList.addEventListener("click", (e) => {
@@ -137,7 +137,7 @@ function showRecipes(recipes) {
         `;
         // add to DOM
         recipeList.append(recipeObject);
-        searchResults.classList.remove("hidden");
+        recipeList.classList.remove("hidden");
     }
 };
 
