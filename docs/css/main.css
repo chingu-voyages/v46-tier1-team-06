@@ -372,6 +372,15 @@ footer .socials-and-attributions {
   padding-top: 3rem;
   justify-self: flex-end;
 }
+footer .socials-and-attributions a:link {
+  color: #bfdbff;
+}
+footer .socials-and-attributions a:visited {
+  color: #ddd1ff;
+}
+footer .socials-and-attributions a:active {
+  color: #ffcccf;
+}
 
 /* ===== Media Queries ===== */
 /* For phones in Portrait Mode */
