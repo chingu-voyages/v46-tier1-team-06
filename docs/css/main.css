@@ -174,14 +174,6 @@ header .app-instructions {
   font-weight: bold;
   margin-top: 2rem;
 }
-header .example-recipes__desc {
-  padding-top: 3rem;
-}
-header .example-recipes__desc .icon-redo2 {
-  color: #384547;
-  font-size: 28px;
-  margin-right: 0.25rem;
-}
 
 /* ===== LANDING PAGE ===== */
 #landing-page {
@@ -207,8 +199,15 @@ header .example-recipes__desc .icon-redo2 {
   margin: 0;
   padding: 3rem 0;
 }
-
-.recipes {
+#search-results-container .example-recipes__desc {
+  padding-top: 3rem;
+}
+#search-results-container .example-recipes__desc .icon-redo2 {
+  color: #384547;
+  font-size: 28px;
+  margin-right: 0.25rem;
+}
+#search-results-container .recipes {
   padding-top: 1.5rem;
   width: 75vw;
   display: flex;
@@ -217,7 +216,7 @@ header .example-recipes__desc .icon-redo2 {
   align-items: stretch;
   gap: 20px;
 }
-.recipes .recipe {
+#search-results-container .recipes .recipe {
   width: 310px;
   padding-bottom: 2rem;
   display: flex;
@@ -228,21 +227,21 @@ header .example-recipes__desc .icon-redo2 {
   border-radius: 20px;
   box-shadow: 3px 3px 5px silver;
 }
-.recipes .recipe .recipe-image {
+#search-results-container .recipes .recipe .recipe-image {
   width: 310px;
   height: 273px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.recipes .recipe .recipe-category {
+#search-results-container .recipes .recipe .recipe-category {
   font-weight: bold;
   margin: 0;
   padding: 0.25rem 0.75rem;
   background-color: #58BC82;
   align-self: flex-start;
 }
-.recipes .recipe .recipe-title__container {
+#search-results-container .recipes .recipe .recipe-title__container {
   flex-grow: 2;
   margin: 0;
   padding: 1rem;
@@ -251,7 +250,7 @@ header .example-recipes__desc .icon-redo2 {
   justify-content: center;
   align-items: center;
 }
-.recipes .recipe .recipe-button {
+#search-results-container .recipes .recipe .recipe-button {
   margin: 0;
   padding: 10px;
   width: 80%;
@@ -260,7 +259,7 @@ header .example-recipes__desc .icon-redo2 {
   border-radius: 15px;
   cursor: pointer;
 }
-.recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
+#search-results-container .recipes .recipe .recipe-button:hover, #search-results-container .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
 }
 
