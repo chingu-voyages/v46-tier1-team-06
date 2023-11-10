@@ -85,7 +85,7 @@ async function landingPageExamples() {
 landingPageExamples();
 
 function validateSearch(recipeInput) {
-    const unacceptedCharacters = /[^a-zA-Z]/;
+    const unacceptedCharacters = /[^a-zA-Z ]/;
     if (recipeInput.length === 0) {
        searchMessages.innerText = "You didn't input anything!";
     } else if (recipeInput.match(unacceptedCharacters)) {
