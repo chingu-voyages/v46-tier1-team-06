@@ -333,13 +333,20 @@ footer {
             margin-top: 1rem;
         }
     }
-    .recipes {
-        padding-top: 0.5rem;
-        width: 100vw;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 30px;
+
+    /* Search Results */
+    #search-results-container {
+        .recipes {
+            padding-top: 0.5rem;
+            width: 100vw;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+        }
+        ul {
+            padding: 0;
+        }
     }
     #landing-page {
         .quote-and-suggestions-section {
@@ -353,13 +360,6 @@ footer {
         }
         .suggestions-headline {
             margin: 0;
-        }
-    }
-
-    /* Search Results */
-    #search-results-container {
-        ul {
-            padding: 0;
         }
     }
 

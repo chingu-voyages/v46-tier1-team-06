@@ -418,13 +418,17 @@ footer .socials-and-attributions a:active {
     font-weight: bold;
     margin-top: 1rem;
   }
-  .recipes {
+  /* Search Results */
+  #search-results-container .recipes {
     padding-top: 0.5rem;
     width: 100vw;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
+  }
+  #search-results-container ul {
+    padding: 0;
   }
   #landing-page .quote-and-suggestions-section {
     padding: 2rem 0;
@@ -436,10 +440,6 @@ footer .socials-and-attributions a:active {
   }
   #landing-page .suggestions-headline {
     margin: 0;
-  }
-  /* Search Results */
-  #search-results-container ul {
-    padding: 0;
   }
   /* Modal */
   #modal {
