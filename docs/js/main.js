@@ -2,7 +2,6 @@
 const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
-const searchMessages = document.querySelector(".app-instructions");
 
 // DOM element to listen to and receive data
 const searchResults = document.querySelector("#search-results");
@@ -10,7 +9,8 @@ const searchResults = document.querySelector("#search-results");
 // DOM elements to get user input from
 const searchBarInput = document.querySelector('#search-bar');
 
-// Modal elements receiving data
+// Elements receiving data
+const searchMessages = document.querySelector(".app-instructions");
 const modalImage = document.querySelector("#example1");
 const modalTitle = document.querySelector(".title-container h1");
 const modalCategory = document.querySelector(".meal-label h2")
