@@ -197,18 +197,6 @@ header .app-instructions {
   margin-bottom: 4rem;
 }
 
-/* ===== RECIPES DISPLAY ===== */
-.example-recipes__desc {
-  padding-top: 3rem;
-  display: flex;
-  align-items: center;
-}
-.example-recipes__desc .icon-redo2 {
-  color: #384547;
-  font-size: 28px;
-  margin-right: 0.25rem;
-}
-
 /* ===== SEARCH RESULTS RECIPES DISPLAY ===== */
 #search-results-container {
   display: flex;
@@ -221,6 +209,8 @@ header .app-instructions {
 }
 #search-results-container .example-recipes__desc {
   padding-top: 3rem;
+  display: flex;
+  align-items: center;
 }
 #search-results-container .example-recipes__desc .icon-redo2 {
   color: #384547;
