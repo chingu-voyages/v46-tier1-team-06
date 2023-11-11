@@ -11,7 +11,7 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - 6 week long sprints
 - Tauri operated as designer and product owner in charge of the backlog on Jira
 - Our team frequently employed pair programming to teach each other Sass and work on Javascript together
-###Focus on Accessibility:
+### Focus on Accessibility:
 - All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - Fonts no smaller than 16px, larger readable recipe cards
 - All buttons inputs and icons are labeled for screen readers
