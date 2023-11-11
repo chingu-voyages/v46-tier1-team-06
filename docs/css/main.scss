@@ -82,11 +82,16 @@ header {
     flex-direction: column;
     .quote-and-suggestions-section {
         padding: 5rem;
+        .citations {
+            font-size: 1rem;
+        }
     }
-    .no-results {
-        font-size:24px;
-        color:grey;
-    }
+}
+
+.no-results {
+    font-size:24px;
+    color:grey;
+    margin-bottom: 4rem;
 }
 
 /* ===== SEARCH RESULTS RECIPES DISPLAY ===== */
@@ -96,10 +101,12 @@ header {
     align-items: center;
     ul {
         margin: 0;
-        padding: 3rem 0;
+        padding: 1rem 0;
     }
     .example-recipes__desc {
         padding-top: 3rem;
+        display: flex;
+        align-items: center;
         .icon-redo2 {
             color: color.$dark-forest-green;
             font-size: 28px;
@@ -200,6 +207,7 @@ header {
         display:flex;
         flex:2;
         margin:20px;
+        padding: 2rem;
         align-items: center;
         text-align: center;
         .img-container {
@@ -279,6 +287,7 @@ footer {
         margin-bottom: .5rem;
         padding-top: 3rem;
         justify-self: flex-end;
+        text-align: center;
 
         a:link {
             color: color.$light-blue;
@@ -324,29 +333,33 @@ footer {
             margin-top: 1rem;
         }
     }
-    .recipes {
-        padding-top: 0.5rem;
-        width: 100vw;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
+
+    /* Search Results */
+    #search-results-container {
+        .recipes {
+            padding-top: 0.5rem;
+            width: 100vw;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 30px;
+        }
+        ul {
+            padding: 0;
+        }
     }
     #landing-page {
         .quote-and-suggestions-section {
-            padding: 0;
+            padding: 2rem 0;
+
             width: 90vw;
             align-self: center;
             h3 {
                 font-size: 2rem;
             }
         }
-    }
-
-    /* Search Results */
-    #search-results-container {
-        ul {
-            padding: 0;
+        .suggestions-headline {
+            margin: 0;
         }
     }
 

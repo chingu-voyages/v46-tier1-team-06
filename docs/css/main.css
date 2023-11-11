@@ -1,3 +1,4 @@
+/* ===== FONT THEMES ===== */
 h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
@@ -38,6 +39,7 @@ h4 {
   font-size: 1.25rem;
 }
 
+/* ===== FONT THEMES ===== */
 h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
@@ -78,6 +80,7 @@ h4 {
   font-size: 1.25rem;
 }
 
+/* ===== GENERAL STYLES ===== */
 * {
   box-sizing: border-box;
 }
@@ -181,12 +184,17 @@ header .app-instructions {
   align-items: center;
   flex-direction: column;
 }
-#landing-page .quote-section {
+#landing-page .quote-and-suggestions-section {
   padding: 5rem;
 }
-#landing-page .no-results {
+#landing-page .quote-and-suggestions-section .citations {
+  font-size: 1rem;
+}
+
+.no-results {
   font-size: 24px;
   color: grey;
+  margin-bottom: 4rem;
 }
 
 /* ===== SEARCH RESULTS RECIPES DISPLAY ===== */
@@ -197,10 +205,12 @@ header .app-instructions {
 }
 #search-results-container ul {
   margin: 0;
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 #search-results-container .example-recipes__desc {
   padding-top: 3rem;
+  display: flex;
+  align-items: center;
 }
 #search-results-container .example-recipes__desc .icon-redo2 {
   color: #384547;
@@ -298,6 +308,7 @@ header .app-instructions {
   display: flex;
   flex: 2;
   margin: 20px;
+  padding: 2rem;
   align-items: center;
   text-align: center;
 }
@@ -367,6 +378,7 @@ footer .socials-and-attributions {
   margin-bottom: 0.5rem;
   padding-top: 3rem;
   justify-self: flex-end;
+  text-align: center;
 }
 footer .socials-and-attributions a:link {
   color: #bfdbff;
@@ -406,25 +418,28 @@ footer .socials-and-attributions a:active {
     font-weight: bold;
     margin-top: 1rem;
   }
-  .recipes {
+  /* Search Results */
+  #search-results-container .recipes {
     padding-top: 0.5rem;
     width: 100vw;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+  }
+  #search-results-container ul {
+    padding: 0;
   }
   #landing-page .quote-and-suggestions-section {
-    padding: 0;
+    padding: 2rem 0;
     width: 90vw;
     align-self: center;
   }
   #landing-page .quote-and-suggestions-section h3 {
     font-size: 2rem;
   }
-  /* Search Results */
-  #search-results-container ul {
-    padding: 0;
+  #landing-page .suggestions-headline {
+    margin: 0;
   }
   /* Modal */
   #modal {
