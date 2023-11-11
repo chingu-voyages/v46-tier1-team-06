@@ -1,3 +1,5 @@
+/* ===== COLOR THEMES ===== */
+/* ===== FONT THEMES ===== */
 h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
@@ -38,6 +40,8 @@ h4 {
   font-size: 1.25rem;
 }
 
+/* ===== COLOR THEMES ===== */
+/* ===== FONT THEMES ===== */
 h1, h2, h3, h4, ol, p, ul, li {
   color: #384547;
 }
@@ -78,6 +82,7 @@ h4 {
   font-size: 1.25rem;
 }
 
+/* ===== GENERAL STYLES ===== */
 * {
   box-sizing: border-box;
 }
