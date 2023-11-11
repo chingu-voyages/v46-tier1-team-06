@@ -5,12 +5,12 @@ const modalCloseButton = document.querySelector(".recipe-details__exit-button");
 const searchMessages = document.querySelector(".app-instructions");
 
 // DOM element to listen to and receive data
-const recipeList = document.querySelector("#search-results");
+const searchResults = document.querySelector("#search-results");
 
 // DOM elements to get user input from
 const searchBarInput = document.querySelector('#search-bar');
 
-// Modal element recieving data
+// Modal elements receiving data
 const modalImage = document.querySelector("#example1");
 const modalTitle = document.querySelector(".title-container h1");
 const modalCategory = document.querySelector(".meal-label h2")
@@ -19,9 +19,9 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 
 // DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
-const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
 const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
+//searchResults declared above also falls under this category
 
 // Global Variable to hold the recipes from the getData() function
 let recipes;
@@ -50,7 +50,7 @@ searchForm.addEventListener('submit', async function (e) {
         landingPage.classList.add("hidden");
         exampleRecipesDesc.classList.add("hidden");
     }
-    if (!recipeList.hasChildNodes()) {
+    if (!searchResults.hasChildNodes()) {
         landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
         landingPage.classList.remove("hidden");
     }
@@ -63,7 +63,7 @@ refreshButton.addEventListener("click", () => {
     searchResults.classList.add("hidden");
 })
 
-recipeList.addEventListener("click", (e) => {
+searchResults.addEventListener("click", (e) => {
     createModal(e, recipes);
 })
 
@@ -85,7 +85,7 @@ async function landingPageExamples() {
 landingPageExamples();
 
 function validateSearch(recipeInput) {
-    const unacceptedCharacters = /[^a-zA-Z]/;
+    const unacceptedCharacters = /[^a-zA-Z ]/;
     if (recipeInput.length === 0) {
        searchMessages.innerText = "You didn't input anything!";
     } else if (recipeInput.match(unacceptedCharacters)) {
@@ -106,8 +106,8 @@ async function getData(recipeInput) {
 
 function showRecipes(recipes) {
     // remove previous search results
-    while (recipeList.hasChildNodes()) {
-        recipeList.firstElementChild.remove();
+    while (searchResults.hasChildNodes()) {
+        searchResults.firstElementChild.remove();
     }
     for (const recipe in recipes) {
         // create recipe summary cards from fetched data
@@ -136,7 +136,7 @@ function showRecipes(recipes) {
             <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         // add to DOM
-        recipeList.append(recipeObject);
+        searchResults.append(recipeObject);
         searchResults.classList.remove("hidden");
     }
 };
