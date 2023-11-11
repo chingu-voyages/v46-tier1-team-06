@@ -73,8 +73,14 @@ modalCloseButton.addEventListener("click", () => {
 
 // Functions
 async function landingPageExamples() {
-    // create fetch url with user-entered search term
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+    // if mobile, show only one recipe card for lettuce
+    if (window.innerWidth < 500) {
+        let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&q=lettuce`;
+    }
+    // if larger, show three recipe cards for lettuce
+    else {
+        let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+    }
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
