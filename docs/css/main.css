@@ -187,7 +187,7 @@ header .app-instructions {
 #landing-page .quote-and-suggestions-section {
   padding: 5rem;
 }
-#landing-page .quote-and-suggestions-section .citations h3 {
+#landing-page .quote-and-suggestions-section .citations {
   font-size: 1rem;
 }
 
