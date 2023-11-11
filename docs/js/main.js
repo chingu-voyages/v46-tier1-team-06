@@ -35,6 +35,9 @@ const options = {
 	}
 };
 
+// Call fetch right away for the landing page example recipes
+landingPageExamples();
+
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -88,7 +91,6 @@ async function landingPageExamples() {
     exampleRecipesDesc.classList.remove("hidden");
     showRecipes(recipes);
 };
-landingPageExamples();
 
 function validateSearch(recipeInput) {
     const unacceptedCharacters = /[^a-zA-Z ]/;
