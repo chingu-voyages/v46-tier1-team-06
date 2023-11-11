@@ -181,10 +181,10 @@ header .app-instructions {
   align-items: center;
   flex-direction: column;
 }
-#landing-page .quote-section {
+#landing-page .quote-and-suggestions-section {
   padding: 5rem;
 }
-#landing-page .quote-section .citations {
+#landing-page .quote-and-suggestions-section .citations {
   font-size: 1rem;
 }
 
@@ -206,7 +206,25 @@ header .app-instructions {
   margin-right: 0.25rem;
 }
 
-.recipes {
+/* ===== SEARCH RESULTS RECIPES DISPLAY ===== */
+#search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#search-results-container ul {
+  margin: 0;
+  padding: 1rem 0;
+}
+#search-results-container .example-recipes__desc {
+  padding-top: 3rem;
+}
+#search-results-container .example-recipes__desc .icon-redo2 {
+  color: #384547;
+  font-size: 28px;
+  margin-right: 0.25rem;
+}
+#search-results-container .recipes {
   padding-top: 1.5rem;
   width: 75vw;
   display: flex;
@@ -215,7 +233,7 @@ header .app-instructions {
   align-items: stretch;
   gap: 20px;
 }
-.recipes .recipe {
+#search-results-container .recipes .recipe {
   width: 310px;
   padding-bottom: 2rem;
   display: flex;
@@ -226,21 +244,21 @@ header .app-instructions {
   border-radius: 20px;
   box-shadow: 3px 3px 5px silver;
 }
-.recipes .recipe .recipe-image {
+#search-results-container .recipes .recipe .recipe-image {
   width: 310px;
   height: 273px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
-.recipes .recipe .recipe-category {
+#search-results-container .recipes .recipe .recipe-category {
   font-weight: bold;
   margin: 0;
   padding: 0.25rem 0.75rem;
   background-color: #58BC82;
   align-self: flex-start;
 }
-.recipes .recipe .recipe-title__container {
+#search-results-container .recipes .recipe .recipe-title__container {
   flex-grow: 2;
   margin: 0;
   padding: 1rem;
@@ -249,7 +267,7 @@ header .app-instructions {
   justify-content: center;
   align-items: center;
 }
-.recipes .recipe .recipe-button {
+#search-results-container .recipes .recipe .recipe-button {
   margin: 0;
   padding: 10px;
   width: 80%;
@@ -258,19 +276,8 @@ header .app-instructions {
   border-radius: 15px;
   cursor: pointer;
 }
-.recipes .recipe .recipe-button:hover, .recipes .recipe .recipe-button:focus {
+#search-results-container .recipes .recipe .recipe-button:hover, #search-results-container .recipes .recipe .recipe-button:focus {
   background-color: #0D9D9B;
-}
-
-/* ===== SEARCH RESULTS ===== */
-#search-results-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#search-results-container ul {
-  margin: 0;
-  padding: 1rem 0;
 }
 
 /* ===== MODAL ===== */
@@ -304,23 +311,23 @@ header .app-instructions {
   color: white;
   font-size: 16px;
 }
-#modal .img-title-row {
+#modal .recipe-details__img-title-row {
   display: flex;
   flex: 2;
   margin: 20px;
   align-items: center;
   text-align: center;
 }
-#modal .img-title-row .img-container img {
+#modal .recipe-details__img-title-row .img-container img {
   width: 325px;
   height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#modal .img-title-row .title-container {
+#modal .recipe-details__img-title-row .title-container {
   margin: auto;
 }
-#modal .img-title-row .title-container .meal-label {
+#modal .recipe-details__img-title-row .title-container .meal-label {
   display: inline-flex;
   padding: 10px;
   justify-content: space-around;
@@ -330,23 +337,23 @@ header .app-instructions {
   text-align: center;
   border-radius: 20px;
 }
-#modal .img-title-row .title-container .meal-label h2 {
+#modal .recipe-details__img-title-row .title-container .meal-label h2 {
   color: black;
   font-size: 1.25rem;
   margin: 0;
 }
-#modal .ingredients {
+#modal .recipe-details__ingredients {
   text-align: center;
   padding-top: 5px;
 }
-#modal #ingredients-list {
+#modal .recipe-details__ingredients #ingredients-list {
   display: inline-block;
   text-align: left;
 }
-#modal .instructions {
+#modal .recipe-details__instructions {
   text-align: center;
 }
-#modal #instructions-list {
+#modal .recipe-details__instructions #instructions-list {
   display: inline-block;
   text-align: left;
   margin: 0 10%;
@@ -425,12 +432,12 @@ footer .socials-and-attributions a:active {
     align-items: center;
     gap: 30px;
   }
-  #landing-page .quote-section {
+  #landing-page .quote-and-suggestions-section {
     padding: 2rem 0;
     width: 90vw;
     align-self: center;
   }
-  #landing-page .quote-section h3 {
+  #landing-page .quote-and-suggestions-section h3 {
     font-size: 2rem;
   }
   #landing-page .suggestions-headline {

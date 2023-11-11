@@ -68,8 +68,8 @@
     <p class="app-instructions">Start decreasing your food waste by searching for recipes by ingredient!</p>
   </header>
 
-  <div class="example-recipes__desc hidden">
-    <div class="example-recipes__desc-container">
+  <div id="search-results-container">
+    <div class="example-recipes__desc hidden">
       <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
           <symbol id="icon-redo2" viewBox="0 0 32 32">
@@ -81,11 +81,8 @@
       <svg class="icon icon-redo2"><use xlink:href="#icon-redo2"></use></svg><span class="sr-only">icon-arrow pointing right</span>
       <p>Some examples of what you could make with that lettuce from last week!</p>
     </div>
-  </div>
-
-  <div id="search-results-container" class="hidden">
     <span id="recipe-button__desc" class="hidden">A popout window will open with recipe details</span>
-    <ul id="search-results" class="recipes"></ul>
+    <ul id="search-results" class="recipes hidden"></ul>
   </div>
 
   <section id="landing-page">
@@ -133,7 +130,7 @@
           </svg>
           <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
       </button>
-      <div class="img-title-row">
+      <div class="recipe-details__img-title-row">
         <div class="img-container">
             <img id="example1" alt="Recipe picture" src="img/example1.png">
         </div>
@@ -144,11 +141,11 @@
             </div>
         </div>
       </div>
-      <div class="ingredients">
+      <div class="recipe-details__ingredients">
         <h3>Ingredients:</h3>
         <ul id="ingredients-list"></ul>
       </div>
-      <div class="instructions">
+      <div class="recipe-details__instructions">
         <h3>Instructions:</h3>
         <ol id="instructions-list"></ol>
       </div>
