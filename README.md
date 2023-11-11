@@ -5,8 +5,8 @@ Reduce food waste by searching our database for an ingredient that you have gett
 
 ## Features:
 
-###[Design comp built on Figma](https://www.figma.com/file/JLp3V0M7hHHeFnvGYglq5Y/recipe-app?type=design&node-id=0%3A1&mode=design&t=bgoSiYiUgFwDWgln-1)
-###Built using Agile principles and SCRUM methodology 
+### [Design comp built on Figma](https://www.figma.com/file/JLp3V0M7hHHeFnvGYglq5Y/recipe-app?type=design&node-id=0%3A1&mode=design&t=bgoSiYiUgFwDWgln-1)
+### Built using Agile principles and SCRUM methodology 
 - Team of 4 Developers: [Begum](https://www.linkedin.com/in/begumvernondeveloper/), [Erica](https://www.linkedin.com/in/charwaeericachong/), [Tauri](https://www.linkedin.com/in/tauri-stclaire/), and [Terri](https://www.linkedin.com/in/terri-fricker/).
 - 6 week long sprints
 - Tauri operated as designer and product owner in charge of the backlog on Jira
@@ -18,7 +18,7 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
 - The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
 attribute so that people who use screen readers are forewarned that a modal will be opening up then closing with each respective button
-###Dry Code focused on Readability:
+### Dry Code focused on Readability:
 - Sass: variables, partials, and nesting
 - Semantic layout:
     - BEM for classes
