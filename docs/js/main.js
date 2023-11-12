@@ -103,7 +103,7 @@ function validateSearch(recipeInput) {
 
 async function getData(recipeInput) {
     // create fetch url with user-entered search term
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=21&q=${recipeInput}`;
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
@@ -135,7 +135,7 @@ function showRecipes(recipes) {
         recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
             <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
-            <p class="recipe-category">${foundMealCategory}</p>
+            <p id="rcid${recipeID}" class="recipe-category">${foundMealCategory}</p>
             <div id="tcid${recipeID}" class="recipe-title__container">
                 <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
             </div>
