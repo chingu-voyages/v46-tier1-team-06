@@ -97,7 +97,7 @@ function validateSearch(recipeInput) {
 
 async function getData(recipeInput) {
     // create fetch url with user-entered search term
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=21&q=${recipeInput}`;
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
