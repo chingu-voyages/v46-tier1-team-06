@@ -129,7 +129,7 @@ function showRecipes(recipes) {
         recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
             <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
-            <p class="recipe-category">${foundMealCategory}</p>
+            <p id="rcid${recipeID}" class="recipe-category">${foundMealCategory}</p>
             <div id="tcid${recipeID}" class="recipe-title__container">
                 <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
             </div>
