@@ -6,6 +6,8 @@ Reduce food waste by searching our database for an ingredient that you have gett
 ## Features:
 
 ### [Design comp built on Figma](https://www.figma.com/file/JLp3V0M7hHHeFnvGYglq5Y/recipe-app?type=design&node-id=0%3A1&mode=design&t=bgoSiYiUgFwDWgln-1)
+- Responsive design features 1 recipe example in mobile and 3 recipe examples in desktop to make finding the suggestions for use on the landing page easy to see
+- Refresh button to easily navigate back to the homepage
 ### Built using Agile principles and SCRUM methodology 
 - Team of 4 Developers: [Begum](https://www.linkedin.com/in/begumvernondeveloper/), [Erica](https://www.linkedin.com/in/charwaeericachong/), [Tauri](https://www.linkedin.com/in/tauri-stclaire/), and [Terri](https://www.linkedin.com/in/terri-fricker/).
 - 6 week long sprints
