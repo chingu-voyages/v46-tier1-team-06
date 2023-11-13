@@ -2,15 +2,15 @@
 const searchForm = document.querySelector('form.search-form');
 const refreshButton = document.querySelector("#refresh-button");
 const modalCloseButton = document.querySelector(".recipe-details__exit-button");
-const searchMessages = document.querySelector(".app-instructions");
 
 // DOM element to listen to and receive data
-const recipeList = document.querySelector("#search-results");
+const searchResults = document.querySelector("#search-results");
 
 // DOM elements to get user input from
 const searchBarInput = document.querySelector('#search-bar');
 
-// Modal element recieving data
+// Elements receiving data
+const searchMessages = document.querySelector(".app-instructions");
 const modalImage = document.querySelector("#example1");
 const modalTitle = document.querySelector(".title-container h1");
 const modalCategory = document.querySelector(".meal-label h2")
@@ -19,9 +19,10 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 
 // DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
-const searchResults = document.querySelector("#search-results-container");
 const modal = document.querySelector("dialog");
-const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
+const exampleDesc = document.querySelector(".example-recipes__desc");
+const exampleDescText = document.querySelector(".example-recipes__desc p");
+//searchResults declared above also falls under this category
 
 // Global Variable to hold the recipes from the getData() function
 let recipes;
@@ -34,6 +35,9 @@ const options = {
 		'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
 	}
 };
+
+// Call fetch right away for the landing page example recipes
+landingPageExamples();
 
 // Event listeners
 searchForm.addEventListener('submit', async function (e) {
@@ -48,9 +52,9 @@ searchForm.addEventListener('submit', async function (e) {
         showRecipes(recipes);
         // switch from landing page to search results
         landingPage.classList.add("hidden");
-        exampleRecipesDesc.classList.add("hidden");
+        exampleDesc.classList.add("hidden");
     }
-    if (!recipeList.hasChildNodes()) {
+    if (!searchResults.hasChildNodes()) {
         landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
         landingPage.classList.remove("hidden");
     }
@@ -59,11 +63,11 @@ searchForm.addEventListener('submit', async function (e) {
 refreshButton.addEventListener("click", () => {
     window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
-    exampleRecipesDesc.classList.remove("hidden");
+    exampleDesc.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
 
-recipeList.addEventListener("click", (e) => {
+searchResults.addEventListener("click", (e) => {
     createModal(e, recipes);
 })
 
@@ -73,19 +77,27 @@ modalCloseButton.addEventListener("click", () => {
 
 // Functions
 async function landingPageExamples() {
-    // create fetch url with user-entered search term
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+    let url;
+    // if mobile, show only one recipe card for lettuce
+    if (window.innerWidth < 500) {
+        url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&q=lettuce`;
+        exampleDescText.innerText = "An example of what you could make with that lettuce from last week!";
+    }
+    // if larger, show three recipe cards for lettuce
+    else {
+        url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+        exampleDescText.innerText = "Some examples of what you could make with that lettuce from last week!";
+    }
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
     recipes = data.results;
-    exampleRecipesDesc.classList.remove("hidden");
+    exampleDesc.classList.remove("hidden");
     showRecipes(recipes);
 };
-landingPageExamples();
 
 function validateSearch(recipeInput) {
-    const unacceptedCharacters = /[^a-zA-Z]/;
+    const unacceptedCharacters = /[^a-zA-Z ]/;
     if (recipeInput.length === 0) {
        searchMessages.innerText = "You didn't input anything!";
     } else if (recipeInput.match(unacceptedCharacters)) {
@@ -97,7 +109,7 @@ function validateSearch(recipeInput) {
 
 async function getData(recipeInput) {
     // create fetch url with user-entered search term
-    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=${recipeInput}`;
+    let url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=21&q=${recipeInput}`;
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
@@ -106,8 +118,8 @@ async function getData(recipeInput) {
 
 function showRecipes(recipes) {
     // remove previous search results
-    while (recipeList.hasChildNodes()) {
-        recipeList.firstElementChild.remove();
+    while (searchResults.hasChildNodes()) {
+        searchResults.firstElementChild.remove();
     }
     for (const recipe in recipes) {
         // create recipe summary cards from fetched data
@@ -129,14 +141,14 @@ function showRecipes(recipes) {
         recipeObject.id = `roid${recipeID}`;
         recipeObject.innerHTML = `
             <img id="imid${recipeID}" class="recipe-image" src="${thumbnail}" alt="food picture">
-            <p class="recipe-category">${foundMealCategory}</p>
+            <p id="rcid${recipeID}" class="recipe-category">${foundMealCategory}</p>
             <div id="tcid${recipeID}" class="recipe-title__container">
                 <h2 id="rtid${recipeID}" class="recipe-title">${title}</h2>
             </div>
             <button id="btid${recipeID}" class="recipe-button" aria-describedby="recipe-button__desc">View Recipe</button>
         `;
         // add to DOM
-        recipeList.append(recipeObject);
+        searchResults.append(recipeObject);
         searchResults.classList.remove("hidden");
     }
 };
