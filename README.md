@@ -15,6 +15,7 @@ Reduce food waste by searching our database for an ingredient that you have gett
 
 - Our team frequently employed pair programming to teach each other Sass and work on Javascript together
 ### Focus on Accessibility:
+- 100% Accessibility Rating thru [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)!
 - All colors for design checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and passed WCAG AAA ratings
 - Fonts no smaller than 16px, ![larger readable recipe cards](docs/img/readme/readable-recipe-cards.png)
 - All buttons inputs and icons are labeled for screen readers
