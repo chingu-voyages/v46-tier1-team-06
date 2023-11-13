@@ -12,6 +12,7 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - Tauri operated as designer and product owner in charge of the backlog on Jira
 - Our team frequently employed pair programming to teach each other Sass and work on Javascript together
 ### Focus on Accessibility:
+- 100% Accessibility Rating thru [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)!
 - All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - Fonts no smaller than 16px, larger readable recipe cards
 - All buttons inputs and icons are labeled for screen readers
