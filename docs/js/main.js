@@ -20,7 +20,8 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 // DOM elements to hide and unhide
 const landingPage = document.querySelector("#landing-page");
 const modal = document.querySelector("dialog");
-const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
+const exampleDesc = document.querySelector(".example-recipes__desc");
+const exampleDescText = document.querySelector(".example-recipes__desc p");
 //searchResults declared above also falls under this category
 
 // Global Variable to hold the recipes from the getData() function
@@ -51,7 +52,7 @@ searchForm.addEventListener('submit', async function (e) {
         showRecipes(recipes);
         // switch from landing page to search results
         landingPage.classList.add("hidden");
-        exampleRecipesDesc.classList.add("hidden");
+        exampleDesc.classList.add("hidden");
     }
     if (!searchResults.hasChildNodes()) {
         landingPage.innerHTML = `<p class="no-results">No recipes found!</p>`;
@@ -62,7 +63,7 @@ searchForm.addEventListener('submit', async function (e) {
 refreshButton.addEventListener("click", () => {
     window.location.reload("Refresh");
     landingPage.classList.remove("hidden");
-    exampleRecipesDesc.classList.remove("hidden");
+    exampleDesc.classList.remove("hidden");
     searchResults.classList.add("hidden");
 })
 
@@ -80,16 +81,18 @@ async function landingPageExamples() {
     // if mobile, show only one recipe card for lettuce
     if (window.innerWidth < 500) {
         url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&q=lettuce`;
+        exampleDescText.innerText = "An example of what you could make with that lettuce from last week!";
     }
     // if larger, show three recipe cards for lettuce
     else {
         url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+        exampleDescText.innerText = "Some examples of what you could make with that lettuce from last week!";
     }
     // fetch recipes
     const res = await fetch(url, options);
     const data = await res.json();
     recipes = data.results;
-    exampleRecipesDesc.classList.remove("hidden");
+    exampleDesc.classList.remove("hidden");
     showRecipes(recipes);
 };
 
