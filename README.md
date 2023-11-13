@@ -12,12 +12,15 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - Tauri operated as designer and product owner in charge of the backlog on Jira
 - Our team frequently employed pair programming to teach each other Sass and work on Javascript together
 ### Focus on Accessibility:
-- All colors checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- All colors for design checked with [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and passed WCAG AAA ratings
 - Fonts no smaller than 16px, larger readable recipe cards
 - All buttons inputs and icons are labeled for screen readers
 - SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
+- all links and buttons labeled, aria-label for links and within the buttons with a class designating for screen readers only
 - The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
 attribute so that people who use screen readers are forewarned that a modal will be opening up then closing with each respective button
+- All links have `aria-describedby` letting people who use screen readers know that it will open up a new tab and go to a different website
+- Cards are clickable anywhere for people with mobility issues, but buttons are kept as anchor points for someone using keyboard only
 ### Dry Code focused on Readability:
 - Sass: variables, partials, and nesting
 - Semantic layout:
