@@ -25,7 +25,7 @@ Reduce food waste by searching our database for an ingredient that you have gett
 - Fonts no smaller than 16px, larger readable recipe cards
 ![Large readable recipe cards](img/readme/readable-recipe-cards.png)
 - All button inputs and icons are labeled for screen readers
-- SVGs are used instead of functions to improve access for people who have adjusted their fonts in the browser
+- SVGs are used instead of fonticons to improve access for people who have adjusted their fonts in the browser
 - all links and buttons labeled, aria-label for links and within the buttons with a class designating for screen readers only
 - The "View Recipes" buttons and exit-buttons have an additional `aria-describedby`
 attribute so that people who use screen readers are forewarned that a modal will be opening up and then closing with each respective button
