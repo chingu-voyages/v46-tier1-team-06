@@ -21,6 +21,7 @@ const modalInstructionsList = document.querySelector("#instructions-list");
 const landingPage = document.querySelector("#landing-page");
 const modal = document.querySelector("dialog");
 const exampleRecipesDesc = document.querySelector(".example-recipes__desc");
+const exampleDescText = document.querySelector(".example-recipes__desc p");
 //searchResults declared above also falls under this category
 
 // Global Variable to hold the recipes from the getData() function
@@ -80,10 +81,12 @@ async function landingPageExamples() {
     // if mobile, show only one recipe card for lettuce
     if (window.innerWidth < 500) {
         url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=1&q=lettuce`;
+        exampleDescText.innerText = "An example of what you could make with that lettuce from last week!";
     }
     // if larger, show three recipe cards for lettuce
     else {
         url = `https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=lettuce`;
+        exampleDescText.innerText = "Some examples of what you could make with that lettuce from last week!";
     }
     // fetch recipes
     const res = await fetch(url, options);
