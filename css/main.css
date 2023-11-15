@@ -453,22 +453,22 @@ footer .socials-and-attributions a:active {
     top: 0;
     right: 0;
   }
-  #modal .img-title-row {
+  #modal .recipe-details__img-title-row {
     width: 100%;
     flex-direction: column;
     margin: 0;
   }
-  #modal .img-title-row .img-container img {
+  #modal .recipe-details__img-title-row .img-container img {
     width: 100%;
     height: auto;
   }
-  #modal .img-title-row .title-container h1 {
+  #modal .recipe-details__img-title-row .title-container h1 {
     font-size: 2rem;
   }
-  #modal .img-title-row .title-container .meal-label {
+  #modal .recipe-details__img-title-row .title-container .meal-label {
     height: 40px;
   }
-  #modal .img-title-row .title-container .meal-label h3 {
+  #modal .recipe-details__img-title-row .title-container .meal-label h3 {
     font-size: 1.5rem;
   }
   #modal .ingredients {
